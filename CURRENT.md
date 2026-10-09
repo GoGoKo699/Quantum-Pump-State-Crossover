@@ -4,18 +4,26 @@ This project continues in the existing Chat. A separate workspace is not
 required, and no step is conditional on workspace quota becoming available.
 The repository is the persistent scientific record.
 
-## Next bounded task
+## Current scientific account and next bounded task
 
-Read the current default branch and its agent instructions. Carry out a focused
-claims-first proof and source review of the existing crossover result: the
-growing-gain Duhamel estimate and domains, physical-frame number marking,
-independent energy comparison, first-crossing argument, bounded quadrature
-law, and the precise contribution after the strongest predecessor implications.
+The [analytical review](research/PROOF_REVIEW.md) reconstructs the state
+bounds and domains, number marking, separate energy control, and bounded
+measurement argument. No blocking defect was identified within the stated
+model. It also supplies finite first-crossing certificates and a quantified
+onset-time remainder. This is an author-side review, not external peer review.
 
-Keep the full-text Hillery–Zubairy boundary explicit until the source is
-actually obtained. Prepare a compact author-facing account. A concrete proof
-objection or directly covering source may change the account; do not silently
-rewrite the preserved record to accommodate it.
+The [source comparison](research/SOURCE_REVIEW.md) explicitly attributes the
+phase-averaged state family to Vintskevich, Grigoriev and Filippov (2019),
+while distinguishing its initial mixed pump from the pure coherent preparation.
+The [author account](research/AUTHOR_ACCOUNT.md) gives the claims-first reading
+path. The original theorem and source archive remain intact.
+
+Continue from these documents, not by repeating initialization or the same
+review. The next bounded task is manuscript-level exposition and contribution
+assessment of the uniform dynamical crossover, with the established state
+family and mechanism already credited. Resolve the historical Hillery–Zubairy
+full-text boundary when accessible; do not infer novelty from that access gap.
+A specific proof objection or directly covering source can change the account.
 
 ## Scope and authority
 

@@ -54,4 +54,4 @@ The Gaussian shear, characteristic-function integration, trace-distance contract
 
 ---
 
-[Preserved source](../archive/consolidation-2026-10-09/SOURCES.md) · [Reproducibility](../REPRODUCIBILITY.md)
+[Preserved source](../archive/consolidation-2026-10-09/SOURCES.md) · [Analytical review](PROOF_REVIEW.md) · [Additional source comparison](SOURCE_REVIEW.md) · [Reproducibility](../REPRODUCIBILITY.md)

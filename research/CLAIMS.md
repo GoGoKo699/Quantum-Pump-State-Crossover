@@ -68,3 +68,19 @@ this particular distinction. No experimental operating window is inferred.
 
 The proofs and explicit constants are in [the theorem](THEOREM.md), with
 [attribution](SOURCES.md) and [contribution assessment](REVIEW.md) separate.
+
+## Review and finite-parameter guarantees
+
+The [analytical review](PROOF_REVIEW.md) supplies a continuous-coordinate
+check of the remainder norms, a domain justification, and exact-arithmetic
+intervals for the first one-percent purity crossing. For each fixed loss
+$0<\delta<1$, it sharpens the onset-time remainder to
+$O_\delta(\log\alpha/\alpha^2)$ without assuming global monotonicity of the
+exact purity. This is a corollary of the existing state estimate.
+
+The [additional source comparison](SOURCE_REVIEW.md) identifies the exact
+phase-averaged squeezed-state family in Vintskevich, Grigoriev and Filippov
+(2019). Its initial mixed-pump phase distribution is not the pure coherent
+preparation here, and its stated approximation domain does not certify this
+crossover. The candidate contribution is the controlled dynamical limit, not
+invention of that reduced-state family. See the [compact account](AUTHOR_ACCOUNT.md).

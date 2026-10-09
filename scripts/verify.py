@@ -83,6 +83,26 @@ def numeric_only(rows:list)->bool:
             and type(e.get('reference')) in (float,int)
             and math.isfinite(e['reference']) and math.isfinite(e['run']) for e in rows)
 
+def report_differences(reference, run, path=''):
+ """Enumerate every changed value; never silently normalize a reference."""
+ rows=[]
+ if isinstance(reference,dict) and isinstance(run,dict):
+  if reference.keys()!=run.keys():
+   rows.append({'path':path,'kind':'keys','reference':list(reference),'run':list(run)})
+  for key in sorted(reference.keys() & run.keys()):
+   rows.extend(report_differences(reference[key],run[key],path+'/'+str(key)))
+ elif isinstance(reference,list) and isinstance(run,list):
+  if len(reference)!=len(run):
+   rows.append({'path':path,'kind':'length','reference':len(reference),'run':len(run)})
+  for i,(x,y) in enumerate(zip(reference,run)):
+   rows.extend(report_differences(x,y,path+'/'+str(i)))
+ elif reference!=run or type(reference) is not type(run):
+  row={'path':path,'reference':reference,'run':run,'kind':'value'}
+  if type(reference) in (int,float) and type(run) in (int,float):
+   row.update(kind='numeric',absolute_difference=abs(reference-run))
+  rows.append(row)
+ return rows
+
 def git_value(*args):
  p=subprocess.run(['git','-C',str(ROOT),*args],text=True,capture_output=True)
  return p.stdout.strip() if p.returncode==0 else None
@@ -101,14 +121,26 @@ def main():
  with (out/'scientific.log').open('xb') as log:
   result=subprocess.run([sys.executable,str(ARCHIVE/'verify.py'),'--output-dir',str(out/'scientific')],
                         cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=600)
+ with (out/'proof_review.log').open('xb') as log:
+  review_run=subprocess.run([sys.executable,str(ROOT/'scripts/check_proof_review.py'),
+                             '--output',str(out/'proof_review.json')],
+                            cwd=ROOT,env=dict(env,PYTHONHASHSEED='0'),stdout=log,stderr=subprocess.STDOUT,timeout=120)
+ review_path=out/'proof_review.json'
+ review=json.loads(review_path.read_text()) if review_path.exists() else {}
+ reference_path=ROOT/'verification/proof-review.json'
+ reference=json.loads(reference_path.read_text())
+ review_differences=report_differences(reference,review)
+ review_identical=review_path.exists() and review_path.read_bytes()==reference_path.read_bytes()
  p=out/'scientific/receipt.json';science=json.loads(p.read_text()) if p.exists() else {}
  infra_data=json.loads((out/'infrastructure.json').read_text())
  differences=[]
  for suite in science.get('suites',[]):
   differences.extend(dict(e,suite=suite['suite']) for e in suite.get('differences',[]))
+ differences.extend(dict(e,suite='proof_review') for e in review_differences)
  assertions=(science.get('scientific_assertions_pass') is True and science.get('groups')==15
-             and len(science.get('suites',[]))==3 and science.get('source_unchanged') is True)
- identical=science.get('canonical_reports_byte_identical') is True
+             and len(science.get('suites',[]))==3 and science.get('source_unchanged') is True
+             and review_run.returncode==0 and review.get('status')=='PASS' and review.get('test_groups')==5)
+ identical=science.get('canonical_reports_byte_identical') is True and review_identical
  unchanged=inventory()==before
  reviewable=bool(differences) and numeric_only(differences)
  passed=(infra.returncode==0 and assertions and unchanged and
@@ -119,7 +151,10 @@ def main():
           'index_tree':git_value('write-tree'),'source_sha256':before,'source_files':len(before),
           'source_unchanged':unchanged,'archive':archive,'reading_pages':pages,'local_links':links,
           'infrastructure_tests':infra_data.get('tests_run'),'infrastructure_pass':infra.returncode==0,
-          'scientific_groups':science.get('groups'),'scientific_assertions_pass':assertions,
+          'scientific_groups':science.get('groups',0)+review.get('test_groups',0),
+          'original_scientific_groups':science.get('groups'),'proof_review_groups':review.get('test_groups'),
+          'proof_review_returncode':review_run.returncode,'proof_review_hash_seed':'0','proof_review_reference':'verification/proof-review.json',
+          'proof_review_byte_identical':review_identical,'scientific_assertions_pass':assertions,
           'canonical_reports_byte_identical':identical,'original_wrapper_returncode':result.returncode,
           'numeric_review_required':not identical,'allow_numeric_report_differences':args.allow_numeric_report_differences,
           'report_differences':differences,'maximum_numeric_absolute_difference':max((e.get('absolute_difference',0) for e in differences),default=0)}

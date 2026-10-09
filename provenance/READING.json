@@ -36,7 +36,7 @@
     "end_excluded": null,
     "equations_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "literal_substitutions": [],
-    "output_sha256": "25d3f47e8287dbe6bb0b1de44d4861b1897f76d3505bf88b9a708e86042c5d5b",
+    "output_sha256": "ebd05cccc929b04e7ba7fdf476f4a3f3df5d32c460f06ffb654f09c9f763c3dc",
     "source": "SOURCES.md",
     "source_sha256": "1341310265080dfd9d07afba8491ed9d37134179be1724bbff4cdbc1c642cdfe",
     "start": "## [CQ]"

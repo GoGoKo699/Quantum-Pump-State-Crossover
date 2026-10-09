@@ -51,15 +51,19 @@ as $N^{-1/4}$: this is not a fixed-resolution device claim.
 
 | Question | Account |
 |---|---|
+| What is the compact physical account? | [Author account](research/AUTHOR_ACCOUNT.md) |
 | What is the model, claim, and order of limits? | [Model and claims](research/CLAIMS.md) |
 | What are the complete proofs and error bounds? | [Self-contained theorem](research/THEOREM.md) |
 | Which proof supports each conclusion? | [Proof map](research/PROOF_MAP.md) |
+| What checks the domains and finite onset bounds? | [Analytical review](research/PROOF_REVIEW.md) |
 | What is additional after attribution? | [Contribution assessment](research/REVIEW.md) |
-| Which primary sources were actually inspected? | [Source record](research/SOURCES.md) |
+| Which primary sources were actually inspected? | [Source record](research/SOURCES.md) and [phase-mixture comparison](research/SOURCE_REVIEW.md) |
 | How are the original calculations reproduced? | [Reproducibility](REPRODUCIBILITY.md) |
 
 The model, quantum-pump mechanism, Gaussian interaction frames, and historical
-high-gain restrictions are established. The result assessed here is the
+high-gain restrictions are established. The phase-averaged squeezed-state
+family also has an explicit predecessor; the present result derives its
+width and validity from a pure coherent pump in the growing-gain limit. The result assessed here is the
 uniformly controlled nondegenerate crossover and the separation of its
 number-statistical and quantum-state validity criteria.
 
