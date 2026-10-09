@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-09",
+  "environment": {
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "final_formal_runs": 2,
+  "final_reports_byte_identical": true,
+  "final_status": "PASS",
+  "incoming_files_preserved": 13,
+  "initial_formal_run": "FAIL: premature finite-amplitude convergence expectation",
+  "largest_physical_frame_diagnostic_amplitudes": 18432,
+  "new_checker_imports_prior_scientific_modules": false,
+  "new_groups": 5,
+  "new_largest_ODE_amplitudes": 4608,
+  "new_passive_optics_hilbert_dimension": 81,
+  "other_projects_or_repositories_accessed": false,
+  "prior_groups_rerun": 5,
+  "prior_manifest_preserved": true,
+  "prior_report_matches_canonical_first": true,
+  "proof_review": "Author-side derivation and finite checks; not external independent review.",
+  "repairs": "development/CONVERGENCE_CHECK.md",
+  "research": "Coherent-pump fixed-crossover state, no model extension",
+  "source_reading_boundaries": "SOURCES.md"
+}

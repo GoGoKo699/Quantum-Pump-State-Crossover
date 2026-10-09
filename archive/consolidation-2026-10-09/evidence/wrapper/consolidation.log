@@ -1,0 +1,10 @@
+test_01_shear_and_non_gaussian_certificate (__main__.Checks.test_01_shear_and_non_gaussian_certificate) ... ok
+test_02_independent_displacement_and_geometric_state (__main__.Checks.test_02_independent_displacement_and_geometric_state) ... ok
+test_03_exact_frame_homodyne_signature (__main__.Checks.test_03_exact_frame_homodyne_signature) ... ok
+test_04_physical_phase_model_and_resolution (__main__.Checks.test_04_physical_phase_model_and_resolution) ... ok
+test_05_exact_remainder_polynomials_and_energy_scaling (__main__.Checks.test_05_exact_remainder_polynomials_and_energy_scaling) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 9.861s
+
+OK

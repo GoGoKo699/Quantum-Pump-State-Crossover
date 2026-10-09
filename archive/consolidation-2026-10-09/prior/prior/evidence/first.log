@@ -1,0 +1,10 @@
+test_01_exact_algebra_and_duhamel_vectors (__main__.Checks.test_01_exact_algebra_and_duhamel_vectors) ... ok
+test_02_purity_and_bounded_characteristic (__main__.Checks.test_02_purity_and_bounded_characteristic) ... ok
+test_03_independent_conserved_sector_dynamics (__main__.Checks.test_03_independent_conserved_sector_dynamics) ... ok
+test_04_finite_amplitude_crossover_and_refinement (__main__.Checks.test_04_finite_amplitude_crossover_and_refinement) ... ok
+test_05_fixed_purity_loss_and_energy_bound (__main__.Checks.test_05_fixed_purity_loss_and_energy_bound) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 5.854s
+
+OK

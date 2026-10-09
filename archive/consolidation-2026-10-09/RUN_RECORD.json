@@ -1,0 +1,48 @@
+{
+  "allocation": "GO for a bounded project record and focused independent author review. Not a strong editorial forecast. Suggested repository name not checked or created.",
+  "date": "2026-10-09",
+  "derivation_boundaries": "Bounded characteristic functions and full rescaled homodyne law; no exact unbounded quadrature-moment convergence or optimal squeezing limit inferred.",
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "external_pdfs_redistributed": false,
+  "incoming_files": 33,
+  "incoming_manifests": 2,
+  "input_zip": "quantized_pump_comparison_2026-10-09.zip",
+  "input_zip_sha256": "d95b91ada40e6f6cf0e58c6e3db6895088ff942e13f2347671d4736387f45de8",
+  "largest_new_equal_pair_readout_matrix_dimension": 192,
+  "largest_new_retained_frame_amplitudes": 8960,
+  "new_check_groups": 5,
+  "new_checker_imports_prior_modules": false,
+  "new_complete_runs": 3,
+  "new_failed_runs": 0,
+  "new_reports_byte_identical": true,
+  "new_runs_all_pass": true,
+  "noise_gap_table_convention": "The check output multiplies the limiting noiseless characteristic contrast by a finite-alpha detector-noise factor. It is not an exact finite-alpha noisy-state prediction.",
+  "original_pilot_repeat_difference_remains_preserved": true,
+  "preserved_suites": {
+    "comparison": {
+      "complete_reruns": 2,
+      "groups": 5
+    },
+    "pilot": {
+      "complete_reruns": 2,
+      "groups": 5
+    }
+  },
+  "protected_project_files_imported": false,
+  "report_comparisons": "evidence/report_comparisons.json",
+  "repositories_accessed_or_modified": false,
+  "reruns_match_canonical_reports": true,
+  "scientific_formula_or_tolerance_repairs": [],
+  "source_boundaries": "Kinsler author-draft relevant prose inspected, not publisher-version equivalence. Hillery-Zubairy full text unavailable. No source plot numbers used.",
+  "task": "Consolidate the coherent-pump state crossover; bounded phase-referenced measurement consequence; no model expansion.",
+  "wrapper_receipt": "evidence/wrapper/receipt.json"
+}

@@ -1,0 +1,163 @@
+{
+  "algebra": {
+    "A_norm_squared": "480*x**4 + 48*x**2 + 2",
+    "B_norm_squared": "384*x**4 + 16*x**2 + 1",
+    "core_dimension": 49,
+    "scope": "No truncated commutator is asserted at its artificial boundary."
+  },
+  "crossover_diagnostics": [
+    {
+      "alpha": 10.0,
+      "analytic_state_error_bound": 0.1566688031353367,
+      "depletion_fraction": 0.0907756476208559,
+      "depletion_refinement_difference": 1.0351848531153784e-08,
+      "depletion_upper": 0.10429341868536188,
+      "function_evaluations": 5546,
+      "gain_r": 1.856786033352154,
+      "lambda": 0.5,
+      "last_four_pair_levels": 9.704754676905043e-18,
+      "last_four_pump_levels": 1.9184512911165193e-11,
+      "limit_purity": 0.757872156141312,
+      "norm": 0.9999999999999617,
+      "npair": 112,
+      "npump": 72,
+      "purity": 0.8258121487946682,
+      "purity_refinement_difference": 1.425526363618701e-13,
+      "retained_amplitudes": 8064,
+      "state_norm_error_to_limit_truncation": 0.07768434956122268,
+      "tau": 0.1856786033352154
+    },
+    {
+      "alpha": 100.0,
+      "analytic_state_error_bound": 0.021466578682338967,
+      "depletion_fraction": 0.009882262986647183,
+      "depletion_refinement_difference": 2.0177189761876047e-07,
+      "depletion_upper": 0.010029503635168354,
+      "function_evaluations": 5978,
+      "gain_r": 2.9969807136532847,
+      "lambda": 0.5,
+      "last_four_pair_levels": 8.193867487757297e-14,
+      "last_four_pump_levels": 2.885265252127689e-08,
+      "limit_purity": 0.757872156141312,
+      "norm": 0.9999999999996978,
+      "npair": 112,
+      "npump": 72,
+      "purity": 0.7685984847460644,
+      "purity_refinement_difference": 6.421529974431905e-13,
+      "retained_amplitudes": 8064,
+      "state_norm_error_to_limit_truncation": 0.012348127631241101,
+      "tau": 0.029969807136532845
+    },
+    {
+      "alpha": 1000.0,
+      "analytic_state_error_bound": 0.002722679248593729,
+      "depletion_fraction": 0.0009987603160653482,
+      "depletion_refinement_difference": 3.664148788659789e-08,
+      "depletion_upper": 0.0010002586016244809,
+      "function_evaluations": 6086,
+      "gain_r": 4.147149804428618,
+      "lambda": 0.5,
+      "last_four_pair_levels": 2.886642067676203e-13,
+      "last_four_pump_levels": 6.232695226604702e-08,
+      "limit_purity": 0.757872156141312,
+      "norm": 0.9999999999995717,
+      "npair": 112,
+      "npump": 72,
+      "purity": 0.7592807883191062,
+      "purity_refinement_difference": 5.569766869939485e-12,
+      "retained_amplitudes": 8064,
+      "state_norm_error_to_limit_truncation": 0.001707541682799378,
+      "tau": 0.004147149804428618
+    }
+  ],
+  "fixed_threshold": {
+    "asymptotic_offset": -0.5547851986384306,
+    "finite_amplitude_roots": [
+      {
+        "alpha": 30.0,
+        "numerical_lambda_at_1_percent_loss": 0.09469265879924252,
+        "tau": 0.05277635881818103,
+        "two_alpha_tau_minus_log_alpha": -0.23461585257129336
+      },
+      {
+        "alpha": 100.0,
+        "numerical_lambda_at_1_percent_loss": 0.08118499885523581,
+        "tau": 0.02094433269406031,
+        "two_alpha_tau_minus_log_alpha": -0.4163036471760302
+      },
+      {
+        "alpha": 1000.0,
+        "numerical_lambda_at_1_percent_loss": 0.07326248714952466,
+        "tau": 0.0031875974939828545,
+        "two_alpha_tau_minus_log_alpha": -0.532560291016428
+      }
+    ],
+    "large_N_rigorous_bound_example": {
+      "alpha": 1000000.0,
+      "conservative_purity_radius": 8.518085099182267e-05,
+      "fractional_depletion_upper": 1.0000002500288855e-06,
+      "lambda": 0.5,
+      "mean_pump_photons": 1000000000000.0,
+      "purity_center": 0.757872156141312
+    },
+    "limiting_lambda": 0.0717744482430585,
+    "purity_loss": 0.01,
+    "scope": "Small finite root diagnostics; no fit used to establish the logarithmic asymptotic."
+  },
+  "groups": 5,
+  "independent_number_sectors": [
+    {
+      "alpha": 2.0,
+      "lambda": 0.25,
+      "purity": 0.9858299320229655,
+      "purity_difference": 4.3454129183828627e-13,
+      "retained_initial_probability": 0.9999999999999997,
+      "sector_max": 48,
+      "state_norm_difference": 9.287212874816964e-11
+    },
+    {
+      "alpha": 4.0,
+      "lambda": 0.25,
+      "purity": 0.9699872670721645,
+      "purity_difference": 1.2602141552520152e-12,
+      "retained_initial_probability": 0.999999999999998,
+      "sector_max": 72,
+      "state_norm_difference": 6.407078049110366e-10
+    }
+  ],
+  "limit_state": [
+    {
+      "double_quadrature": 0.9950731878244694,
+      "lambda": 0.05,
+      "purity": 0.9950731878244696,
+      "squeezed_vacuum_fidelity": 0.9975185196367357
+    },
+    {
+      "double_quadrature": 0.9810943073153875,
+      "lambda": 0.1,
+      "purity": 0.9810943073153879,
+      "squeezed_vacuum_fidelity": 0.9902859647173192
+    },
+    {
+      "double_quadrature": 0.9053540999623488,
+      "lambda": 0.25,
+      "purity": 0.9053540999622139,
+      "squeezed_vacuum_fidelity": 0.9466095316542428
+    },
+    {
+      "double_quadrature": 0.757872156141312,
+      "lambda": 0.5,
+      "purity": 0.7578721561413121,
+      "squeezed_vacuum_fidelity": 0.8427384585761093
+    },
+    {
+      "double_quadrature": 0.5456413607746475,
+      "lambda": 1.0,
+      "purity": 0.5456413607650472,
+      "squeezed_vacuum_fidelity": 0.6556795424187986
+    }
+  ],
+  "new_research_only": true,
+  "old_scientific_modules_imported": false,
+  "status": "PASS"
+}

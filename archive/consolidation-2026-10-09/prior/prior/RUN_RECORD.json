@@ -1,0 +1,27 @@
+{
+  "all_assertions_pass": true,
+  "charter_sha256": "fdbfb56074779485e0d9ba5a115515e14bb2321882a2750af93a67df8240a041",
+  "code_change_note": "Sparse pair-operator arrays use explicit floating-point dtype; no scientific formula or tolerance repair was needed.",
+  "date": "2026-10-09",
+  "environment": {
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "groups_each": 5,
+  "maximum_exploratory_frame_amplitudes": 18432,
+  "maximum_formal_frame_amplitudes": 8064,
+  "new_complete_runs": 2,
+  "new_research_only": true,
+  "original_sector_max_pump_photons": 72,
+  "packaging_event": "The first packaging attempt stopped when an expected byte-identity assertion failed. Both passing reports were preserved and the single differing diagnostic is enumerated.",
+  "previous_scientific_modules_imported": false,
+  "protected_repositories_accessed_or_modified": false,
+  "report_comparison": "evidence/REPORT_COMPARISON.json",
+  "reports_byte_identical": false,
+  "scientific_status": "Author-side derivation; bounded continuation for closest-source comparison",
+  "scientific_tolerance_changes": [],
+  "source_audit": "Primary text and equations only; failed PDF screenshot calls supply no figure evidence. Historical HZ84/KD93/CB88 full text not read."
+}

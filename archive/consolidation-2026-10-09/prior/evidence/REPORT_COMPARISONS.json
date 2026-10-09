@@ -1,0 +1,14 @@
+[
+  {
+    "byte_identical": true,
+    "differences": [],
+    "max_absolute_difference": 0,
+    "suite": "new"
+  },
+  {
+    "byte_identical": true,
+    "differences": [],
+    "max_absolute_difference": 0,
+    "suite": "prior"
+  }
+]
