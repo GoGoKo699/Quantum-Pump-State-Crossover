@@ -11,8 +11,9 @@ python scripts/verify.py --output-dir /absolute/path/to/new-results
 The output directory must be new and outside this repository. The wrapper
 checks the full 60-file archive and its three manifests, the owner's license,
 three generated reading pages, and relative links. It runs eight infrastructure
-tests and all fifteen original scientific groups: five consolidation, five
-comparison, and five pilot groups. No archived script, assertion, reference
+tests and twenty scientific groups: fifteen preserved groups (five
+consolidation, five comparison, and five pilot groups), plus five analytical
+review groups in `scripts/check_proof_review.py`. No archived script, assertion, reference
 report, or numerical tolerance is modified.
 
 ## Reading the receipt
@@ -20,7 +21,9 @@ report, or numerical tolerance is modified.
 `verification.json` records the tested commit and tree when Git metadata is
 available, the source hash inventory, assertion outcomes, and every canonical
 report difference. The original wrapper's receipt and logs are under
-`scientific/`. Source integrity, passing assertions, and byte identity are
+`scientific/`. The separate `proof_review.json` is compared with
+`verification/proof-review.json`; all four report comparisons are required.
+Source integrity, passing assertions, and byte identity are
 separate facts.
 
 Strict mode requires all canonical report bytes to match. The explicit option
@@ -46,6 +49,21 @@ cutoff evolution, refinement, symbolic core identities, and source-expansion
 comparisons are checks, not external peer review or a novelty certificate.
 Norm convergence does not by itself control unbounded moments. The source
 record's older access boundaries remain explicit.
+
+## Exact first-crossing certificates
+
+The wrapper fixes `PYTHONHASHSEED=0` for the new symbolic checker to make
+its simplification path reproducible; this does not change any equation,
+assertion, or tolerance. The review checker independently evaluates the remainder norms as continuous
+Gaussian polynomial integrals. Its three first-crossing intervals use exact
+rational sign comparisons: finite alternating Taylor bounds for purity,
+integer square-root upper bounds, and positive exponential Taylor bounds
+with a geometric remainder for the logarithmic gain. Decimal diagnostics do
+not decide these inequalities. The canonical report stores the exact rational
+witnesses. These certificates enclose the exact infinite-dimensional crossing
+using the proven state bound; they are not finite-cutoff trajectory claims.
+The additional reference is outside the immutable archive and must not be
+rewritten to hide a failed assertion or a changed scientific conclusion.
 
 ## Current reading pages
 

@@ -1,0 +1,206 @@
+{
+  "coordinate_reconstruction": {
+    "TA_squared_norm": "384*ell**4 + 16*ell**2 + 1",
+    "archived_modules_imported": false,
+    "number_marking_squared_norm": 2,
+    "pL_squared_norm": "2*(240*ell**4 + 24*ell**2 + 1)",
+    "representation": "Three real quadrature coordinates; exact Gaussian polynomial integration."
+  },
+  "energy_check": {
+    "exact_sector_checks": [
+      {
+        "amplitude_sign": 1,
+        "mean_pairs": "4/5",
+        "pump_sector": 1
+      },
+      {
+        "amplitude_sign": -1,
+        "mean_pairs": "4/5",
+        "pump_sector": 1
+      },
+      {
+        "amplitude_sign": 1,
+        "mean_pairs": "7/3",
+        "pump_sector": 3
+      },
+      {
+        "amplitude_sign": -1,
+        "mean_pairs": "7/3",
+        "pump_sector": 3
+      },
+      {
+        "amplitude_sign": 1,
+        "mean_pairs": "91/17",
+        "pump_sector": 7
+      },
+      {
+        "amplitude_sign": -1,
+        "mean_pairs": "91/17",
+        "pump_sector": 7
+      }
+    ],
+    "mean_scaling": "2*lambda",
+    "moment_argument": "Independent sector upper bound plus bounded truncated expectations; not total variation alone."
+  },
+  "first_crossing": {
+    "arithmetic": "Exact fractions; integrated Taylor sign bounds, positive exponential tail bounds, upward square-root enclosures.",
+    "claim": "The exact infinite-dimensional first crossing lies in every displayed time interval. No exact-purity monotonicity or simulated trajectory is assumed.",
+    "purity_loss": "1/100",
+    "rows": [
+      {
+        "N": 100000000,
+        "alpha": 10000,
+        "dimensionless_time_interval": [
+          {
+            "decimal_diagnostic": 0.00043008590732,
+            "exact": "10752147683/25000000000000"
+          },
+          {
+            "decimal_diagnostic": 0.00043531624201,
+            "exact": "43531624201/100000000000000"
+          }
+        ],
+        "lambda_interval": [
+          "17/250",
+          "151/2000"
+        ],
+        "purity_enclosure_widths": [
+          {
+            "decimal_diagnostic": 5.493351133590947e-16,
+            "exact": "727038968904420656010383776428745775314771955767945137/1323488980084844279794253907311940565705299377441406250000000000000000"
+          },
+          {
+            "decimal_diagnostic": 1.5626244144116364e-14,
+            "exact": "1638530457966095940171311269173201476877592390582306607543990880937749520328806141617/104857600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "state_error_upper": [
+          {
+            "decimal_diagnostic": 0.00024238187009812626,
+            "exact": "12119093504906313590497/50000000000000000000000000"
+          },
+          {
+            "decimal_diagnostic": 0.0002475760908793095,
+            "exact": "49515218175861906262917/200000000000000000000000000"
+          }
+        ],
+        "strict_lower_purity_margin": {
+          "decimal_diagnostic": 2.7894857978726284e-05,
+          "exact": "302436656217096448261214600421897367919403279280782866808346767/10842021724855044340074528008699417114257812500000000000000000000000"
+        },
+        "strict_upper_purity_margin": {
+          "decimal_diagnostic": 4.089586597607966e-05,
+          "exact": "4288242356173370322826740148491126016139336311251956933805772087490092216431075991190807858383/104857600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      {
+        "N": 10000000000,
+        "alpha": 100000,
+        "dimensionless_time_interval": [
+          {
+            "decimal_diagnostic": 5.4757627932e-05,
+            "exact": "13689406983/250000000000000"
+          },
+          {
+            "decimal_diagnostic": 5.4827265729e-05,
+            "exact": "54827265729/1000000000000000"
+          }
+        ],
+        "lambda_interval": [
+          "713/10000",
+          "723/10000"
+        ],
+        "purity_enclosure_widths": [
+          {
+            "decimal_diagnostic": 2.5027479168299367e-15,
+            "exact": "6110224406323088084487800130847914904886920131306495356301473077840362517637899500506424512715334788979377/2441406250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          {
+            "decimal_diagnostic": 3.908207976034527e-15,
+            "exact": "9541523378990544195261884857034213061845081364361087537211205071034345473137185431688246442279523591633457/2441406250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "state_error_upper": [
+          {
+            "decimal_diagnostic": 3.0478552027474437e-05,
+            "exact": "952454750858576194041/31250000000000000000000000"
+          },
+          {
+            "decimal_diagnostic": 3.0555668849938835e-05,
+            "exact": "61111337699877667804883/2000000000000000000000000000"
+          }
+        ],
+        "strict_lower_purity_margin": {
+          "decimal_diagnostic": 6.0963226043113505e-06,
+          "exact": "297672002163640164193550270256303909690807432985294886936217918159213629423558112972192362812838377313763457/48828125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "strict_upper_purity_margin": {
+          "decimal_diagnostic": 2.045431116773265e-05,
+          "exact": "49937283124347295788426848911996481731379407920003041546115284949364370745689342021244931520760456045667693558366543/2441406250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      {
+        "N": 1000000000000,
+        "alpha": 1000000,
+        "dimensionless_time_interval": [
+          {
+            "decimal_diagnostic": 6.6299841061e-06,
+            "exact": "66299841061/10000000000000000"
+          },
+          {
+            "decimal_diagnostic": 6.6307503885e-06,
+            "exact": "13261500777/2000000000000000"
+          }
+        ],
+        "lambda_interval": [
+          "1793/25000",
+          "7183/100000"
+        ],
+        "purity_enclosure_widths": [
+          {
+            "decimal_diagnostic": 3.020237821412961e-15,
+            "exact": "39972514738755119092487559160651203998151456850906821032908193469339387819996710519059905990062961338612986368966800817/13234889800848442797942539073119405657052993774414062500000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          {
+            "decimal_diagnostic": 3.172048939639134e-15,
+            "exact": "774426010654085456575142166356869343022880192803620859737299639051189788177972790893273904699260010023089395077650651184053381606941090737/244140625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "state_error_upper": [
+          {
+            "decimal_diagnostic": 3.6527563412845598e-06,
+            "exact": "18263781706422799216491/5000000000000000000000000000"
+          },
+          {
+            "decimal_diagnostic": 3.6536913058222233e-06,
+            "exact": "14614765223288894096039/4000000000000000000000000000"
+          }
+        ],
+        "strict_lower_purity_margin": {
+          "decimal_diagnostic": 1.1786623116835978e-07,
+          "exact": "4991829058414623185551327874128568590491515578376314729702642868016765557520066747705972167734141814482501170951019057/42351647362715016953416125033982098102569580078125000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "strict_upper_purity_margin": {
+          "decimal_diagnostic": 4.228523602310866e-07,
+          "exact": "103235439509542632963231764997053863124626992323386800311818519927664047448120404000899525878409809452120376256395227397337195583320779108058909263/244140625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+      }
+    ]
+  },
+  "measurement_and_source_dictionary": {
+    "Gaussian_integral": "1/sqrt(2*lam**2*xi**2 + 1)",
+    "VGF_family_coherence_kernel": "exp(-(k-l)^2/(8*N))",
+    "attribution": "The phase-averaged family is established; deriving this width from an initially pure coherent pump at growing gain is the dynamical claim.",
+    "bounded_observable_scope": "Characteristic functions and distributions; no convergence of unbounded quadrature moments inferred.",
+    "geometric_difference_probability": "(1-q)/(1+q)*q^abs(d)",
+    "phase_width": "1/(2*alpha)"
+  },
+  "status": "PASS",
+  "test_groups": 5,
+  "threshold_rate": {
+    "alpha_norm_error_over_log_alpha_limit": "sqrt(384*lam**4 + 16*lam**2 + 1)/4",
+    "fixed_gain_impurity_series": "4*r**8/45 + 2*r**6/9",
+    "inference": "Uniform purity envelope and a strictly negative limiting derivative give time error O(log(alpha)/alpha^2).",
+    "published_eighth_order_polynomial_at_crossover_limit": 0
+  }
+}

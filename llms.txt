@@ -16,3 +16,8 @@
 This repository serves as a record of the work and a guide for the author’s
 self-directed learning. For discussion or potential collaboration, please
 contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
+## Analytical and source review
+- [Author account](research/AUTHOR_ACCOUNT.md): compact claims-first interpretation.
+- [Proof review](research/PROOF_REVIEW.md): domains, exact remainder checks, finite first-crossing certificates.
+- [Source review](research/SOURCE_REVIEW.md): established phase-mixture family versus the pure-coherent-pump dynamical limit.
