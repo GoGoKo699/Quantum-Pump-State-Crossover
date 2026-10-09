@@ -1,0 +1,23 @@
+[
+  {
+    "byte_identical": true,
+    "differences": [],
+    "reference": "evidence/first.json",
+    "run": "evidence/repeat.json",
+    "suite": "new"
+  },
+  {
+    "byte_identical": true,
+    "differences": [],
+    "reference": "prior/evidence/final.json",
+    "run": "evidence/prior_comparison.json",
+    "suite": "prior_followup"
+  },
+  {
+    "byte_identical": true,
+    "differences": [],
+    "reference": "prior/prior/evidence/first.json",
+    "run": "evidence/prior_pilot.json",
+    "suite": "prior_pilot"
+  }
+]

@@ -1,0 +1,10 @@
+test_01_source_frames_and_short_time_dictionary (__main__.Checks.test_01_source_frames_and_short_time_dictionary) ... ok
+test_02_number_marking_norm_bound (__main__.Checks.test_02_number_marking_norm_bound) ... ok
+test_03_exact_reduced_state_comparison (__main__.Checks.test_03_exact_reduced_state_comparison) ... ok
+test_04_onset_and_source_polynomial (__main__.Checks.test_04_onset_and_source_polynomial) ... ok
+test_05_phase_sensitive_vs_number_conserving_tests (__main__.Checks.test_05_phase_sensitive_vs_number_conserving_tests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.888s
+
+OK

@@ -1,0 +1,4 @@
+# Environment used by the preserved scientific record.
+numpy==2.3.5
+scipy==1.17.0
+sympy==1.14.0

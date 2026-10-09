@@ -1,0 +1,19 @@
+test_01_source_frames_and_short_time_dictionary (__main__.Checks.test_01_source_frames_and_short_time_dictionary) ... ok
+test_02_number_marking_norm_bound (__main__.Checks.test_02_number_marking_norm_bound) ... ok
+test_03_exact_reduced_state_comparison (__main__.Checks.test_03_exact_reduced_state_comparison) ... ok
+test_04_onset_and_source_polynomial (__main__.Checks.test_04_onset_and_source_polynomial) ... FAIL
+test_05_phase_sensitive_vs_number_conserving_tests (__main__.Checks.test_05_phase_sensitive_vs_number_conserving_tests) ... ok
+
+======================================================================
+FAIL: test_04_onset_and_source_polynomial (__main__.Checks.test_04_onset_and_source_polynomial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/quantized_pump_comparison_2026-10-09/check_comparison.py", line 217, in test_04_onset_and_source_polynomial
+    self.assertLess(abs(rows[-1]['onset_lambda']-star),.001)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0014880389075568184 not less than 0.001
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.687s
+
+FAILED (failures=1)

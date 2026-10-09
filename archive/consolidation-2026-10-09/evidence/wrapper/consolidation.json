@@ -1,0 +1,278 @@
+{
+  "core_and_energy": {
+    "polynomial_core_dimension": 49,
+    "rows": [
+      {
+        "alpha": 10.0,
+        "exact_state_norm_bound": 0.5828705598182297,
+        "mean_pairs_over_alpha_upper": 1.0429341868536188,
+        "nominal_mean_pairs_over_alpha": 0.9756097560975612
+      },
+      {
+        "alpha": 100.0,
+        "exact_state_norm_bound": 0.08898773731002109,
+        "mean_pairs_over_alpha_upper": 1.0029503635168353,
+        "nominal_mean_pairs_over_alpha": 0.9975062344139651
+      },
+      {
+        "alpha": 1000.0,
+        "exact_state_norm_bound": 0.011995698785950717,
+        "mean_pairs_over_alpha_upper": 1.000258601624481,
+        "nominal_mean_pairs_over_alpha": 0.9997500624843793
+      },
+      {
+        "alpha": 1000000.0,
+        "exact_state_norm_bound": 2.1295212747955668e-05,
+        "mean_pairs_over_alpha_upper": 1.0000002500288854,
+        "nominal_mean_pairs_over_alpha": 0.9999997500000626
+      }
+    ],
+    "scope": "Independent polynomial identities and scalar estimates, not an inference of unbounded moments from norm convergence."
+  },
+  "full_generator_readout": {
+    "largest_frame_amplitudes": 8960,
+    "runs": [
+      {
+        "N": 100.0,
+        "alpha": 10.0,
+        "characteristic_at_1": 0.6648998884879453,
+        "characteristic_at_2": 0.22809346199452032,
+        "cutoff_refinement": null,
+        "function_evaluations": 5174,
+        "gaussian_identity_gap": 0.03264824780317291,
+        "lambda": 0.5,
+        "last_four_pair_weight": 2.1452550179987144e-18,
+        "last_four_pump_weight": 1.1015278215666715e-08,
+        "purity": 0.8258121487946509,
+        "reference_phi1": 0.6358881766016378,
+        "reference_phi2": 0.21239529438966134,
+        "state_norm": 0.9999999999999729
+      },
+      {
+        "N": 10000.0,
+        "alpha": 100.0,
+        "characteristic_at_1": 0.6414085087005346,
+        "characteristic_at_2": 0.2155629221759413,
+        "cutoff_refinement": null,
+        "function_evaluations": 5558,
+        "gaussian_identity_gap": 0.04630895097465787,
+        "lambda": 0.5,
+        "last_four_pair_weight": 1.0078192414016042e-14,
+        "last_four_pump_weight": 1.0864880987997197e-06,
+        "purity": 0.7685984847475362,
+        "reference_phi1": 0.6358881766016378,
+        "reference_phi2": 0.21239529438966134,
+        "state_norm": 0.9999999999998221
+      },
+      {
+        "N": 1000000.0,
+        "alpha": 1000.0,
+        "characteristic_at_1": 0.6366920712061462,
+        "characteristic_at_2": 0.21287584878164442,
+        "cutoff_refinement": [
+          1.1285872236754813e-10,
+          5.5037030488591654e-11
+        ],
+        "function_evaluations": 5642,
+        "gaussian_identity_gap": 0.048545504043489424,
+        "lambda": 0.5,
+        "last_four_pair_weight": 3.3170942134252545e-14,
+        "last_four_pump_weight": 1.8311098613913068e-06,
+        "purity": 0.7592807883258951,
+        "reference_phi1": 0.6358881766016378,
+        "reference_phi2": 0.21239529438966134,
+        "state_norm": 0.9999999999997581
+      }
+    ],
+    "scope": "Numerical truncation and refinement diagnostics; the asymptotic law follows from a bounded measurement and the state theorem."
+  },
+  "groups": 5,
+  "independent_readout": {
+    "gaussian_quadrature_order": 180,
+    "matrix_elements": "Infinite displacement matrix elements via Laguerre polynomials, not an exponentiated truncated readout.",
+    "pair_cutoff": 192,
+    "rows": [
+      {
+        "analytic_value": 0.9370733006179083,
+        "fock_characteristic_real": 0.9370733006179085,
+        "imaginary_residual": 5.237935318970589e-23,
+        "lambda": 0.1,
+        "omitted_norm_weight": 1.1102230246251565e-16,
+        "xi": 0.5
+      },
+      {
+        "analytic_value": 0.7711276818264614,
+        "fock_characteristic_real": 0.7711276818264614,
+        "imaginary_residual": 4.85397407524491e-21,
+        "lambda": 0.1,
+        "omitted_norm_weight": 1.1102230246251565e-16,
+        "xi": 1.0
+      },
+      {
+        "analytic_value": 0.3539921573161022,
+        "fock_characteristic_real": 0.3539921573161022,
+        "imaginary_residual": 4.193278821263452e-20,
+        "lambda": 0.1,
+        "omitted_norm_weight": 1.1102230246251565e-16,
+        "xi": 2.0
+      },
+      {
+        "analytic_value": 0.9250700363773783,
+        "fock_characteristic_real": 0.9250700363773784,
+        "imaginary_residual": 4.90206578680653e-19,
+        "lambda": 0.25,
+        "omitted_norm_weight": 1.1102230246251565e-16,
+        "xi": 0.5
+      },
+      {
+        "analytic_value": 0.7342604198709117,
+        "fock_characteristic_real": 0.734260419870912,
+        "imaginary_residual": 1.5704479661696117e-18,
+        "lambda": 0.25,
+        "omitted_norm_weight": 1.1102230246251565e-16,
+        "xi": 1.0
+      },
+      {
+        "analytic_value": 0.30037230591008524,
+        "fock_characteristic_real": 0.30037230591008557,
+        "imaginary_residual": 2.6016095193897813e-18,
+        "lambda": 0.25,
+        "omitted_norm_weight": 1.1102230246251565e-16,
+        "xi": 2.0
+      },
+      {
+        "analytic_value": 0.8856871294008439,
+        "fock_characteristic_real": 0.8856871294008443,
+        "imaginary_residual": 4.945421145223377e-19,
+        "lambda": 0.5,
+        "omitted_norm_weight": -2.220446049250313e-16,
+        "xi": 0.5
+      },
+      {
+        "analytic_value": 0.6358881766016378,
+        "fock_characteristic_real": 0.6358881766016387,
+        "imaginary_residual": 1.61830008876861e-18,
+        "lambda": 0.5,
+        "omitted_norm_weight": -2.220446049250313e-16,
+        "xi": 1.0
+      },
+      {
+        "analytic_value": 0.21239529438966134,
+        "fock_characteristic_real": 0.2123952943896624,
+        "imaginary_residual": 3.2451822119011264e-18,
+        "lambda": 0.5,
+        "omitted_norm_weight": -2.220446049250313e-16,
+        "xi": 2.0
+      }
+    ]
+  },
+  "physical_readout_and_resolution": {
+    "lipschitz_diagnostic_max_ratio": 0.514469125530676,
+    "runs": [
+      {
+        "alpha": 10.0,
+        "phase_model_phi1": 0.6306989360730602,
+        "phase_model_phi2": 0.20895575420356316,
+        "physical_squeezed_quadrature_scale": 0.15617376188860604,
+        "with_fixed_additive_std_0_1_gap_at_xi1": 0.11642337134195634,
+        "with_matched_additive_std_exp_minus_r_gap_at_xi1": 0.08668087748335981
+      },
+      {
+        "alpha": 100.0,
+        "phase_model_phi1": 0.635359373206434,
+        "phase_model_phi2": 0.21204233176810097,
+        "physical_squeezed_quadrature_scale": 0.04993761694389223,
+        "with_fixed_additive_std_0_1_gap_at_xi1": 0.01924465384583429,
+        "with_matched_additive_std_exp_minus_r_gap_at_xi1": 0.08668087748335981
+      },
+      {
+        "alpha": 1000.0,
+        "phase_model_phi1": 0.6358351969594284,
+        "phase_model_phi2": 0.21235990549575293,
+        "physical_squeezed_quadrature_scale": 0.015809412247806513,
+        "with_fixed_additive_std_0_1_gap_at_xi1": 2.930956882660596e-10,
+        "with_matched_additive_std_exp_minus_r_gap_at_xi1": 0.08668087748335981
+      },
+      {
+        "alpha": 10000.0,
+        "phase_model_phi1": 0.6358828776438972,
+        "phase_model_phi2": 0.21239175457133402,
+        "physical_squeezed_quadrature_scale": 0.004999937501171851,
+        "with_fixed_additive_std_0_1_gap_at_xi1": 1.9678984650984563e-88,
+        "with_matched_additive_std_exp_minus_r_gap_at_xi1": 0.08668087748335981
+      }
+    ],
+    "scope": "Ideal phase-referenced homodyne is a specified measurement. Fixed additive readout noise removes this scaled signal as N increases; no hardware operating window is inferred."
+  },
+  "prior_scientific_modules_imported": false,
+  "shear_and_certificate": {
+    "covariance": "Matrix([[1/2, l*z, 0, 0], [l*z, 2*l**2*z**2 + 1/2, 0, 0], [0, 0, 2*l**2*z**2 + 1/2, -l*z], [0, 0, -l*z, 1/2]])",
+    "proof_scope": "The non-Gaussian witness concerns individual Gaussian states, including mixed ones, not their convex hull.",
+    "rows": [
+      {
+        "all_gaussian_trace_distance_lower": 8.798749769677921e-07,
+        "gaussian_identity_gap": 8.798749769677921e-06,
+        "lambda": 0.1,
+        "limiting_characteristic": 0.9768724472684659,
+        "xi": 0.3
+      },
+      {
+        "all_gaussian_trace_distance_lower": 3.979232028357742e-05,
+        "gaussian_identity_gap": 0.00039792320283577417,
+        "lambda": 0.1,
+        "limiting_characteristic": 0.7711276818264614,
+        "xi": 1.0
+      },
+      {
+        "all_gaussian_trace_distance_lower": 2.3900918746851707e-05,
+        "gaussian_identity_gap": 0.00023900918746851707,
+        "lambda": 0.1,
+        "limiting_characteristic": 0.3539921573161022,
+        "xi": 2.0
+      },
+      {
+        "all_gaussian_trace_distance_lower": 0.00044276919436799113,
+        "gaussian_identity_gap": 0.004427691943679911,
+        "lambda": 0.5,
+        "limiting_characteristic": 0.9564675248831381,
+        "xi": 0.3
+      },
+      {
+        "all_gaussian_trace_distance_lower": 0.0048893320535686995,
+        "gaussian_identity_gap": 0.04889332053568699,
+        "lambda": 0.5,
+        "limiting_characteristic": 0.6358881766016378,
+        "xi": 1.0
+      },
+      {
+        "all_gaussian_trace_distance_lower": 0.0004070141975274262,
+        "gaussian_identity_gap": 0.004070141975274262,
+        "lambda": 0.5,
+        "limiting_characteristic": 0.21239529438966134,
+        "xi": 2.0
+      },
+      {
+        "all_gaussian_trace_distance_lower": 0.004049484854589949,
+        "gaussian_identity_gap": 0.04049484854589949,
+        "lambda": 1.0,
+        "limiting_characteristic": 0.9000929715788686,
+        "xi": 0.3
+      },
+      {
+        "all_gaussian_trace_distance_lower": 0.008175098692698718,
+        "gaussian_identity_gap": 0.08175098692698718,
+        "lambda": 1.0,
+        "limiting_characteristic": 0.449640841751367,
+        "xi": 1.0
+      },
+      {
+        "all_gaussian_trace_distance_lower": 0.0002962224486455521,
+        "gaussian_identity_gap": 0.0029622244864555207,
+        "lambda": 1.0,
+        "limiting_characteristic": 0.12262648039048078,
+        "xi": 2.0
+      }
+    ]
+  },
+  "status": "PASS"
+}

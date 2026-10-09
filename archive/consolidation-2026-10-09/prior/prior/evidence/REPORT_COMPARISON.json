@@ -1,0 +1,15 @@
+{
+  "all_scientific_assertions_pass": true,
+  "byte_identical": false,
+  "differences": [
+    {
+      "absolute_difference": 1.1796119636642288e-16,
+      "first": 0.012348127631241101,
+      "kind": "numeric",
+      "path": "/crossover_diagnostics/1/state_norm_error_to_limit_truncation",
+      "repeat": 0.012348127631240984
+    }
+  ],
+  "differing_fields": 1,
+  "maximum_absolute_difference": 1.1796119636642288e-16
+}

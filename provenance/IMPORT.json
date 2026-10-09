@@ -1,0 +1,14 @@
+{
+  "archive": "archive/consolidation-2026-10-09",
+  "archive_manifest_sha256": "ef5ad49059d165f3edb1a9ac3bd418d625cea2080322e58f218ad5566a1c9dec",
+  "file_count": 60,
+  "initial_main": "d5aa0802128f6f3389591145a431ef1cf64c7fa7",
+  "initial_tree": "ec7437bccf0eab9f453ec8c973a6795116546915",
+  "license_git_blob": "e17a781bf47c4aadf18b68fc593846a1193b86c1",
+  "license_sha256": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
+  "manifests": 3,
+  "package_name": "quantized_pump_consolidation_2026-10-09.zip",
+  "package_sha256": "944bfc315fe033c3951333638cbdfb229c7c3581b42ca9c49dc85af4b499f802",
+  "repository": "GoGoKo699/Quantum-Pump-State-Crossover",
+  "scope": "Only the authorized coherent-pump package; no external PDF or other project imported."
+}

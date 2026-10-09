@@ -1,0 +1,27 @@
+[
+  {
+    "name": "HS25",
+    "url": "https://arxiv.org/pdf/2503.18828",
+    "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2503.18828 (Caused by NameResolutionError(\"HTTPSConnection(host='arxiv.org', port=443): Failed to resolve 'arxiv.org' ([Errno -3] Temporary failure in name resolution)\"))"
+  },
+  {
+    "name": "HS25_html",
+    "url": "https://arxiv.org/html/2503.18828v2",
+    "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /html/2503.18828v2 (Caused by NameResolutionError(\"HTTPSConnection(host='arxiv.org', port=443): Failed to resolve 'arxiv.org' ([Errno -3] Temporary failure in name resolution)\"))"
+  },
+  {
+    "name": "CQ24",
+    "url": "https://arxiv.org/pdf/2312.09239v2",
+    "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2312.09239v2 (Caused by NameResolutionError(\"HTTPSConnection(host='arxiv.org', port=443): Failed to resolve 'arxiv.org' ([Errno -3] Temporary failure in name resolution)\"))"
+  },
+  {
+    "name": "HZ84",
+    "url": "https://journals.aps.org/pra/pdf/10.1103/PhysRevA.29.1275",
+    "error": "HTTPSConnectionPool(host='journals.aps.org', port=443): Max retries exceeded with url: /pra/pdf/10.1103/PhysRevA.29.1275 (Caused by NameResolutionError(\"HTTPSConnection(host='journals.aps.org', port=443): Failed to resolve 'journals.aps.org' ([Errno -3] Temporary failure in name resolution)\"))"
+  },
+  {
+    "name": "GIF22",
+    "url": "https://arxiv.org/pdf/2111.13799",
+    "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2111.13799 (Caused by NameResolutionError(\"HTTPSConnection(host='arxiv.org', port=443): Failed to resolve 'arxiv.org' ([Errno -3] Temporary failure in name resolution)\"))"
+  }
+]

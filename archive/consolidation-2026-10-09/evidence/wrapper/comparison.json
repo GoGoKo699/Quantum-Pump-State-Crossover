@@ -1,0 +1,219 @@
+{
+  "groups": 5,
+  "measurement_control": {
+    "finite_pure_target_fidelity": 0.9846239334596691,
+    "lambda": 0.5,
+    "limit_purity": 0.757872156141312,
+    "limit_target_fidelity": 0.8427384585761093,
+    "limit_trace_distance_lower_from_target_projector": 0.1572615414238907,
+    "max_count_difference_after_passive_beam_splitter": 0.0,
+    "scope": "Total-number-conserving measurements and vacuum ancillas only. Additional phase references or active processing are not included.",
+    "two_mode_hilbert_dimension": 81
+  },
+  "number_marking": {
+    "comparisons": [
+      {
+        "alpha": 10.0,
+        "analytic_upper": 0.019885959186813885,
+        "joint_state_distance": 0.015720728449621236,
+        "lambda": 0.1,
+        "quadrature_error_on_squared_distance": 3.079951987200442e-15
+      },
+      {
+        "alpha": 10.0,
+        "analytic_upper": 0.019700001718904785,
+        "joint_state_distance": 0.01726248277577469,
+        "lambda": 0.5,
+        "quadrature_error_on_squared_distance": 3.4804428449888357e-15
+      },
+      {
+        "alpha": 10.0,
+        "analytic_upper": 0.021230405465843115,
+        "joint_state_distance": 0.01750275555405778,
+        "lambda": 1.0,
+        "quadrature_error_on_squared_distance": 3.031998936600133e-15
+      },
+      {
+        "alpha": 100.0,
+        "analytic_upper": 0.0017923035047124822,
+        "joint_state_distance": 0.0017459499559536555,
+        "lambda": 0.1,
+        "quadrature_error_on_squared_distance": 3.624037208288221e-17
+      },
+      {
+        "alpha": 100.0,
+        "analytic_upper": 0.0017884441648763152,
+        "joint_state_distance": 0.0017633746604341157,
+        "lambda": 0.5,
+        "quadrature_error_on_squared_distance": 3.8145596017121795e-17
+      },
+      {
+        "alpha": 100.0,
+        "analytic_upper": 0.0018036934961412172,
+        "joint_state_distance": 0.0017656037136226158,
+        "lambda": 1.0,
+        "quadrature_error_on_squared_distance": 4.686499110368112e-17
+      },
+      {
+        "alpha": 1000.0,
+        "analytic_upper": 0.00017702481773002458,
+        "joint_state_distance": 0.00017655600770297503,
+        "lambda": 0.1,
+        "quadrature_error_on_squared_distance": 4.437679304001269e-17
+      },
+      {
+        "alpha": 1000.0,
+        "analytic_upper": 0.00017698393253672408,
+        "joint_state_distance": 0.00017673252823897904,
+        "lambda": 0.5,
+        "quadrature_error_on_squared_distance": 4.380174173060239e-18
+      },
+      {
+        "alpha": 1000.0,
+        "analytic_upper": 0.0001771363648514807,
+        "joint_state_distance": 0.0001767546446628186,
+        "lambda": 1.0,
+        "quadrature_error_on_squared_distance": 7.087032513920895e-17
+      }
+    ],
+    "extra_norm_upper": "[sqrt(2)+exp(-2r)*sqrt(2+48lambda^2+480lambda^4)]/(8alpha)",
+    "finite_polynomial_dimension": 49,
+    "operator": "B_alpha=S(-r)n_a S(r)/(2alpha)=[exp(2r)R-exp(-2r)L-2I]/(8alpha)"
+  },
+  "onset_comparison": {
+    "eighth_order_impurity_at_logarithmic_gain_limit": "0",
+    "limiting_lambda": 0.07177444824305804,
+    "logarithmic_offset": -0.554785198638437,
+    "matched_roots": [
+      {
+        "CQ_eighth_order_root_tau": 0.05469930573084865,
+        "alpha": 30.0,
+        "controlled_crossover_estimate_tau": 0.04838069800851934,
+        "distance_to_asymptotic_lambda": 0.022918210557553678,
+        "exact_frame_onset_tau": 0.05277635881841187,
+        "onset_lambda": 0.09469265880061171,
+        "within_0_001_of_limit": false
+      },
+      {
+        "CQ_eighth_order_root_tau": 0.022923256708994103,
+        "alpha": 100.0,
+        "controlled_crossover_estimate_tau": 0.020338253706021773,
+        "distance_to_asymptotic_lambda": 0.00941055061289689,
+        "exact_frame_onset_tau": 0.020944332694103923,
+        "onset_lambda": 0.08118499885595493,
+        "within_0_001_of_limit": false
+      },
+      {
+        "CQ_eighth_order_root_tau": 0.004209489494053413,
+        "alpha": 1000.0,
+        "controlled_crossover_estimate_tau": 0.0031773550662141346,
+        "distance_to_asymptotic_lambda": 0.0014880389075568184,
+        "exact_frame_onset_tau": 0.003187597493990282,
+        "onset_lambda": 0.07326248715061486,
+        "within_0_001_of_limit": false
+      },
+      {
+        "CQ_eighth_order_root_tau": 0.0007569648787898789,
+        "alpha": 10000.0,
+        "controlled_crossover_estimate_tau": 0.0004327864657429798,
+        "distance_to_asymptotic_lambda": 0.00020594738371343402,
+        "exact_frame_onset_tau": 0.0004329297038485577,
+        "onset_lambda": 0.07198039562677147,
+        "within_0_001_of_limit": true
+      }
+    ],
+    "qualification": "Finite roots are our recalculation, not digitized source data; source cutoff-normalized target tends to this fixed target.",
+    "target_fixed_impurity": 0.01
+  },
+  "prior_scientific_modules_imported": false,
+  "source_dictionary": {
+    "attribution": "CQ Appendix C Eqs. 99-100; the fixed-gain resummation and limit here are reconstructions, not quoted source results.",
+    "fixed_gain_entangled_amplitude": "(r/2 - sinh(2*r)/4)/a",
+    "fixed_gain_pump_only_amplitude": "(1/4 - cosh(2*r)/4)/a",
+    "leading_inverse_amplitude_impurity_series": "2*r**6/9 + 4*r**8/45 + 82*r**10/4725 + O(r**12)",
+    "self_consistent_frame": [
+      {
+        "alpha": 30.0,
+        "gain_difference": 0.007707719223360776,
+        "gain_difference_bound": 0.015472243673055087,
+        "lambda": 0.5,
+        "pump_amplitude_shift": 0.4921935251390856,
+        "relative_invariant_error": 1.768461920114027e-15
+      },
+      {
+        "alpha": 300.0,
+        "gain_difference": 0.0008238429245492895,
+        "gain_difference_bound": 0.0016483574273838514,
+        "lambda": 0.5,
+        "pump_amplitude_shift": 0.4991751232942714,
+        "relative_invariant_error": 0.0
+      },
+      {
+        "alpha": 3000.0,
+        "gain_difference": 8.32063669129468e-05,
+        "gain_difference_bound": 0.00016641964480772702,
+        "lambda": 0.5,
+        "pump_amplitude_shift": 0.4999167832269327,
+        "relative_invariant_error": 0.0
+      }
+    ],
+    "source_tau8_subleading_term": "-2*r^8/(9*alpha^4) in impurity; not in leading alpha^-2 term"
+  },
+  "state_comparison": {
+    "numerical_warning": "Finite-cutoff tests; the trace-norm theorem is analytical. Physical-count conversion diagnostic at alpha=10 uses 18432 matrix amplitudes.",
+    "runs": [
+      {
+        "alpha": 10.0,
+        "analytic_distance_upper": 0.6025705615371344,
+        "exact_purity": 0.8258121487946128,
+        "exact_tmsv_fidelity": 0.8855729652158899,
+        "frame_amplitudes": 4608,
+        "frame_pair_cutoff": 96,
+        "function_evaluations": 3926,
+        "lambda": 0.5,
+        "phase_model_purity": 0.7513237881845015,
+        "phase_model_tmsv_fidelity": 0.8375764145240647,
+        "phase_quadrature_refinement": 5.4931172536392605e-11,
+        "physical_count_total_variation_if_tested": 0.019598175523999978,
+        "pump_cutoff": 48,
+        "retained_phase_model_trace": 0.9999999999956233,
+        "trace_distance_to_phase_model": 0.04858798740319905
+      },
+      {
+        "alpha": 100.0,
+        "analytic_distance_upper": 0.09077618147489741,
+        "exact_purity": 0.768598484747212,
+        "exact_tmsv_fidelity": 0.8499704884740449,
+        "frame_amplitudes": 4608,
+        "frame_pair_cutoff": 96,
+        "function_evaluations": 4166,
+        "lambda": 0.5,
+        "phase_model_purity": 0.7571910901160582,
+        "phase_model_tmsv_fidelity": 0.8422060558908462,
+        "phase_quadrature_refinement": 3.274522402023839e-11,
+        "physical_count_total_variation_if_tested": null,
+        "pump_cutoff": 48,
+        "retained_phase_model_trace": 0.9999999999973019,
+        "trace_distance_to_phase_model": 0.008011320625867
+      },
+      {
+        "alpha": 1000.0,
+        "analytic_distance_upper": 0.01217268271848744,
+        "exact_purity": 0.7592807883252095,
+        "exact_tmsv_fidelity": 0.843721914085771,
+        "frame_amplitudes": 4608,
+        "frame_pair_cutoff": 96,
+        "function_evaluations": 4238,
+        "lambda": 0.5,
+        "phase_model_purity": 0.7578037818316898,
+        "phase_model_tmsv_fidelity": 0.8426850538089953,
+        "phase_quadrature_refinement": 3.104072021909434e-11,
+        "physical_count_total_variation_if_tested": null,
+        "pump_cutoff": 48,
+        "retained_phase_model_trace": 0.9999999999974513,
+        "trace_distance_to_phase_model": 0.0010927434497795072
+      }
+    ]
+  },
+  "status": "PASS"
+}
