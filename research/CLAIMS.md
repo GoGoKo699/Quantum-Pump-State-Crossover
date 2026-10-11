@@ -16,7 +16,7 @@ two-mode squeezed vacuum (TMSV)
 
 ```math
 |\mathrm{TMSV}_r\rangle=\sum_{k\ge0}s_k|k,k\rangle,
-\qquad s_k=\operatorname{sech}r\,\tanh^k r.
+\qquad s_k=\mathrm{sech}r\,\tanh^k r.
 ```
 
 The crossover coordinate is $`\lambda=(e^{2r}-1)/(8\alpha)\ge0`$. The

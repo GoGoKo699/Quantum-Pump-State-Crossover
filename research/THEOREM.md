@@ -15,7 +15,7 @@ $$
 |{\rm TMSV}_r\rangle=S(r)|00\rangle
 =\sum_{k\ge0}s_k|k,k\rangle,\qquad
 S(r)=e^{r(a^\dagger b^\dagger-ab)},\quad
-s_k=\operatorname{sech}r\,\tanh^k r.
+s_k=\mathrm{sech}r\,\tanh^k r.
 $$
 
 Fix a finite crossover coordinate lambda>=0 and let alpha increase at
@@ -223,7 +223,7 @@ frequency $\xi$, each coherent component has characteristic function
 $e^{-\xi^2/4-i\sqrt2\lambda u\xi}$. Hence
 
 $$
-\operatorname{Tr}\omega_{p,\lambda}e^{i\xi X_d}
+\mathrm{Tr}\omega_{p,\lambda}e^{i\xi X_d}
 =e^{-\xi^2/4}\int_0^\infty e^{-u-i\sqrt2\lambda\xi u}\,du
 =\frac{e^{-\xi^2/4}}{1+i\sqrt2\lambda\xi}.
 $$
@@ -232,7 +232,7 @@ Writing $\widetilde\rho_{c,\alpha}=D_c(-\alpha)\rho_cD_c(\alpha)$ for
 the exact displaced pump state, contraction of (5) gives
 
 $$
-\left|\operatorname{Tr}\widetilde\rho_{c,\alpha}e^{i\xi X_d}
+\left|\mathrm{Tr}\widetilde\rho_{c,\alpha}e^{i\xi X_d}
 -\frac{e^{-\xi^2/4}}{1+i\sqrt2\lambda\xi}\right|
 \le2\epsilon_\alpha.
 $$
@@ -246,7 +246,7 @@ Its purity is
 $$
 \mathcal P(\lambda)=\int_0^\infty e^{-z-\lambda^2z^2}dz
 =\frac{\sqrt\pi}{2\lambda}e^{1/(4\lambda^2)}
-\operatorname{erfc}(1/(2\lambda)),\qquad \mathcal P(0)=1. \tag{14}
+\mathrm{erfc}(1/(2\lambda)),\qquad \mathcal P(0)=1. \tag{14}
 $$
 
 The exact pump and signal–idler purities agree and differ from (14) by at most 4epsilon_alpha. Conditioning on the pump momentum in (2), the signal vacuum probability gives
@@ -291,7 +291,7 @@ reproduces the leading sixth- and eighth-order coefficients in [CQ]. This is a l
 This section is a direct consequence of the state theorem. Let X_-=(x_a-x_b)/sqrt2 be the physically squeezed output quadrature. Define the dimensionless, alpha-dependent record Y_alpha=exp(r_alpha) X_-. Its characteristic function is the expectation of a bounded unitary:
 
 $$
-C_\alpha(\xi)=\operatorname{Tr}\rho_{ab}
+C_\alpha(\xi)=\mathrm{Tr}\rho_{ab}
  e^{i\xi e^{r_\alpha}X_-}.
 $$
 

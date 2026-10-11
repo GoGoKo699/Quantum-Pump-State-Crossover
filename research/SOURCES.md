@@ -36,7 +36,7 @@ is an empirical numerical criterion.
 Their Hamiltonian $\kappa(abc^\dagger+a^\dagger b^\dagger c)$ is related to
 ours by a phase rotation of one output; equivalently their coherent pump
 phase can be chosen as $\beta=i\alpha$. Their overlap is
-$\mathcal O=\sqrt{\operatorname{Tr}(\rho_{\rm exact}\rho_{\rm target})}$,
+$\mathcal O=\sqrt{\mathrm{Tr}(\rho_{\rm exact}\rho_{\rm target})}$,
 so $\mathcal O^2$ is our squared-overlap fidelity. A 99% overlap threshold
 therefore differs from a 1% pump-purity loss. The present
 [validity window](VALIDITY_WINDOW.md) quantifies the simultaneous count/state

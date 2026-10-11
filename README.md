@@ -88,7 +88,7 @@ the controlled approximation
 ```math
 \sigma_{ab}=\sum_{k,l\ge0}s_ks_l e^{-(k-l)^2/(8N)}
 |k,k\rangle\langle l,l|,
-\qquad s_k=\operatorname{sech}r\,\tanh^k r.
+\qquad s_k=\mathrm{sech}r\,\tanh^k r.
 ```
 
 The Gaussian phase average comes from tracing an initially pure quantum pump.
