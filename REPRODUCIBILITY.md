@@ -4,7 +4,6 @@ Use Python 3.13 with the pinned dependencies:
 
 ```bash
 python -m pip install -r requirements.txt
-python scripts/build_reading.py --check
 python scripts/verify.py --output-dir /absolute/path/to/new-results
 ```
 
@@ -17,7 +16,9 @@ canonical references.
 
 | Component | What it checks |
 |---|---|
-| State and measurement checks | Residual generators, finite-state evolution, number marking, count laws, purity, fidelity, quadrature statistics, and cutoff refinement |
+| `scripts/check_consolidation.py` | Gaussian-state witness, quadrature statistics, readout resolution, cutoff refinement, and remainder bounds |
+| `scripts/check_comparison.py` | Source-frame dictionary, number marking, reduced-state count and fidelity comparisons, onset scaling, and passive measurements |
+| `scripts/check_pilot.py` · `scripts/pump_model.py` | Residual generators, finite-state evolution, conserved-number sectors, and crossover bounds |
 | `scripts/check_proof_review.py` | Continuous-coordinate remainder norms, energy identities, exact first-crossing certificates, source expansions, and phase-mixture formulas |
 | `scripts/check_manuscript_basis.py` | Finite error domination, count identities, source conventions, changing-frequency witnesses, and the growing-parameter sequence |
 
@@ -63,16 +64,19 @@ values, and `manuscript/figures/generation.json` records rendering versions.
 
 ## Source integrity
 
-`research/THEOREM.md` is generated from the reference theorem through
-`scripts/build_reading.py`. The transformation ledger in
-`provenance/READING.json` hashes the source, output, and every display
-equation. Edit the generation rules and regenerate to update this page.
-Other research pages are maintained directly.
+The research pages are maintained directly, with
+[THEOREM.md](research/THEOREM.md) as the canonical state theorem.
+[integrity.json](verification/integrity.json) records SHA-256 hashes for the
+core scientific implementations, their three reference reports, the theorem,
+and the owner's license. The verifier checks every protected file before
+running the suites, and confirms that execution leaves the complete source
+inventory unchanged.
 
-The verifier checks the 60-file reference package under
-`archive/consolidation-2026-10-09/`, its three manifests, and the owner's
-license. `provenance/IMPORT.json` records the package and archive hashes.
-Reference reports and scientific tolerances are preserved; execution
-receipts for a PR head and merged main are recorded separately in the PR.
+The five canonical reports are [consolidation.json](verification/consolidation.json),
+[comparison.json](verification/comparison.json), [pilot.json](verification/pilot.json),
+[proof-review.json](verification/proof-review.json), and
+[manuscript-basis.json](verification/manuscript-basis.json). Reference reports
+and scientific tolerances are preserved; execution receipts for a PR head
+and merged main are recorded separately in the PR.
 
 [Sources and attribution](research/SOURCES.md) · [Proof map](research/PROOF_MAP.md)

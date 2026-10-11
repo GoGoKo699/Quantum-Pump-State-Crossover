@@ -15,10 +15,17 @@ import re
 import subprocess
 import sys
 ROOT=Path(__file__).resolve().parents[1]
-ARCHIVE=ROOT/'archive/consolidation-2026-10-09'
+REPOSITORY='https://github.com/GoGoKo699/Quantum-Pump-State-Crossover'
+SCIENTIFIC_SUITES=(
+ ('consolidation','scripts/check_consolidation.py','verification/consolidation.json'),
+ ('comparison','scripts/check_comparison.py','verification/comparison.json'),
+ ('pilot','scripts/check_pilot.py','verification/pilot.json'),
+)
+PROTECTED_PATHS=frozenset(
+ {'LICENSE','research/THEOREM.md','scripts/pump_model.py'}
+ | {path for _,script,reference in SCIENTIFIC_SUITES for path in (script,reference)}
+)
 sys.dont_write_bytecode=True
-sys.path.insert(0,str(ROOT/'scripts'))
-import build_reading
 
 def digest(p:Path)->str:return hashlib.sha256(p.read_bytes()).hexdigest()
 def inventory(root:Path=ROOT)->dict:
@@ -32,37 +39,35 @@ def inventory(root:Path=ROOT)->dict:
 
 def member(base:Path,name:str)->Path:
  p=PurePosixPath(name)
- if p.is_absolute() or '..' in p.parts or '\\' in name:raise ValueError('Unsafe archive path')
+ if p.is_absolute() or '..' in p.parts or '\\' in name:raise ValueError('Unsafe source path')
  f=base/p
- if f.is_symlink() or not f.resolve().is_relative_to(base.resolve()):raise ValueError('Escaping archive path')
+ if f.is_symlink() or not f.resolve().is_relative_to(base.resolve()):raise ValueError('Escaping source path')
  return f
 
-def check_archive()->dict:
- spec=json.loads((ROOT/'provenance/IMPORT.json').read_text())
- if digest(ARCHIVE/'MANIFEST.json')!=spec['archive_manifest_sha256']:raise ValueError('Root manifest changed')
- expected=set(json.loads((ARCHIVE/'MANIFEST.json').read_text()))|{'MANIFEST.json'}
- if set(inventory(ARCHIVE))!=expected:raise ValueError('Archive membership changed')
- manifests=[]
- for m in sorted(ARCHIVE.rglob('MANIFEST.json')):
-  entries=json.loads(m.read_text())
-  for name,v in entries.items():
-   f=member(m.parent,name)
-   if f.stat().st_size!=v['bytes'] or digest(f)!=v['sha256']:raise ValueError('Archived bytes changed: '+name)
-  manifests.append({'path':str(m.relative_to(ARCHIVE)),'members':len(entries)})
- if len(expected)!=spec['file_count'] or len(manifests)!=spec['manifests']:raise ValueError('Archive counts differ')
- if digest(ROOT/'LICENSE')!=spec['license_sha256']:raise ValueError('Owner license changed')
- return {'files':len(expected),'manifests':manifests,'license_unchanged':True}
-
-def check_reading()->int:
- for name,data in build_reading.expected().items():
-  if (ROOT/name).read_bytes()!=data:raise ValueError('Generated page differs: '+name)
- return len(build_reading.RULES)
+def check_integrity(root:Path=ROOT)->dict:
+ """Verify the exact protected path set and every recorded source/report hash."""
+ manifest=member(root,'verification/integrity.json')
+ if not manifest.is_file():raise ValueError('Missing integrity manifest')
+ spec=json.loads(manifest.read_text())
+ if not isinstance(spec,dict) or spec.get('repository')!=REPOSITORY:
+  raise ValueError('Integrity repository identity differs')
+ entries=spec.get('files')
+ if not isinstance(entries,dict) or set(entries)!=PROTECTED_PATHS:
+  raise ValueError('Protected path membership differs')
+ for name,expected in sorted(entries.items()):
+  if not isinstance(expected,str) or re.fullmatch(r'[0-9a-f]{64}',expected) is None:
+   raise ValueError('Invalid protected SHA-256: '+name)
+  f=member(root,name)
+  if not f.is_file():raise ValueError('Missing protected file: '+name)
+  if digest(f)!=expected:raise ValueError('Protected bytes changed: '+name)
+ return {'files':len(entries),'manifest':'verification/integrity.json',
+         'manifest_sha256':digest(manifest),'protected_paths':sorted(entries)}
 
 def check_links()->int:
  count=0
  for f in sorted(ROOT.rglob('*')):
   if not f.is_file() or f.suffix not in ('.md','.txt'):continue
-  if any(x in f.relative_to(ROOT).parts for x in ('archive','.git','.venv')):continue
+  if any(x in f.relative_to(ROOT).parts for x in ('.git','.venv')):continue
   for raw in re.findall(r'\[[^\]\n]*\]\(([^\s)]+)\)',f.read_text()):
    target=raw.split('#',1)[0]
    if not target or re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:',target):continue
@@ -107,20 +112,46 @@ def git_value(*args):
  p=subprocess.run(['git','-C',str(ROOT),*args],text=True,capture_output=True)
  return p.stdout.strip() if p.returncode==0 else None
 
+def run_scientific(out:Path,env:dict)->dict:
+ """Execute all three five-group suites against unchanged canonical reports."""
+ before=inventory();out.mkdir()
+ results=[]
+ for name,script,canonical in SCIENTIFIC_SUITES:
+  output=out/(name+'.json');reference=ROOT/canonical
+  with (out/(name+'.log')).open('xb') as log:
+   result=subprocess.run([sys.executable,str(ROOT/script),'--output',str(output)],
+                         cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=180)
+  item={'suite':name,'returncode':result.returncode,'script':script,
+        'canonical':canonical,'report':output.name,'byte_identical':False}
+  if output.is_file():
+   data=json.loads(output.read_text());ref=json.loads(reference.read_text())
+   item.update(status=data.get('status'),groups=data.get('groups'),
+               byte_identical=output.read_bytes()==reference.read_bytes(),
+               differences=report_differences(ref,data))
+  else:
+   item['differences']=[{'path':'','kind':'missing','reference':canonical,'run':None}]
+  results.append(item)
+ receipt={'scientific_assertions_pass':all(x['returncode']==0 and x.get('status')=='PASS'
+                                         and x.get('groups')==5 for x in results),
+          'canonical_reports_byte_identical':all(x['byte_identical'] for x in results),
+          'source_unchanged':inventory()==before,
+          'groups':sum(x.get('groups',0) for x in results),'source_sha256':before,'suites':results}
+ with (out/'receipt.json').open('x') as f:
+  json.dump(receipt,f,indent=2,sort_keys=True,allow_nan=False);f.write('\n')
+ return receipt
+
 def main():
  ap=argparse.ArgumentParser(description=__doc__)
  ap.add_argument('--output-dir',required=True)
  ap.add_argument('--allow-numeric-report-differences',action='store_true')
  args=ap.parse_args();out=new_output(args.output_dir)
- before=inventory();archive=check_archive();pages=check_reading();links=check_links()
+ before=inventory();integrity=check_integrity();links=check_links()
  out.mkdir(parents=True)
  env=dict(os.environ,OPENBLAS_NUM_THREADS='1',OMP_NUM_THREADS='1',PYTHONDONTWRITEBYTECODE='1')
  with (out/'infrastructure.log').open('xb') as log:
   infra=subprocess.run([sys.executable,str(ROOT/'scripts/check_repository.py'),'--output',str(out/'infrastructure.json')],
                        cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=120)
- with (out/'scientific.log').open('xb') as log:
-  result=subprocess.run([sys.executable,str(ARCHIVE/'verify.py'),'--output-dir',str(out/'scientific')],
-                        cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=600)
+ science=run_scientific(out/'scientific',env)
  with (out/'proof_review.log').open('xb') as log:
   review_run=subprocess.run([sys.executable,str(ROOT/'scripts/check_proof_review.py'),
                              '--output',str(out/'proof_review.json')],
@@ -142,7 +173,6 @@ def main():
  manuscript_differences=report_differences(manuscript_reference,manuscript)
  manuscript_identical=(manuscript_path.exists() and
                        manuscript_path.read_bytes()==manuscript_reference_path.read_bytes())
- p=out/'scientific/receipt.json';science=json.loads(p.read_text()) if p.exists() else {}
  infra_data=json.loads((out/'infrastructure.json').read_text())
  differences=[]
  for suite in science.get('suites',[]):
@@ -157,22 +187,24 @@ def main():
             and manuscript_identical)
  unchanged=inventory()==before
  reviewable=bool(differences) and numeric_only(differences)
- passed=(infra.returncode==0 and assertions and unchanged and
+ infrastructure_pass=(infra.returncode==0 and infra_data.get('status')=='PASS'
+                      and infra_data.get('tests_run')==8)
+ passed=(infrastructure_pass and assertions and unchanged and
          (identical or (args.allow_numeric_report_differences and reviewable)))
  status='PASS' if passed and identical else ('PASS_REQUIRES_NUMERIC_REVIEW' if passed else 'FAIL')
  receipt={'status':status,'repository':'GoGoKo699/Quantum-Pump-State-Crossover',
           'commit':git_value('rev-parse','HEAD'),'tree':git_value('rev-parse','HEAD^{tree}'),
           'index_tree':git_value('write-tree'),'source_sha256':before,'source_files':len(before),
-          'source_unchanged':unchanged,'archive':archive,'reading_pages':pages,'local_links':links,
-          'infrastructure_tests':infra_data.get('tests_run'),'infrastructure_pass':infra.returncode==0,
+          'source_unchanged':unchanged,'integrity':integrity,'local_links':links,
+          'infrastructure_tests':infra_data.get('tests_run'),'infrastructure_pass':infrastructure_pass,
           'scientific_groups':science.get('groups',0)+review.get('test_groups',0)+manuscript.get('test_groups',0),
           'manuscript_basis_groups':manuscript.get('test_groups'),'manuscript_basis_returncode':manuscript_run.returncode,
           'manuscript_basis_reference':'verification/manuscript-basis.json',
           'manuscript_basis_byte_identical':manuscript_identical,
-          'original_scientific_groups':science.get('groups'),'proof_review_groups':review.get('test_groups'),
+          'core_scientific_groups':science.get('groups'),'proof_review_groups':review.get('test_groups'),
           'proof_review_returncode':review_run.returncode,'proof_review_hash_seed':'0','proof_review_reference':'verification/proof-review.json',
           'proof_review_byte_identical':review_identical,'scientific_assertions_pass':assertions,
-          'canonical_reports_byte_identical':identical,'original_wrapper_returncode':result.returncode,
+          'canonical_reports_byte_identical':identical,'scientific_receipt':'scientific/receipt.json',
           'numeric_review_required':not identical,'allow_numeric_report_differences':args.allow_numeric_report_differences,
           'report_differences':differences,'maximum_numeric_absolute_difference':max((e.get('absolute_difference',0) for e in differences),default=0)}
  with (out/'verification.json').open('x') as f:json.dump(receipt,f,indent=2,sort_keys=True,allow_nan=False);f.write('\n')

@@ -127,7 +127,6 @@ Use Python 3.13 with the pinned dependencies:
 
 ```sh
 python -m pip install -r requirements.txt
-python scripts/build_reading.py --check
 python scripts/verify.py --output-dir /absolute/path/to/new-results
 ```
 

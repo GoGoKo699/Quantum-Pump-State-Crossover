@@ -218,6 +218,29 @@ $$
 \omega_{p,\lambda}=\int_0^\infty e^{-u}|-\lambda u\rangle\langle-\lambda u|du.
 $$
 
+For the displaced pump quadrature $X_d=(d+d^\dagger)/\sqrt2$ and a real
+frequency $\xi$, each coherent component has characteristic function
+$e^{-\xi^2/4-i\sqrt2\lambda u\xi}$. Hence
+
+$$
+\operatorname{Tr}\omega_{p,\lambda}e^{i\xi X_d}
+=e^{-\xi^2/4}\int_0^\infty e^{-u-i\sqrt2\lambda\xi u}\,du
+=\frac{e^{-\xi^2/4}}{1+i\sqrt2\lambda\xi}.
+$$
+
+Writing $\widetilde\rho_{c,\alpha}=D_c(-\alpha)\rho_cD_c(\alpha)$ for
+the exact displaced pump state, contraction of (5) gives
+
+$$
+\left|\operatorname{Tr}\widetilde\rho_{c,\alpha}e^{i\xi X_d}
+-\frac{e^{-\xi^2/4}}{1+i\sqrt2\lambda\xi}\right|
+\le2\epsilon_\alpha.
+$$
+
+This bounded-observable estimate establishes the pump's limiting
+non-Gaussian quadrature law for $\lambda>0$. It uses no assumption of
+convergence of unbounded quadrature moments.
+
 Its purity is
 
 $$
