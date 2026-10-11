@@ -1,5 +1,9 @@
 # Manuscript scientific basis
 
+The [tutorial bridge](TUTORIAL_BRIDGE.md) introduces the selected review and
+the route into these results. This page organizes the full claim hierarchy
+for manuscript drafting.
+
 ## Central question and supported answer
 
 **When does a bright coherent pump justify a quantum-state approximation,

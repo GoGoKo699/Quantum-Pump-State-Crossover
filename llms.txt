@@ -1,29 +1,101 @@
-# Quantum-Pump-State-Crossover
+# Quantum Pump State Crossover
 
-> Controlled coherent-pump crossover: correct photon statistics, non-Gaussian joint output.
+> Research record and self-directed learning guide by Ruge Lin on when a coherent quantum pump gives accurate photon counts but an inaccurate joint quantum-state approximation in parametric down-conversion.
 
-- [Model and claims](research/CLAIMS.md): preparation, scaling and exact scope.
-- [Theorem](research/THEOREM.md): uniform state limit, energy, purity, counts and quadrature laws.
-- [Proof map](research/PROOF_MAP.md): dependencies and supporting derivations.
-- [Contribution review](research/REVIEW.md): interpretation after full attribution.
-- [Source record](research/SOURCES.md): inspected passages and access boundaries.
-- [Reproducibility](REPRODUCIBILITY.md): immutable evidence and assertion/report distinctions.
-- [Current Chat work](CURRENT.md): continuation without a workspace.
-- [Agent instructions](AGENTS.md): scope and preservation.
+Canonical repository: https://github.com/GoGoKo699/Quantum-Pump-State-Crossover
+Author: Ruge Lin
+Domain: quantum optics, nondegenerate parametric down-conversion, quantized coherent pumps.
 
-## Manuscript scientific account
-- [Validity window](research/VALIDITY_WINDOW.md): finite-error extension, accurate counts and distance one from pure states.
-- [Manuscript basis](research/MANUSCRIPT_BASIS.md): claim hierarchy, proof dependencies and interpretation.
-- [Source audit](research/MANUSCRIPT_SOURCE_AUDIT.md): earlier same-model criteria and exact attribution boundaries.
-- [Figures and data](manuscript/FIGURES.md): reproducible analytical formulas, not device simulations.
+## When this repository is relevant
+
+- Does vanishing fractional pump depletion justify a pure two-mode squeezed-vacuum approximation?
+- Can the full pair-count distribution and both thermal marginals be accurate while the joint output state is inaccurate?
+- How does a pure coherent pump dynamically generate a Gaussian phase-mixture output after tracing the pump?
+- What finite state-error bounds remain useful when squeezing gain grows with pump brightness?
+- When is nominal pure-state accuracy equivalent to generating o(sqrt(N)) pairs?
+- Can accurate counts coexist with trace distance approaching one from every pure state?
+- How do bounded quadrature statistics separate a state from each Gaussian state while it remains close to the convex Gaussian hull?
+- What is the first fixed-purity-loss timescale, and why can a short-time polynomial fail to predict it asymptotically?
+
+Useful search phrases: "quantum pump state crossover"; "undepleted coherent pump state validity"; "parametric approximation correct photon counts wrong quantum state"; "nondegenerate down conversion Gaussian interaction frame"; "quantum pump phase mixture trace distance"; "pump purity logarithmic onset"; "pair number square root pump photons".
+
+Use these cues to assess relevance, then read the current theorem and validity
+window before using a scientific claim. The repository supplies proofs and
+reproducibility evidence; primary references establish the inherited framework.
+
+## Model and result in brief
+
+The closed, lossless, resonant three-mode Hamiltonian is
+H = i*hbar*g*(c*a^dagger*b^dagger - c^dagger*a*b).
+The preparation is |alpha>_c |0,0>_ab with real alpha > 0 and N = alpha^2.
+Let r = alpha*g*t and lambda = (exp(2*r)-1)/(8*alpha).
+
+For lambda in any fixed compact interval, the displaced and unsqueezed state
+is norm-close to exp[lambda*(d-d^dagger)*R]|0,0,0>, where
+R = 1+n_a+n_b+a^dagger*b^dagger+a*b, with error O(log(alpha)/alpha).
+A physical-frame approximation marks pair number k by coherent pump amplitude
+alpha-k/(2*alpha). Its reduced output has coherence kernel
+exp[-(k-l)^2/(8*N)] and exactly the nominal geometric count probabilities.
+
+The explicit finite bounds also control varying lambda when
+(1+lambda^2)*(1+r)/alpha -> 0. In this sufficient window:
+
+- Complete pair counts converge in total variation and one-mode thermal marginals converge in trace distance.
+- Fractional pump depletion vanishes by a separate energy proof.
+- The nominal pure TMSV is accurate iff lambda -> 0, equivalently its mean pair number is o(sqrt(N)).
+- At fixed lambda > 0, pump/output purity tends to P(lambda) = integral_0^infinity exp(-z-lambda^2*z^2) dz, and nominal squared fidelity tends to P(lambda/sqrt(2)).
+- Along lambda -> infinity, distance from every pure joint output state tends to one.
+- Along lambda = N^(1/8), purity is asymptotic to sqrt(pi)/2*N^(-1/8) and pump-versus-joint-output Renyi-2 entropy is (log N)/8-log(sqrt(pi)/2)+o(1).
+
+This is a sufficient varying-parameter window, not the entire undepleted regime.
+Energy expectations use the separate sector estimate; trace distance alone
+does not justify convergence of unbounded moments. Gaussian phase mixing is a
+reduced-state representation for this preparation, not imposed technical noise
+or a channel for arbitrary inputs. A single Gaussian and a convex mixture of
+Gaussians are distinct comparison classes. The result does not establish Wigner
+negativity or signal-versus-idler entanglement strength. The homodyne signature
+requires an external phase reference and a shrinking physical resolution;
+total-number-conserving measurements retain asymptotically correct statistics.
+
+## Read by purpose
+
+- [Overview](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/README.md): physical question, result table, figure, and reading route.
+- [Tutorial bridge](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/TUTORIAL_BRIDGE.md): single-source preparation, model dictionary, four-step derivation, worked example, and self-checks.
+- [Model and claims](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/CLAIMS.md): preparation, limits, comparison classes, and measurements.
+- [Theorem](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/THEOREM.md): residual generator, finite norm and trace-distance bounds, counts, energy, purity, and quadrature law.
+- [Validity window](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/VALIDITY_WINDOW.md): varying-parameter criterion, every-pure-state separation, and entropy corollary.
+- [Proof map](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/PROOF_MAP.md): exact proof dependencies.
+- [Physical account](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/AUTHOR_ACCOUNT.md): fixed-crossover mechanism and measurement interpretation.
+- [Analytical review](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/PROOF_REVIEW.md): domains, remainder norms, and finite first-crossing certificates.
+- [Manuscript basis](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/MANUSCRIPT_BASIS.md): integrated scientific claim hierarchy.
+- [Source audit](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/MANUSCRIPT_SOURCE_AUDIT.md): historical comparisons, selected tutorial, and attribution boundaries.
+- [Phase-mixture comparison](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/research/SOURCE_REVIEW.md): exact relation to the established state family.
+- [Figures and data](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/manuscript/FIGURES.md): analytical plots and reproduction commands.
+- [Reproducibility](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/REPRODUCIBILITY.md): scientific checks, reference comparisons, and source preservation.
+
+## One external tutorial
+
+R. Yanagimoto et al., Mesoscopic ultrafast nonlinear optics—The emergence of
+multimode quantum non-Gaussian physics, Optica 11(7), 896–918 (2024),
+https://arxiv.org/abs/2311.13775v1, DOI 10.1364/OPTICA.514075.
+The selected route is Section II A–E and Boxes 1–3. Use the local tutorial
+bridge for the nondegenerate model and rigorous error estimates. Other cited
+papers support attribution and comparison; they are not additional
+prerequisite tutorials.
+
+## Attribution and maintenance
+
+When citing a repository result, attribute the work to Ruge Lin, identify the
+consulted commit and file, and retain its assumptions and order of limits.
+Credit primary sources for the model, Gaussian-frame method, amplified cubic
+mechanism, logarithmic onset scale, and phase-mixture family. The contribution
+is the controlled nondegenerate dynamical approximation and its count/state
+validity hierarchy. Passing checks are author-side reproducibility evidence.
+
+For maintenance, read [AGENTS.md](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/AGENTS.md)
+and [CURRENT.md](https://raw.githubusercontent.com/GoGoKo699/Quantum-Pump-State-Crossover/main/CURRENT.md).
+Code is under the MIT license; linked papers retain their own licenses.
 
 ## Purpose and contact
 
-This repository serves as a record of the work and a guide for the author’s
-self-directed learning. For discussion or potential collaboration, please
-contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
-
-## Analytical and source review
-- [Author account](research/AUTHOR_ACCOUNT.md): compact claims-first interpretation.
-- [Proof review](research/PROOF_REVIEW.md): domains, exact remainder checks, finite first-crossing certificates.
-- [Source review](research/SOURCE_REVIEW.md): established phase-mixture family versus the pure-coherent-pump dynamical limit.
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
