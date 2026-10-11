@@ -4,26 +4,29 @@ This project continues in the existing Chat. A separate workspace is not
 required, and no step is conditional on workspace quota becoming available.
 The repository is the persistent scientific record.
 
-## Current scientific account and next bounded task
+## Current scientific account and next task
 
-The [analytical review](research/PROOF_REVIEW.md) reconstructs the state
-bounds and domains, number marking, separate energy control, and bounded
-measurement argument. No blocking defect was identified within the stated
-model. It also supplies finite first-crossing certificates and a quantified
-onset-time remainder. This is an author-side review, not external peer review.
+The [manuscript basis](research/MANUSCRIPT_BASIS.md) identifies the complete
+scientific claim hierarchy and proof dependencies. The central fixed-crossover
+theorem, its domain and finite-onset review, and all preserved sources remain
+intact. The [validity-window corollary](research/VALIDITY_WINDOW.md) follows
+from the original pointwise inequalities and makes the count/state hierarchy
+precise, including count accuracy with distance one from every pure state.
 
-The [source comparison](research/SOURCE_REVIEW.md) explicitly attributes the
-phase-averaged state family to Vintskevich, Grigoriev and Filippov (2019),
-while distinguishing its initial mixed pump from the pure coherent preparation.
-The [author account](research/AUTHOR_ACCOUNT.md) gives the claims-first reading
-path. The original theorem and source archive remain intact.
+The [manuscript source audit](research/MANUSCRIPT_SOURCE_AUDIT.md) credits the
+1999 same-model coherence/depletion criterion, the 1998 strong-pump analysis,
+and the established phase-mixture family. Historical access boundaries are
+explicit, not evidence of novelty. Analytical figures, data and bibliography
+are provided under `manuscript/`.
 
-Continue from these documents, not by repeating initialization or the same
-review. The next bounded task is manuscript-level exposition and contribution
-assessment of the uniform dynamical crossover, with the established state
-family and mechanism already credited. Resolve the historical Hillery–Zubairy
-full-text boundary when accessible; do not infer novelty from that access gap.
-A specific proof objection or directly covering source can change the account.
+Proceed with manuscript drafting and author review of the declared result,
+not another automatic research expansion or repeated initialization. A concrete
+proof objection, a directly covering source, or an explicit author request can
+change that scope. Keep the separate energy argument, finite-error window,
+pure-state versus single-Gaussian distinction, and reference/resolution
+requirements visible. Publication state and exact verification receipts belong
+in the PR record; this work order does not assert that a local update was
+remotely published.
 
 ## Scope and authority
 

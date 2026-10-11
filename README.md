@@ -47,21 +47,39 @@ which gives a bounded-measurement separation from every individual Gaussian
 state, including mixed or retuned ones. The physical quadrature scale shrinks
 as $N^{-1/4}$: this is not a fixed-resolution device claim.
 
+## Accuracy window and stronger separation
+
+The same **finite** inequalities also control varying $\lambda_\alpha$ when
+$(1+\lambda_\alpha^2)(1+r)/\alpha\to0$. In that window, the nominal pure
+squeezed state becomes accurate exactly when $\lambda_\alpha\to0$, while
+complete count statistics remain accurate throughout. If $\lambda_\alpha$
+grows to infinity within the window, the exact output approaches trace
+distance one from **every pure state**, despite vanishing fractional depletion.
+
+For example, $\lambda_\alpha=N^{1/8}$ gives mean pair number
+$2N^{5/8}(1+o(1))$, fractional depletion $2N^{-3/8}(1+o(1))$, and purity
+$(\sqrt\pi/2)N^{-1/8}(1+o(1))$. This is a corollary of pointwise error bounds,
+not an extrapolation of a fixed-parameter limit or a device operating claim.
+See the [complete validity-window proof](research/VALIDITY_WINDOW.md).
+
 ## Read the result
 
 | Question | Account |
 |---|---|
-| What is the compact physical account? | [Author account](research/AUTHOR_ACCOUNT.md) |
+| What is the manuscript-level scientific account? | [Manuscript basis](research/MANUSCRIPT_BASIS.md) |
+| What is the compact fixed-crossover account? | [Author account](research/AUTHOR_ACCOUNT.md) |
 | What is the model, claim, and order of limits? | [Model and claims](research/CLAIMS.md) |
 | What are the complete proofs and error bounds? | [Self-contained theorem](research/THEOREM.md) |
 | Which proof supports each conclusion? | [Proof map](research/PROOF_MAP.md) |
 | What checks the domains and finite onset bounds? | [Analytical review](research/PROOF_REVIEW.md) |
 | What is additional after attribution? | [Contribution assessment](research/REVIEW.md) |
-| Which primary sources were actually inspected? | [Source record](research/SOURCES.md) and [phase-mixture comparison](research/SOURCE_REVIEW.md) |
+| Which primary sources were actually inspected? | [Manuscript source audit](research/MANUSCRIPT_SOURCE_AUDIT.md), [source record](research/SOURCES.md), and [phase-mixture comparison](research/SOURCE_REVIEW.md) |
+| How are the analytical figures generated? | [Figures and data](manuscript/FIGURES.md) |
 | How are the original calculations reproduced? | [Reproducibility](REPRODUCIBILITY.md) |
 
 The model, quantum-pump mechanism, Gaussian interaction frames, and historical
-high-gain restrictions are established. The phase-averaged squeezed-state
+high-gain restrictions are established. D’Ariano, Paris and Sacchi (1999)
+already distinguish pump coherence from depletion in the same model. The phase-averaged squeezed-state
 family also has an explicit predecessor; the present result derives its
 width and validity from a pure coherent pump in the growing-gain limit. The result assessed here is the
 uniformly controlled nondegenerate crossover and the separation of its

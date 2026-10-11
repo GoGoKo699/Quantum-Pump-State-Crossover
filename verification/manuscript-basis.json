@@ -1,0 +1,242 @@
+{
+  "comparison_states": {
+    "finite_states": [
+      {
+        "alpha": 2.0,
+        "cutoff": 38,
+        "discarded_geometric_mass": 9.443744659094275e-17,
+        "lambda": 0.2,
+        "purity": 0.9084613054059116,
+        "squared_fidelity": 0.9480789459068646,
+        "target_distance": 0.08556004990189403
+      },
+      {
+        "alpha": 4.0,
+        "cutoff": 127,
+        "discarded_geometric_mass": 9.657319066868211e-17,
+        "lambda": 0.4,
+        "purity": 0.7984971364258651,
+        "squared_fidelity": 0.8734757510246365,
+        "target_distance": 0.17964601462566704
+      },
+      {
+        "alpha": 8.0,
+        "cutoff": 304,
+        "discarded_geometric_mass": 9.817598264206365e-17,
+        "lambda": 0.5,
+        "purity": 0.7497756525359044,
+        "squared_fidelity": 0.8363411456392984,
+        "target_distance": 0.22169601077773549
+      }
+    ],
+    "independent_integrals": [
+      {
+        "lambda": 0.1,
+        "purity_integral_error": 2.220446049250313e-16,
+        "vacuum_probability_integral_error": 1.1102230246251565e-16
+      },
+      {
+        "lambda": 0.5,
+        "purity_integral_error": 3.3306690738754696e-16,
+        "vacuum_probability_integral_error": 2.220446049250313e-16
+      },
+      {
+        "lambda": 1.0,
+        "purity_integral_error": 1.1102230246251565e-16,
+        "vacuum_probability_integral_error": 0.0
+      },
+      {
+        "lambda": 3.0,
+        "purity_integral_error": 2.7755575615628914e-17,
+        "vacuum_probability_integral_error": 5.551115123125783e-17
+      }
+    ],
+    "scope": "Normalized finite projections of the established family; not exact trilinear simulations."
+  },
+  "exact_algebra": {
+    "CQ_leading_fixed_gain_series": "4*r**8/45 + 2*r**6/9",
+    "eta_bound": "10 B_alpha",
+    "first_domination_polynomial": "4*z**2 + 920*z + 482",
+    "nominal_count_identity": "exact",
+    "scope": "Pointwise inequalities justify varying lambda; no fixed-lambda little-o is extrapolated.",
+    "second_domination_polynomial": "16*z**2 + 784*z + 399"
+  },
+  "growing_sequence": {
+    "evaluation_status": "High-precision evaluations of analytic bounds; not interval arithmetic or high-N simulation.",
+    "fractional_depletion_asymptotic": "2 N^(-3/8)",
+    "lambda": "N^(1/8)",
+    "mean_proof": "Uses the separate conserved-sector energy inequality, not TV alone.",
+    "pair_mean_asymptotic": "2 N^(5/8)",
+    "pump_output_Renyi2_asymptotic": "log(N)/8 - log(sqrt(pi)/2) + o(1)",
+    "rate_of_state_bound": "O(log(N)/N^(1/4))",
+    "rows": [
+      {
+        "B": "0.078741459696078879649913108205266",
+        "count_tv_upper": "0.69344366640132979675987937617313",
+        "depletion_upper": "0.0020000029618818282094776667757822",
+        "epsilon": "0.693425954482063919951230239002",
+        "epsilon_over_comparison_purity": "8.2712012276630515408738647206291",
+        "eta": "0.69344366640132979675987937617313",
+        "gaussian_distance_lower": "0.0",
+        "lambda": "10.0",
+        "log10_N": "8.0",
+        "mean_upper_divided_by_2_alpha_lambda": "1.0000014809409141047388333878911",
+        "pure_distance_lower": "0.0",
+        "purity_comparison": "0.083836184780863415505837348748262",
+        "purity_divided_by_leading_asymptotic": "0.94599004355496148123305880589697",
+        "r": "6.796184128324641549496347347056"
+      },
+      {
+        "B": "0.010685089286415556825705195533277",
+        "count_tv_upper": "0.097530421373590155208512279453995",
+        "depletion_upper": "0.000063245553456327298390091052889548",
+        "epsilon": "0.097530244586068999792220648177055",
+        "epsilon_over_comparison_purity": "3.542447704226173746591138332254",
+        "eta": "0.097530421373590155208512279453995",
+        "gaussian_distance_lower": "0.0",
+        "lambda": "31.622776601683793319988935444327",
+        "log10_N": "12.0",
+        "mean_upper_divided_by_2_alpha_lambda": "1.0000000039996442269500780260003",
+        "pure_distance_lower": "0.35373932643284587533841887361895",
+        "purity_comparison": "0.027531879855195742749819840370651",
+        "purity_divided_by_leading_asymptotic": "0.98240581625350777022633803167896",
+        "r": "9.6744148715440128128923032300468"
+      },
+      {
+        "B": "0.0013554001500439978023854187969748",
+        "count_tv_upper": "0.012572921318714174253763106867228",
+        "depletion_upper": "0.0000020000000000250157568927523525843",
+        "epsilon": "0.012572919550943798004293572918836",
+        "epsilon_over_comparison_purity": "1.4267158973795495058223009223216",
+        "eta": "0.012572921318714174253763106867228",
+        "gaussian_distance_lower": "0.0096470805601636094957045752601757",
+        "lambda": "100.0",
+        "log10_N": "16.0",
+        "mean_upper_divided_by_2_alpha_lambda": "1.0000000000125078784463761762922",
+        "pure_distance_lower": "0.7568865117183706097814841994875",
+        "purity_comparison": "0.008812489980686758820813738650922",
+        "purity_divided_by_leading_asymptotic": "0.99438301044448746066492126779513",
+        "r": "12.552646235816396384215766393109"
+      },
+      {
+        "B": "0.00016431041910828743780706205562653",
+        "count_tv_upper": "0.0015392975305624624253034673217914",
+        "depletion_upper": "0.000000063245553203370086715275491514689",
+        "epsilon": "0.0015392975128847918131074832152972",
+        "epsilon_over_comparison_purity": "0.55023988521796360654753884217551",
+        "eta": "0.0015392975305624624253034673217914",
+        "gaussian_distance_lower": "0.020682702488226315594309183432851",
+        "lambda": "316.22776601683793319988935444327",
+        "log10_N": "20.0",
+        "mean_upper_divided_by_2_alpha_lambda": "1.0000000000000395296613120225894",
+        "pure_distance_lower": "0.90537076214164795335859368091434",
+        "purity_comparison": "0.0027975026061134009864676882764115",
+        "purity_divided_by_leading_asymptotic": "0.99821837291342906435935992392117",
+        "r": "15.430877602052723253473670825945"
+      },
+      {
+        "B": "0.000019309128277404228952021440853104",
+        "count_tv_upper": "0.00018213051530791953001865425808544",
+        "depletion_upper": "0.0000000020000000000000002500003352234712",
+        "epsilon": "0.00018213051513114283437969076142817",
+        "epsilon_over_comparison_purity": "0.20562824089021801674218921591448",
+        "eta": "0.00018213051530791953001865425808544",
+        "gaussian_distance_lower": "0.022040069484879968273027717571905",
+        "lambda": "1000.0",
+        "log10_N": "24.0",
+        "mean_upper_divided_by_2_alpha_lambda": "1.0000000000000001250001676117356",
+        "pure_distance_lower": "0.95982227971312016977339214086374",
+        "purity_comparison": "0.00088572714692618372976564817348725",
+        "purity_divided_by_leading_asymptotic": "0.99943606032245188705453630876961",
+        "r": "18.30910896829526065676078409232"
+      },
+      {
+        "B": "0.00000025065571951436091812110135772095",
+        "count_tv_upper": "0.0000023853209698088514708807177535136",
+        "depletion_upper": "2.0000000000000000000025000000058e-12",
+        "epsilon": "0.0000023853209697911738013510198327437",
+        "epsilon_over_comparison_purity": "0.026916983452362757404204329040072",
+        "eta": "0.0000023853209698088514708807177535136",
+        "gaussian_distance_lower": "0.022219836679030209937309756387575",
+        "lambda": "10000.0",
+        "log10_N": "32.0",
+        "mean_upper_divided_by_2_alpha_lambda": "1.0000000000000000000012500000029",
+        "pure_distance_lower": "0.99009247878397482840509591440328",
+        "purity_comparison": "0.000088617692766824199671702125347431",
+        "purity_divided_by_leading_asymptotic": "0.99994358354155119589895320368053",
+        "r": "24.065571700780374804306387729031"
+      },
+      {
+        "B": "3.6578497165787181721561470605677e-11",
+        "count_tv_upper": "3.5133526827211931100677995521509e-10",
+        "depletion_upper": "2.0000000000000000000000000000002e-18",
+        "epsilon": "3.5133526827211913423008465857821e-10",
+        "epsilon_over_comparison_purity": "0.00039643962105117784660683251067851",
+        "eta": "3.5133526827211931100677995521509e-10",
+        "gaussian_distance_lower": "0.022222221870864731727880876881026",
+        "lambda": "1000000.0",
+        "log10_N": "48.0",
+        "mean_upper_divided_by_2_alpha_lambda": "1.0000000000000000000000000000001",
+        "pure_distance_lower": "0.99905785788411404299071742794245",
+        "purity_comparison": "0.00000088622642545297957029711362553523",
+        "purity_divided_by_leading_asymptotic": "0.99999943581066645214968148591258",
+        "r": "35.578497165750603224395720002453"
+      }
+    ]
+  },
+  "original_scientific_code_imported": false,
+  "quadrature_witness": {
+    "changing_frequency": [
+      {
+        "contrast": 3.0862097477697824e-12,
+        "frequency": 5.0,
+        "ideal_gaussian_gap_lower": 3.0862097477697825e-13,
+        "lambda": 0.2
+      },
+      {
+        "contrast": 0.00407014197527426,
+        "frequency": 2.0,
+        "ideal_gaussian_gap_lower": 0.000407014197527426,
+        "lambda": 0.5
+      },
+      {
+        "contrast": 0.08175098692698718,
+        "frequency": 1.0,
+        "ideal_gaussian_gap_lower": 0.008175098692698718,
+        "lambda": 1.0
+      },
+      {
+        "contrast": 0.19885318151430434,
+        "frequency": 0.3333333333333333,
+        "ideal_gaussian_gap_lower": 0.019885318151430433,
+        "lambda": 3.0
+      },
+      {
+        "contrast": 0.2200110741664818,
+        "frequency": 0.1,
+        "ideal_gaussian_gap_lower": 0.02200110741664818,
+        "lambda": 10.0
+      }
+    ],
+    "exact_positive_polynomial": "16*z**4 + 32*z**3 + 24*z**2",
+    "limiting_gaussian_distance_lower": "1/45",
+    "warning": "Single Gaussian states, not their convex hull; resolution and reference costs are not removed."
+  },
+  "source_dictionary": {
+    "conservation_block_dimensions": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "phase_rotation": "exp(i pi n_a/2)",
+    "source": "D'Ariano--Paris--Sacchi, quant-ph/9902013v1, Sec.4",
+    "source_99_percent_overlap_equals_squared_fidelity": "0.9801",
+    "warning": "Not a 1-percent pump-purity threshold and not a Fano-factor theorem."
+  },
+  "status": "PASS",
+  "test_groups": 5
+}

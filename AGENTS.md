@@ -3,14 +3,19 @@
 Work only in `GoGoKo699/Quantum-Pump-State-Crossover`. The project continues
 in Chat; no workspace is required. Read `CURRENT.md`, `README.md`,
 `research/CLAIMS.md`, `research/THEOREM.md`, `research/PROOF_MAP.md`,
-`research/REVIEW.md`, `research/SOURCES.md`, and `REPRODUCIBILITY.md` first.
+`research/REVIEW.md`, `research/SOURCES.md`, `research/VALIDITY_WINDOW.md`,
+`research/MANUSCRIPT_BASIS.md`, `research/MANUSCRIPT_SOURCE_AUDIT.md`, and
+`REPRODUCIBILITY.md` first.
 
 ## Scientific scope
 
 Preserve the coherent pump, vacuum outputs, lossless resonant nondegenerate
 three-mode Hamiltonian and compact-lambda growing-gain limit. Distinguish
 norm/trace-distance control from unbounded moment estimates; use the separate
-energy proof. Keep first-crossing, fixed-gain, and finite-time claims distinct.
+energy proof. Keep first-crossing, fixed-gain, and finite-time claims distinct. The
+separate validity-window corollary uses the original finite inequalities; do
+not extrapolate a fixed-lambda little-o to varying lambda or claim a maximal
+undepleted window.
 
 The Gaussian phase mixture is a reduced-state representation, not injected
 technical noise or a Markovian channel. Separate individual Gaussian states

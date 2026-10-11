@@ -131,16 +131,30 @@ def main():
  reference=json.loads(reference_path.read_text())
  review_differences=report_differences(reference,review)
  review_identical=review_path.exists() and review_path.read_bytes()==reference_path.read_bytes()
+ with (out/'manuscript_basis.log').open('xb') as log:
+  manuscript_run=subprocess.run([sys.executable,str(ROOT/'scripts/check_manuscript_basis.py'),
+                                 '--output',str(out/'manuscript_basis.json')],
+                                cwd=ROOT,env=dict(env,PYTHONHASHSEED='0'),stdout=log,stderr=subprocess.STDOUT,timeout=120)
+ manuscript_path=out/'manuscript_basis.json'
+ manuscript=json.loads(manuscript_path.read_text()) if manuscript_path.exists() else {}
+ manuscript_reference_path=ROOT/'verification/manuscript-basis.json'
+ manuscript_reference=json.loads(manuscript_reference_path.read_text())
+ manuscript_differences=report_differences(manuscript_reference,manuscript)
+ manuscript_identical=(manuscript_path.exists() and
+                       manuscript_path.read_bytes()==manuscript_reference_path.read_bytes())
  p=out/'scientific/receipt.json';science=json.loads(p.read_text()) if p.exists() else {}
  infra_data=json.loads((out/'infrastructure.json').read_text())
  differences=[]
  for suite in science.get('suites',[]):
   differences.extend(dict(e,suite=suite['suite']) for e in suite.get('differences',[]))
  differences.extend(dict(e,suite='proof_review') for e in review_differences)
+ differences.extend(dict(e,suite='manuscript_basis') for e in manuscript_differences)
  assertions=(science.get('scientific_assertions_pass') is True and science.get('groups')==15
              and len(science.get('suites',[]))==3 and science.get('source_unchanged') is True
-             and review_run.returncode==0 and review.get('status')=='PASS' and review.get('test_groups')==5)
- identical=science.get('canonical_reports_byte_identical') is True and review_identical
+             and review_run.returncode==0 and review.get('status')=='PASS' and review.get('test_groups')==5
+             and manuscript_run.returncode==0 and manuscript.get('status')=='PASS' and manuscript.get('test_groups')==5)
+ identical=(science.get('canonical_reports_byte_identical') is True and review_identical
+            and manuscript_identical)
  unchanged=inventory()==before
  reviewable=bool(differences) and numeric_only(differences)
  passed=(infra.returncode==0 and assertions and unchanged and
@@ -151,7 +165,10 @@ def main():
           'index_tree':git_value('write-tree'),'source_sha256':before,'source_files':len(before),
           'source_unchanged':unchanged,'archive':archive,'reading_pages':pages,'local_links':links,
           'infrastructure_tests':infra_data.get('tests_run'),'infrastructure_pass':infra.returncode==0,
-          'scientific_groups':science.get('groups',0)+review.get('test_groups',0),
+          'scientific_groups':science.get('groups',0)+review.get('test_groups',0)+manuscript.get('test_groups',0),
+          'manuscript_basis_groups':manuscript.get('test_groups'),'manuscript_basis_returncode':manuscript_run.returncode,
+          'manuscript_basis_reference':'verification/manuscript-basis.json',
+          'manuscript_basis_byte_identical':manuscript_identical,
           'original_scientific_groups':science.get('groups'),'proof_review_groups':review.get('test_groups'),
           'proof_review_returncode':review_run.returncode,'proof_review_hash_seed':'0','proof_review_reference':'verification/proof-review.json',
           'proof_review_byte_identical':review_identical,'scientific_assertions_pass':assertions,

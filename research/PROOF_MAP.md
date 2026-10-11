@@ -12,6 +12,9 @@
 | Continuous-coordinate domain and remainder reconstruction | [Analytical review, Sections 1–2](PROOF_REVIEW.md) |
 | Finite first-crossing certificates and quantified time remainder | [Analytical review, Sections 3–4](PROOF_REVIEW.md) |
 | Exact 2019 phase-mixture dictionary and its validity boundary | [Additional source comparison](SOURCE_REVIEW.md) |
+| Controlled varying-parameter window and nominal-state criterion | [Validity window, Sections 1–3](VALIDITY_WINDOW.md) |
+| Count accuracy with distance one from every pure state | [Validity window, Sections 4–5](VALIDITY_WINDOW.md) |
+| Earlier same-model validity criteria and full manuscript attribution | [Manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md) |
 
 The [preserved comparison](../archive/consolidation-2026-10-09/prior/FOLLOWUP.md)
 contains the detailed source-frame dictionary and the finite-amplitude
@@ -22,6 +25,6 @@ reading path does not require their development chronology.
 The equations and scientific claims in the current theorem are reproduced
 from the supplied consolidation using the documented generation rules.
 [Reproducibility](../REPRODUCIBILITY.md) describes the fifteen preserved
-scientific check groups and five additional algebraic and exact-arithmetic
-review groups. Numerical diagnostics, proof validity, and literature
+scientific check groups, five algebraic and exact-arithmetic
+review groups, and five manuscript-basis groups. Numerical diagnostics, proof validity, and literature
 priority are distinct questions.

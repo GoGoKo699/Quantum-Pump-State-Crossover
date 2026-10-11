@@ -32,7 +32,8 @@ def expected():
    if text.count(old)!=1:raise ValueError('Nonunique transformation: '+source)
    text=text.replace(old,new)
   if equations(text)!=equations(selected):raise ValueError('Scientific equation changed')
-  additional=' · [Analytical review](PROOF_REVIEW.md) · [Additional source comparison](SOURCE_REVIEW.md)' if source=='SOURCES.md' else ''
+  additional=' · [Validity window](VALIDITY_WINDOW.md) · [Manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md)'
+  if source=='SOURCES.md':additional+=' · [Analytical review](PROOF_REVIEW.md) · [Additional source comparison](SOURCE_REVIEW.md)'
   footer=f'\n\n---\n\n[Preserved source](../archive/consolidation-2026-10-09/{source}){additional} · [Reproducibility](../REPRODUCIBILITY.md)\n'
   data=('# '+title+'\n\n'+text.rstrip()+footer).encode()
   pages[destination]=data

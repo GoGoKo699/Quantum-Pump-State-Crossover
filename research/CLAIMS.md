@@ -84,3 +84,23 @@ phase-averaged squeezed-state family in Vintskevich, Grigoriev and Filippov
 preparation here, and its stated approximation domain does not certify this
 crossover. The candidate contribution is the controlled dynamical limit, not
 invention of that reduced-state family. See the [compact account](AUTHOR_ACCOUNT.md).
+
+
+## Controlled validity-window corollary
+
+The explicit finite inequalities also imply an error-controlled window with
+varying $\lambda_\alpha$ whenever
+$(1+\lambda_\alpha^2)(1+r_\alpha)/\alpha\to0$. In that window, nominal pure
+TMSV accuracy is equivalent to $\lambda_\alpha\to0$. Counts and thermal
+one-mode marginals remain accurate even along admissible
+$\lambda_\alpha\to\infty$, where the distance from every pure joint state
+tends to one. Fractional depletion still vanishes by the independent energy
+bound. A single Gaussian remains separated while the convex Gaussian hull
+does not. The [proof](VALIDITY_WINDOW.md) retains the order of limits and
+measurement qualifications; it is not a uniform claim for every undepleted
+gain or a new preparation.
+
+The [manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md) explicitly credits
+the earlier same-model depletion/coherence criterion and the strong-pump
+squeezing literature. The manuscript is organized around the controlled
+accuracy hierarchy rather than the first discovery of quantum pump noise.
