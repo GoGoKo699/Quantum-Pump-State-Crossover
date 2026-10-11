@@ -1,5 +1,9 @@
 # Coherent-pump crossover: the physical claim
 
+For a guided derivation from the selected review, read the
+[tutorial bridge](TUTORIAL_BRIDGE.md). This account concentrates on the
+physical meaning of the fixed-crossover result.
+
 ## Question
 
 A classical pump can predict the number of generated photons correctly while

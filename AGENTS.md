@@ -2,6 +2,7 @@
 
 Work only in `GoGoKo699/Quantum-Pump-State-Crossover`. The project continues
 in Chat; no workspace is required. Read `CURRENT.md`, `README.md`,
+`research/TUTORIAL_BRIDGE.md`,
 `research/CLAIMS.md`, `research/THEOREM.md`, `research/PROOF_MAP.md`,
 `research/REVIEW.md`, `research/SOURCES.md`, `research/VALIDITY_WINDOW.md`,
 `research/MANUSCRIPT_BASIS.md`, `research/MANUSCRIPT_SOURCE_AUDIT.md`, and
@@ -38,6 +39,13 @@ its explicit presentation rules and regenerate rather than independently
 editing the generated pages. Preserve equations and source terminology.
 Keep development chronology out of the main reader path, not out of evidence.
 Retain the owner's MIT license and Purpose and contact notice.
+
+Preserve the one-source learning route through Yanagimoto et al. (2024),
+arXiv:2311.13775v1, Section II and Boxes 1–3. The local tutorial bridge
+translates the degenerate example to this nondegenerate model; it does not
+replace the canonical proofs. Keep inherited Gaussian frames, amplified cubic
+interactions, and onset-scale reasoning credited. Other literature supports
+attribution and comparison rather than adding prerequisite tutorials.
 
 ## Verification and remote writes
 

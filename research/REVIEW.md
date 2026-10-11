@@ -24,4 +24,4 @@ The mathematical error estimates are conservative. They establish the asymptotic
 
 ---
 
-[Preserved source](../archive/consolidation-2026-10-09/REVIEW.md) · [Validity window](VALIDITY_WINDOW.md) · [Manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md) · [Reproducibility](../REPRODUCIBILITY.md)
+[Preserved source](../archive/consolidation-2026-10-09/REVIEW.md) · [Tutorial bridge](TUTORIAL_BRIDGE.md) · [Validity window](VALIDITY_WINDOW.md) · [Manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md) · [Reproducibility](../REPRODUCIBILITY.md)

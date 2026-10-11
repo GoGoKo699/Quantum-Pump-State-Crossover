@@ -1,5 +1,9 @@
 # Proof map
 
+For a learning route into these proofs, begin with the
+[single-source tutorial bridge](TUTORIAL_BRIDGE.md). The table below locates
+the complete arguments behind its four-step derivation.
+
 | Claim | Complete derivation |
 |---|---|
 | Residual cubic state, uniform norm estimate, and domains | [Theorem, Section 2](THEOREM.md) |

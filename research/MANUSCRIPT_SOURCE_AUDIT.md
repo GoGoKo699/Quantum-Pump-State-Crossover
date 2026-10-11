@@ -72,6 +72,24 @@ text was checked again. The Kinsler draft reading remains the previously
 recorded one. The Flórez publisher text confirms the exact reversal argument;
 no metrological sensitivity or device performance number is borrowed.
 
+### Tutorial anchor: Yanagimoto et al. (2024)
+
+R. Yanagimoto et al., *Mesoscopic ultrafast nonlinear optics—the emergence
+of multimode quantum non-Gaussian physics*, Optica **11**(7), 896–918 (2024),
+[doi:10.1364/OPTICA.514075](https://doi.org/10.1364/OPTICA.514075).
+The reading uses [arXiv:2311.13775v1](https://arxiv.org/html/2311.13775v1),
+Sec. II, Eqs. (1)–(7), and Sec. IV.A;
+the [publisher](https://opg.optica.org/optica/issue.cfm?issue=7&volume=11)
+confirms the bibliographic metadata.
+
+Gaussian-frame decomposition, an exponentially amplified cubic interaction,
+and a logarithmic onset scale are inherited from its degenerate-amplifier
+example. Its conditional-displacement onset criterion differs from our
+pump-purity crossing. Our nondegenerate theorem supplies finite norm bounds
+and the count/state validity hierarchy. The [tutorial bridge](TUTORIAL_BRIDGE.md)
+states the model and criterion changes explicitly. This review is distinct
+from the 2022 Gaussian-frame paper above.
+
 ## 4. Historical and adjacent reading boundaries
 
 Hillery–Zubairy, *Path-integral approach to the quantum theory of the

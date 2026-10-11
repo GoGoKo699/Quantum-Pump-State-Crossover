@@ -374,4 +374,4 @@ See [sources](SOURCES.md), [contribution assessment](REVIEW.md), and the [proof 
 
 ---
 
-[Preserved source](../archive/consolidation-2026-10-09/THEOREM.md) · [Validity window](VALIDITY_WINDOW.md) · [Manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md) · [Reproducibility](../REPRODUCIBILITY.md)
+[Preserved source](../archive/consolidation-2026-10-09/THEOREM.md) · [Tutorial bridge](TUTORIAL_BRIDGE.md) · [Validity window](VALIDITY_WINDOW.md) · [Manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md) · [Reproducibility](../REPRODUCIBILITY.md)
