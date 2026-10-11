@@ -33,11 +33,11 @@ statistics. Pump coherence, rather than fractional depletion alone, is
 already a state-validity criterion in this work. Its pump-Fano threshold
 is an empirical numerical criterion.
 
-Their Hamiltonian $\kappa(abc^\dagger+a^\dagger b^\dagger c)$ is related to
+Their Hamiltonian $`\kappa(abc^\dagger+a^\dagger b^\dagger c)`$ is related to
 ours by a phase rotation of one output; equivalently their coherent pump
-phase can be chosen as $\beta=i\alpha$. Their overlap is
-$\mathcal O=\sqrt{\mathrm{Tr}(\rho_{\rm exact}\rho_{\rm target})}$,
-so $\mathcal O^2$ is our squared-overlap fidelity. A 99% overlap threshold
+phase can be chosen as $`\beta=i\alpha`$. Their overlap is
+$`\mathcal O=\sqrt{\mathrm{Tr}(\rho_{\rm exact}\rho_{\rm target})}`$,
+so $`\mathcal O^2`$ is our squared-overlap fidelity. A 99% overlap threshold
 therefore differs from a 1% pump-purity loss. The present
 [validity window](VALIDITY_WINDOW.md) quantifies the simultaneous count/state
 separation through a controlled growing-gain approximation.
@@ -67,7 +67,7 @@ This work uses the same Hamiltonian and coherent-pump/vacuum-output
 preparation. Appendix C, Eqs. (96)–(100), gives the Gaussian-frame generator;
 Eq. (48) gives short-time purity coefficients. Appendix D, Eqs. (119)–(120),
 gives a fixed-degree purity-threshold estimate and a finite-range fitted
-exponent. Our fixed-gain expansion reproduces the leading large-$\alpha$
+exponent. Our fixed-gain expansion reproduces the leading large-$`\alpha`$
 parts of its sixth- and eighth-order coefficients. The logarithmic
 first-crossing law concerns the nonuniform large-amplitude extrapolation
 of that polynomial root; the
@@ -83,7 +83,7 @@ Review A **100**, 053811 (2019).
 [Published article](https://doi.org/10.1103/PhysRevA.100.053811)
 
 Its Gaussian phase-averaged squeezed-state family is exactly our reduced
-comparison state after the width substitution $w=1/(2\alpha)$. The source
+comparison state after the width substitution $`w=1/(2\alpha)`$. The source
 introduces that width through initial pump incoherence; here the width
 comes from tracing an initially pure quantum pump. The
 [formula dictionary and validity comparison](SOURCE_REVIEW.md) explain the
@@ -115,7 +115,7 @@ information in the parametric amplifier*, Physical Review A **48**,
 The introduction and Section II of the author draft dated 12 September 2002
 support the mechanism comparison: pump phase uncertainty mixes antisqueezed
 fluctuations into the squeezed quadrature in both degenerate and nondegenerate
-models. The draft discusses the $N^{-1/2}$ minimum squeezed-variance scale
+models. The draft discusses the $`N^{-1/2}`$ minimum squeezed-variance scale
 and the care needed with finite asymptotic expansions at logarithmically
 growing gain. These mechanisms and scales precede the present theorem.
 
@@ -130,7 +130,7 @@ Physical Review A **112**, 033706 (2025).
 The degenerate model supplies energy-correlated coherent-amplitude shifts
 and a predecessor for the Gaussian pair-number coherence kernel, together
 with error-specific validity criteria. Its approximation uses a stated
-small-pair-index domain. The nondegenerate $k=\Theta(\sqrt N)$ regime and
+small-pair-index domain. The nondegenerate $`k=\Theta(\sqrt N)`$ regime and
 varying-parameter window here instead have explicit state-error bounds.
 The paper also reviews historical path-integral high-gain conditions.
 
