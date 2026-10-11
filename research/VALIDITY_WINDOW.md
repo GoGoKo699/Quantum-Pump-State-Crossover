@@ -122,7 +122,7 @@ The physical-frame approximation is the established phase-averaged family
 $$
 \sigma_{ab}=\sum_{k,l\ge0}s_ks_l
  e^{-(k-l)^2/(8N)}|k,k\rangle\langle l,l|,
-\qquad s_k=\operatorname{sech}r\,\tanh^kr,
+\qquad s_k=\mathrm{sech}r\,\tanh^kr,
 \qquad D(\rho_{ab},\sigma_{ab})\le\eta_\alpha. \tag{W7}
 $$
 
@@ -170,11 +170,11 @@ The exact pump and output purities coincide because the full state is pure.
 The existing finite bound is
 
 $$
-|\operatorname{Tr}\rho_{ab}^2-\mathcal P(\lambda)|\le4\epsilon_\alpha.
+|\mathrm{Tr}\rho_{ab}^2-\mathcal P(\lambda)|\le4\epsilon_\alpha.
 $$
 
 For every pure state $|\phi\rangle$, its overlap with $\rho_{ab}$ is at
-most $\|\rho_{ab}\|_\infty\le\sqrt{\operatorname{Tr}\rho_{ab}^2}$.
+most $\|\rho_{ab}\|_\infty\le\sqrt{\mathrm{Tr}\rho_{ab}^2}$.
 Projector discrimination therefore gives
 
 $$
@@ -240,7 +240,7 @@ Equations (W7)–(W11) give correct complete pair counts together with
 $$
 \langle n_a\rangle\sim2N^{5/8},\qquad
 \frac{N-\langle n_c\rangle}{N}\sim2N^{-3/8},\qquad
-\operatorname{Tr}\rho_{ab}^2\sim\frac{\sqrt\pi}{2}N^{-1/8}. \tag{W13}
+\mathrm{Tr}\rho_{ab}^2\sim\frac{\sqrt\pi}{2}N^{-1/8}. \tag{W13}
 $$
 
 The purity equivalence, rather than merely convergence to zero, follows
@@ -248,7 +248,7 @@ because the error in (W2) is $o(N^{-1/8})$. The pump/output second-Renyi
 entanglement entropy consequently is
 
 $$
-S_2=-\log\operatorname{Tr}\rho_{ab}^2
+S_2=-\log\mathrm{Tr}\rho_{ab}^2
 =\frac18\log N-\log(\sqrt\pi/2)+o(1). \tag{W14}
 $$
 

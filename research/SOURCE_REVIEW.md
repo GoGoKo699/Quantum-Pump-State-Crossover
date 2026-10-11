@@ -39,7 +39,7 @@ The source also gives its purity through Eq. (57). Independently summing the
 difference of two geometric random variables puts that expression in the form
 
 $$
-\operatorname{Tr}\rho^2=\frac{1-q}{1+q}
+\mathrm{Tr}\rho^2=\frac{1-q}{1+q}
 \left[1+2\sum_{d\ge1}q^d e^{-d^2w^2}\right].
 $$
 
@@ -104,7 +104,7 @@ $$
 \left\|D_c(-\alpha)S(-r)|\Phi_{\alpha,r}\rangle
 -|\chi_\lambda\rangle\right\|^2
 =\int_{-\infty}^{\infty}\frac{e^{-P^2}}{\sqrt\pi}
-\left[2-2\operatorname{Re}
+\left[2-2\mathrm{Re}
 \frac{\overline{A_P^{(0)}}A_P}
 {1-\overline{z_P^{(0)}}z_P}\right]dP.
 $$
@@ -160,7 +160,7 @@ $$
 $$
 
 For $\lambda$ in a fixed compact interval and sufficiently large $\alpha$,
-$r_\alpha(\lambda)<\operatorname{arsinh}\alpha$, so that branch remains
+$r_\alpha(\lambda)<\mathrm{arsinh}\alpha$, so that branch remains
 positive throughout the required interval. The bound gives
 $\eta=r+O_\Lambda(\alpha^{-1})$; the invariant then gives
 $\beta=\alpha-\lambda+o(1)$ at fixed $\lambda$. The residual state in this

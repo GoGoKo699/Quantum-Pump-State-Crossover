@@ -140,7 +140,7 @@ pump-amplitude shift that is small relative to its mean amplitude:
 ```math
 \lvert\Phi_{\alpha,r}\rangle
 =\sum_{k\ge0}s_k\lvert\alpha-k/(2\alpha)\rangle_c\lvert k,k\rangle,
-\qquad s_k=\operatorname{sech}r\,\tanh^k r.
+\qquad s_k=\mathrm{sech}r\,\tanh^k r.
 ```
 
 The [number-marking proof](THEOREM.md), Section 2.2, supplies a second
@@ -188,7 +188,7 @@ Choose $`r=\tfrac12\log(1+4\alpha)`$ and let $`\alpha`$ grow. The
 ```math
 \langle n_a\rangle\sim\sqrt N,\qquad
 \frac{N-\langle n_c\rangle}{N}\sim N^{-1/2},\qquad
-\operatorname{Tr}\rho_{ab}^2\longrightarrow0.7578721561.
+\mathrm{Tr}\rho_{ab}^2\longrightarrow0.7578721561.
 ```
 
 The squared target-state fidelity tends to $`0.8427384586`$, so the
