@@ -16,9 +16,9 @@ format is a data convenience, not certified interval arithmetic.
 
 [SVG](figures/crossover.svg) · [data](figures/crossover.csv)
 
-**Caption.** Pump and joint-output purity $\mathcal P(\lambda)$ and squared
-fidelity $\mathcal P(\lambda/\sqrt2)$ with the nominal two-mode squeezed
-vacuum in the fixed-$\lambda$ large-pump limit. At every displayed finite
+**Caption.** Pump and joint-output purity $`\mathcal P(\lambda)`$ and squared
+fidelity $`\mathcal P(\lambda/\sqrt2)`$ with the nominal two-mode squeezed
+vacuum in the fixed-$`\lambda`$ large-pump limit. At every displayed finite
 crossover coordinate, complete pair-count error and fractional depletion
 tend to zero. The curves are limiting formulas, not finite-brightness
 numerical propagation. The purity loss diagnoses entanglement across the pump
@@ -29,7 +29,7 @@ versus both outputs jointly.
 [SVG](figures/growing_window.svg) · [data](figures/growing_window.csv)
 
 **Caption.** Evaluations of the finite inequalities along
-$\lambda_\alpha=\alpha^{1/4}=N^{1/8}$. The lower bound on trace distance from
+$`\lambda_\alpha=\alpha^{1/4}=N^{1/8}`$. The lower bound on trace distance from
 every pure output state tends to one, while the upper bound on the total-
 variation error of the nominal geometric pair-count law tends to zero.
 The curves use the explicit state error, not a bare extrapolation of the

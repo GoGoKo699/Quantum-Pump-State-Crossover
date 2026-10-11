@@ -1,7 +1,7 @@
 {
   "files": {
     "LICENSE": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
-    "research/THEOREM.md": "c28b99b41c9344bba1cae53f49e022634dde16de92220c5e36102d8819ec98af",
+    "research/THEOREM.md": "45c65829a931e49b5f9de0f13da106ca3a5c3e93e6ddbfe57d67e6184bdb2c7d",
     "scripts/check_comparison.py": "ae7046b7092bebb4340a4f6da95ed59e54044f84283ebc2ac68a218b420e62be",
     "scripts/check_consolidation.py": "f7b6c10d8f40f3462eb88ad1fbbb0f9bc9be5c32ede2eeeed3f74dc4ca5c8a0c",
     "scripts/check_pilot.py": "0b30795ccc23861d347565824ef7aad3e426113befdb6200c85909973c7f6a02",

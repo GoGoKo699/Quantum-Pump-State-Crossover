@@ -39,6 +39,11 @@ work orders out of reader-facing pages; retain model assumptions and
 measurement conditions that determine the meaning of a result.
 Retain the owner's MIT license and Purpose and contact notice.
 
+Use fenced `math` blocks for display equations and GitHub's dollar-plus-backtick
+delimiters for inline mathematics. Put equation numbers in Markdown outside
+the math block. Avoid `\tag` and `\operatorname`, which break the current
+GitHub rendering. Check the published preview when changing math formatting.
+
 Preserve the one-source learning route through Yanagimoto et al. (2024),
 arXiv:2311.13775v1, Section II and Boxes 1–3. The local tutorial bridge
 translates the degenerate example to this nondegenerate model; it does not
