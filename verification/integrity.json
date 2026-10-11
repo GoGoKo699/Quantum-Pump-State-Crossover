@@ -1,0 +1,14 @@
+{
+  "files": {
+    "LICENSE": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
+    "research/THEOREM.md": "51d90b009994f371732fe0ebb1f308e6df2096820b301189c9a28c3a73d10cd5",
+    "scripts/check_comparison.py": "ae7046b7092bebb4340a4f6da95ed59e54044f84283ebc2ac68a218b420e62be",
+    "scripts/check_consolidation.py": "f7b6c10d8f40f3462eb88ad1fbbb0f9bc9be5c32ede2eeeed3f74dc4ca5c8a0c",
+    "scripts/check_pilot.py": "0b30795ccc23861d347565824ef7aad3e426113befdb6200c85909973c7f6a02",
+    "scripts/pump_model.py": "3135393c269ac0668912ca05ccb2284819d74fc4e5339e282c3c3fe52972d41a",
+    "verification/comparison.json": "b75035a7d5d621a0fba33a535139ae612fb9ce31c7f56bf2db574d7c141809bc",
+    "verification/consolidation.json": "bc1eb01002e88e06c1c74c68327dff7fa44f3ff8d0e16a215abbf00bdf17c744",
+    "verification/pilot.json": "b05d90785da4acfa48e8e62dc0f074491a672a17ea46cefb17a8ed51253881b9"
+  },
+  "repository": "https://github.com/GoGoKo699/Quantum-Pump-State-Crossover"
+}

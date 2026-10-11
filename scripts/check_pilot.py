@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Five independently specified check groups for the fresh pump pilot.
+"""Five independently specified check groups for the coherent-pump crossover.
 
 These are author-side algebraic and finite-dimensional diagnostics. They do not
-establish prior-work novelty or replace the infinite-dimensional proof in PILOT.
+establish prior-work novelty or replace the proof in research/THEOREM.md.
 """
 from __future__ import annotations
 import argparse, json, sys, unittest
