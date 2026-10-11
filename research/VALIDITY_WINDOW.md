@@ -4,7 +4,6 @@ This is a direct consequence of the **finite-parameter inequalities** in the
 [crossover theorem](THEOREM.md), not a substitution of an unbounded parameter
 into its compact-parameter convergence statement. The preparation, closed
 resonant nondegenerate Hamiltonian, and definition of gain are unchanged.
-The original theorem and its evidence are preserved.
 
 ## 1. The finite bounds and an explicit sufficient window
 
@@ -57,7 +56,7 @@ $$
 
 Consequently all the trace-distance and bounded-measurement consequences
 survive along (W1). The sharper bounds (W2), rather than (W3), should be used
-for finite certificates. Neither bound is a numerical propagation result.
+for finite certificates.
 
 ## 2. Three accuracy regimes for the same initial state
 
@@ -105,10 +104,7 @@ $$
 $$
 
 Thus (W5) is equivalently $\bar n_{\mathrm{cl}}=o(\sqrt N)$ in this
-controlled window. This is an observable-specific state criterion, not a
-criterion for all undepleted gains or all possible pump preparations.
-Historical quantum-pump restrictions already identify square-root
-photon-number/high-gain scales; their first appearance is not claimed here.
+controlled window, for the specified coherent-pump and vacuum-output preparation.
 
 | Sequence inside (W1) | Counts and individual marginals | Joint-state conclusion |
 |---|---|---|
@@ -116,10 +112,10 @@ photon-number/high-gain scales; their first appearance is not claimed here.
 | $\lambda_\alpha\to\lambda_0>0$ | Accurate | Fixed purity and target-fidelity crossover |
 | $\lambda_\alpha\to\infty$ | Accurate | Distance from every pure state tends to one |
 
-The last row is established below. The first two are not new mechanisms;
-the table identifies their common finite-error justification.
+The last row is established below. All three rows follow from the same
+finite error bounds.
 
-## 3. Counts remain accurate; energy still needs its separate proof
+## 3. Count accuracy and the separate energy estimate
 
 The physical-frame approximation is the established phase-averaged family
 
@@ -221,18 +217,16 @@ $$
 The limit in (W12) assumes (W1) and $\lambda\to\infty$. The output still
 approaches the **convex hull** of Gaussian states through (W7). These
 statements are compatible: a mixture of Gaussian states need not itself
-be Gaussian. No Wigner negativity or distance from the convex Gaussian
-hull is asserted.
+be Gaussian.
 
 For completeness, the rescaled quadrature $e^rX_-/\lambda$ has limiting
 characteristic function $(1+2\xi^2)^{-1/2}$, the law of $\sqrt2$ times a
 product of two independent standard normals. The physical readout scale is
 $\lambda e^{-r}\sim\sqrt{\lambda/(8\alpha)}$, which still shrinks here.
 A phase reference and increasingly fine physical resolution remain
-substantive requirements. The limiting contrast is not a fixed-resolution
-device guarantee.
+substantive requirements.
 
-## 5. One explicit sequence, with no new physical resource
+## 5. An explicit sequence and entanglement entropy
 
 Take $\lambda_\alpha=\alpha^{1/4}=N^{1/8}$. Then
 
@@ -261,22 +255,11 @@ $$
 This is an entropy across **pump versus both outputs**, not a formula for
 signal/idler entanglement or the von Neumann entropy. The physical quadrature
 scale for (W12) is $N^{-3/16}/\sqrt8$. These exponents describe the specified
-sequence, not a universal device operating law. One can take other slowly
-growing sequences satisfying (W1); this example is not an optimized bound.
+sequence. Other slowly growing sequences satisfying (W1) are also admissible.
 
-## 6. What this adds to the manuscript
+## 6. Reproduction
 
-The compact-crossover state theorem remains the central derivation. This
-corollary states the accuracy hierarchy using the same pointwise bounds:
-correct photon counts can coexist not only with finite pure-state error,
-but with asymptotic orthogonality to every pure state and growing pump/output
-entanglement at vanishing fractional depletion. It also gives a necessary
-and sufficient nominal-state criterion **inside an explicit controlled
-window**. It does not solve the full depletion-time dynamics.
-
-The older warnings about depletion, pump coherence, and phase-noise limits
-must be credited; see [the manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md).
-The [new checker](../scripts/check_manuscript_basis.py) checks exact algebra,
-finite comparison-state identities, the original inequality constants, and
-bound-only sequence examples. It does not simulate the enormous photon
-numbers used to illustrate asymptotic certificates.
+The [checker](../scripts/check_manuscript_basis.py) verifies the exact algebra,
+finite comparison-state identities, inequality constants, and evaluations of
+the growing-window bounds. See [reproducibility](../REPRODUCIBILITY.md) for
+the commands and [sources](SOURCES.md) for related validity criteria.

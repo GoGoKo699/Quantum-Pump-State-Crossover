@@ -22,7 +22,7 @@ refer to the [26-page arXiv version](https://arxiv.org/pdf/2311.13775v1).
 
 These passages provide the organizing physics. The bridge below supplies
 the nondegenerate model and controlled state-error argument. The full
-[attribution record](MANUSCRIPT_SOURCE_AUDIT.md) remains separate from this
+[sources](SOURCES.md) accompany this
 single-source learning route.
 
 The review's conditional-displacement onset criterion also differs from

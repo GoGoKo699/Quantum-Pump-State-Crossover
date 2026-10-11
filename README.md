@@ -15,8 +15,7 @@ tends to one even as fractional pump depletion vanishes.
 | [Tutorial bridge](research/TUTORIAL_BRIDGE.md) | Learn from one review, translate the notation, and derive the route to this result. |
 | [Theorem](research/THEOREM.md) · [Validity window](research/VALIDITY_WINDOW.md) | Read the state approximation, finite error bounds, and count/state hierarchy. |
 | [Model and claims](research/CLAIMS.md) · [Proof map](research/PROOF_MAP.md) | Check the preparation, limits, measurement scope, and proof dependencies. |
-| [Physical account](research/AUTHOR_ACCOUNT.md) · [Manuscript basis](research/MANUSCRIPT_BASIS.md) | Connect pump back-action to the fixed crossover and its stronger consequence. |
-| [Source audit](research/MANUSCRIPT_SOURCE_AUDIT.md) | Separate inherited models and methods from the controlled dynamical result. |
+| [Sources and attribution](research/SOURCES.md) | Connect the model, methods, and controlled dynamical result to the literature. |
 | [Reproducibility](REPRODUCIBILITY.md) · [Figures and data](manuscript/FIGURES.md) | Reproduce the checks and analytical plots. |
 | [LLM guide](llms.txt) | Find relevant questions, search phrases, and authoritative sources. |
 
@@ -82,8 +81,9 @@ specifies the sufficient domain and the pump/output entanglement consequence.
 ## Why counts and states separate
 
 Different generated pair numbers leave different pump displacements, small
-relative to its mean amplitude. Their overlap suppresses output coherences while preserving the
-diagonal count probabilities. Tracing the pump gives the controlled approximation
+relative to its mean amplitude. Their overlap suppresses output coherences
+while preserving the diagonal count probabilities. Tracing the pump gives
+the controlled approximation
 
 ```math
 \sigma_{ab}=\sum_{k,l\ge0}s_ks_l e^{-(k-l)^2/(8N)}
@@ -97,7 +97,7 @@ from the exact output at a fixed positive crossover coordinate. Every
 total-output-number-conserving measurement retains the nominal statistics
 asymptotically. A distinguishing squeezed-quadrature measurement uses an external
 phase reference and physical resolution on a scale $`N^{-1/4}`$ at fixed
-positive $`\lambda`$. The [physical account](research/AUTHOR_ACCOUNT.md)
+positive $`\lambda`$. The [theorem, Section 7](research/THEOREM.md)
 explains these measurement conditions.
 
 ## One tutorial, then this result
@@ -119,7 +119,7 @@ Gaussian frames, amplified cubic interactions, logarithmic onset scales, and
 the distinction between depletion and state validity have established
 precedents. The contribution here is the **controlled nondegenerate dynamical
 approximation and its observable-dependent validity hierarchy**. The
-[source audit](research/MANUSCRIPT_SOURCE_AUDIT.md) records those connections.
+[sources](research/SOURCES.md) record those connections.
 
 ## Evidence and reproduction
 

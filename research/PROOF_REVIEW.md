@@ -1,19 +1,9 @@
-# Analytical review and finite first-crossing certificates
+# Operator domains and finite first-crossing bounds
 
-## Scope and outcome
-
-This author-side review checks the theorem at source revision
-`a4069462777b9489c1fc1c7462e9d4c9fc326922`. It reconstructs the remainder
-norms in continuous quadrature coordinates, checks the energy comparison and
-measurement logic, and makes the existing first-crossing statement quantitative.
-No blocking mathematical defect was identified in the stated coherent-pump,
-vacuum-output, closed nondegenerate model. This is not external peer review or
-exhaustive literature clearance. The original theorem and all archived files
-remain unchanged.
-
-The additional first-crossing bound below is a corollary of the existing norm
-estimate. The [source review](SOURCE_REVIEW.md) separately narrows attribution:
-the phase-averaged squeezed-state family has an explicit 2019 predecessor.
+The [state theorem](THEOREM.md) rests on a common operator domain and explicit
+remainder norms. This page gives those details, the separate energy and
+measurement arguments, and exact-arithmetic certificates for the first time
+the pump reaches a prescribed purity loss.
 
 ## 1. Domain justification and the exact residual generator
 
@@ -111,7 +101,7 @@ at one selected time would not be enough.
 
 Write $P_\alpha(\lambda)$ for the exact pump purity at
 $\tau_\alpha(\lambda)=\log(1+8\alpha\lambda)/(2\alpha)$, and keep the
-unchanged conservative bound
+finite bound
 
 $$
 |P_\alpha(\lambda)-\mathcal P(\lambda)|\le4\epsilon_\alpha(\lambda),
@@ -166,8 +156,7 @@ $$
 $$
 
 Equivalently, the time remainder is $O_\delta(\log N/N)$ in dimensionless
-units $gt$. This sharpens the previously stated $o(1/\alpha)$ remainder; it
-is not a different leading time law or a new onset mechanism.
+units $gt$.
 
 ## 4. Exact-arithmetic certificates for one-percent purity loss
 
@@ -179,9 +168,8 @@ The following are outward bounds on the first crossing of purity $0.99$:
 | $10^5$ | $10^{10}$ | $(0.000054757627932,\ 0.000054827265729)$ |
 | $10^6$ | $10^{12}$ | $(0.0000066299841061,\ 0.0000066307503885)$ |
 
-These enclose the exact infinite-dimensional first crossing. They are not
-numerical propagation results, fits, optimal intervals, or device operating
-points. The endpoints use $(l,u)=(0.068,0.0755)$, $(0.0713,0.0723)$, and
+These enclose the exact infinite-dimensional first crossing using the
+finite state bound. The endpoints use $(l,u)=(0.068,0.0755)$, $(0.0713,0.0723)$, and
 $(0.07172,0.07183)$ respectively.
 
 For $\lambda\ge0$, integrating odd/even Taylor bounds for $e^{-\lambda^2z^2}$
@@ -203,18 +191,11 @@ $1.17\times10^{-7}$. The [checker](../scripts/check_proof_review.py) and
 [reference report](../verification/proof-review.json) contain the exact
 fractions and validation rules.
 
-## 5. Verification and decision boundary
+## 5. Reproduction
 
-Five additional check groups separately reconstruct the quadrature-coordinate
+Five check groups separately reconstruct the quadrature-coordinate
 remainder norms, energy and geometric-law identities, rational first-crossing
 certificates, short-time/source asymptotics, and phase-mixture/measurement
-dictionary. No archived code is imported into that checker. The existing
-fifteen scientific groups and eight infrastructure tests remain unchanged.
-Execution and canonical-report comparisons belong in the verification receipt
-and PR record, not an assertion of external independence.
-
-The supported outcome is continuation with a coherent scientific account and
-more explicit finite-parameter guarantees. The [author account](AUTHOR_ACCOUNT.md)
-sets out the claims in their physical order. The mathematical review does not
-increase the originality of a phase-averaged state family already present in
-prior literature, and does not resolve an unread historical article by proxy.
+dictionary. The [verification guide](../REPRODUCIBILITY.md) gives the command
+and report format. See the [proof map](PROOF_MAP.md) for the full derivation
+and [sources](SOURCES.md) for attribution.
