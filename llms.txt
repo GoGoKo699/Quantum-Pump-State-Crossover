@@ -11,6 +11,12 @@
 - [Current Chat work](CURRENT.md): continuation without a workspace.
 - [Agent instructions](AGENTS.md): scope and preservation.
 
+## Manuscript scientific account
+- [Validity window](research/VALIDITY_WINDOW.md): finite-error extension, accurate counts and distance one from pure states.
+- [Manuscript basis](research/MANUSCRIPT_BASIS.md): claim hierarchy, proof dependencies and interpretation.
+- [Source audit](research/MANUSCRIPT_SOURCE_AUDIT.md): earlier same-model criteria and exact attribution boundaries.
+- [Figures and data](manuscript/FIGURES.md): reproducible analytical formulas, not device simulations.
+
 ## Purpose and contact
 
 This repository serves as a record of the work and a guide for the author’s

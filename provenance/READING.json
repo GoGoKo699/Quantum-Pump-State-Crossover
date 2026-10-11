@@ -14,7 +14,7 @@
         "See [sources](SOURCES.md), [contribution assessment](REVIEW.md), and the [proof map](PROOF_MAP.md) for the preserved supporting derivations."
       ]
     ],
-    "output_sha256": "fbff4fc231f160ce8940a48e8eff72cea71d49a0ab3c41a0c84f40791f9a3c4c",
+    "output_sha256": "a9a9755e82e89cb8e3a438f0a7cdee44de4b06106c236674bac94f1fa20a0276",
     "source": "THEOREM.md",
     "source_sha256": "8f18b90395d32793488c514bc8f4fbe9e61d172c829931cfbe5410e5f3864b0e",
     "start": "## 1. Model, preparation, and order of limits"
@@ -25,7 +25,7 @@
     "end_excluded": "## Decision",
     "equations_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "literal_substitutions": [],
-    "output_sha256": "4562bce94ccb63b8e41edf1d66915cf15c5642993945a9125a9dbca629db84aa",
+    "output_sha256": "ee38f6cd0478530cab992618d5dcec233dbd018672cbd7990645ef44aa3f395f",
     "source": "REVIEW.md",
     "source_sha256": "c91b63647e70761044ab1c137a0de159f5028ae46151d0ce0da73b449ef1ca83",
     "start": "## Central scientific account"
@@ -36,7 +36,7 @@
     "end_excluded": null,
     "equations_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "literal_substitutions": [],
-    "output_sha256": "ebd05cccc929b04e7ba7fdf476f4a3f3df5d32c460f06ffb654f09c9f763c3dc",
+    "output_sha256": "0b77a828ac1d338bfef386611f337e0a2267b2d07c4a744558b5be29d6cb7872",
     "source": "SOURCES.md",
     "source_sha256": "1341310265080dfd9d07afba8491ed9d37134179be1724bbff4cdbc1c642cdfe",
     "start": "## [CQ]"

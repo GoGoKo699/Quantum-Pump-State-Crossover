@@ -11,10 +11,11 @@ python scripts/verify.py --output-dir /absolute/path/to/new-results
 The output directory must be new and outside this repository. The wrapper
 checks the full 60-file archive and its three manifests, the owner's license,
 three generated reading pages, and relative links. It runs eight infrastructure
-tests and twenty scientific groups: fifteen preserved groups (five
+tests and twenty-five scientific groups: fifteen preserved groups (five
 consolidation, five comparison, and five pilot groups), plus five analytical
-review groups in `scripts/check_proof_review.py`. No archived script, assertion, reference
-report, or numerical tolerance is modified.
+review groups in `scripts/check_proof_review.py`, and five manuscript-basis
+groups in `scripts/check_manuscript_basis.py`. No archived script, assertion,
+reference report, or numerical tolerance is modified.
 
 ## Reading the receipt
 
@@ -22,7 +23,9 @@ report, or numerical tolerance is modified.
 available, the source hash inventory, assertion outcomes, and every canonical
 report difference. The original wrapper's receipt and logs are under
 `scientific/`. The separate `proof_review.json` is compared with
-`verification/proof-review.json`; all four report comparisons are required.
+`verification/proof-review.json`. The additional `manuscript_basis.json` is
+compared with `verification/manuscript-basis.json`; all five report comparisons
+are required.
 Source integrity, passing assertions, and byte identity are
 separate facts.
 
@@ -79,3 +82,21 @@ revision, archive root hash and unchanged license. Only this authorized research
 package was imported; unrelated project files and external PDFs were excluded.
 
 The continuation is [Chat-based](CURRENT.md), not dependent on a workspace.
+
+
+## Manuscript-basis checks and figures
+
+The five manuscript-basis groups check pointwise error domination, the exact
+nominal-count identity, the earlier Hamiltonian/overlap convention, finite
+phase-mixture identities, bounded quadrature tests at changing frequencies,
+and an explicit growing-window sequence. No new high-brightness trajectory
+simulation is used. Large-number examples evaluate proven inequalities at
+high precision; unlike the rational first-crossing certificates, those decimal
+evaluations are not interval arithmetic. All original twenty groups still run.
+
+[Analytical figure data and captions](manuscript/FIGURES.md) distinguish
+limiting curves from finite-error bounds. Matplotlib is an optional rendering
+dependency, not a requirement for scientific verification. SVGs contain text
+and vectors, not redistributed fonts. Generation versions are recorded with
+the CSV files. The bibliography's reading scopes are given by the
+[manuscript source audit](research/MANUSCRIPT_SOURCE_AUDIT.md).

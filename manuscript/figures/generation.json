@@ -1,0 +1,14 @@
+{
+  "calculation": "Explicit formulas only; no dynamical data or curve fitting.",
+  "data": [
+    "crossover.csv",
+    "growing_window.csv"
+  ],
+  "figures": [
+    "crossover.svg",
+    "growing_window.svg"
+  ],
+  "matplotlib_version": "3.10.8",
+  "numpy_version": "2.3.5",
+  "source": "research/THEOREM.md and research/VALIDITY_WINDOW.md"
+}
