@@ -1,6 +1,6 @@
-# Reproducibility and source preservation
+# Reproducibility
 
-Use Python 3.13 with the pinned environment in `requirements.txt`:
+Use Python 3.13 with the pinned dependencies:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -8,95 +8,71 @@ python scripts/build_reading.py --check
 python scripts/verify.py --output-dir /absolute/path/to/new-results
 ```
 
-The output directory must be new and outside this repository. The wrapper
-checks the full 60-file archive and its three manifests, the owner's license,
-three generated reading pages, and relative links. It runs eight infrastructure
-tests and twenty-five scientific groups: fifteen preserved groups (five
-consolidation, five comparison, and five pilot groups), plus five analytical
-review groups in `scripts/check_proof_review.py`, and five manuscript-basis
-groups in `scripts/check_manuscript_basis.py`. No archived script, assertion,
-reference report, or numerical tolerance is modified.
+The output directory must be new and outside the repository. The verifier
+runs **25 scientific groups and 8 infrastructure tests**, checks local links
+and source integrity, and compares all five numerical reports with their
+canonical references.
 
-## Reading the receipt
+## Scientific checks
 
-`verification.json` records the tested commit and tree when Git metadata is
-available, the source hash inventory, assertion outcomes, and every canonical
-report difference. The original wrapper's receipt and logs are under
-`scientific/`. The separate `proof_review.json` is compared with
-`verification/proof-review.json`. The additional `manuscript_basis.json` is
-compared with `verification/manuscript-basis.json`; all five report comparisons
-are required.
-Source integrity, passing assertions, and byte identity are
-separate facts.
+| Component | What it checks |
+|---|---|
+| State and measurement checks | Residual generators, finite-state evolution, number marking, count laws, purity, fidelity, quadrature statistics, and cutoff refinement |
+| `scripts/check_proof_review.py` | Continuous-coordinate remainder norms, energy identities, exact first-crossing certificates, source expansions, and phase-mixture formulas |
+| `scripts/check_manuscript_basis.py` | Finite error domination, count identities, source conventions, changing-frequency witnesses, and the growing-parameter sequence |
 
-Strict mode requires all canonical report bytes to match. The explicit option
-`--allow-numeric-report-differences` allows only finite numerical value changes
-with identical types and structures after every original assertion passes.
-Such a run is labeled `PASS_REQUIRES_NUMERIC_REVIEW` and lists every changed
-field. This option changes report policy, not scientific tolerances. Missing
-reports, changed sources, nonnumeric changes, and failed assertions are fatal.
-The initial local baseline passed all fifteen groups with one approximately
-$4.03\times10^{-16}$ difference in a physical-count diagnostic; that historical
-report was not replaced.
+The analytical proofs establish the infinite-dimensional statements.
+The numerical and symbolic checks verify identities, finite examples, and
+the implementation of the stated bounds.
 
-Hosted CI uses the explicit portability mode to retain inspectable evidence
-across numerical stacks. A green job does not establish canonical byte
-identity. Inspect every difference and the source/commit hashes before merge.
-A PR-head run is not a merged-main run; each must be verified separately.
-Exact run evidence belongs in the PR discussion and artifacts.
+The first-crossing certificates use rational sign comparisons: alternating
+Taylor bounds for purity, integer square-root bounds, and exponential Taylor
+sums with a geometric remainder. Their exact witnesses are in
+[proof-review.json](verification/proof-review.json). The symbolic checker
+runs with `PYTHONHASHSEED=0` for reproducibility. Growing-window examples
+evaluate the proved inequalities at high precision; their decimal values
+are distinct from the rational interval certificates.
 
-## Scientific meaning
+## Verification receipt
 
-The proofs establish the infinite-dimensional asymptotic statements. Finite
-cutoff evolution, refinement, symbolic core identities, and source-expansion
-comparisons are checks, not external peer review or a novelty certificate.
-Norm convergence does not by itself control unbounded moments. The source
-record's older access boundaries remain explicit.
+`verification.json` records the tested commit and tree, the complete source
+hash inventory, assertion outcomes, and every canonical report difference.
+The `scientific/` directory contains three reports and their logs;
+`proof_review.json` and `manuscript_basis.json` are compared with the two
+references under `verification/`.
 
-## Exact first-crossing certificates
+Strict mode requires byte-identical canonical reports. The explicit option
+`--allow-numeric-report-differences` permits finite numerical changes with
+identical types and structure after every assertion passes. Such a run is
+labeled `PASS_REQUIRES_NUMERIC_REVIEW` and lists every changed field.
+Source changes, missing reports, nonnumeric changes, and failed assertions
+are errors in either mode. Hosted CI uses this portability option; inspect
+the receipt to distinguish assertion success from report byte identity.
 
-The wrapper fixes `PYTHONHASHSEED=0` for the new symbolic checker to make
-its simplification path reproducible; this does not change any equation,
-assertion, or tolerance. The review checker independently evaluates the remainder norms as continuous
-Gaussian polynomial integrals. Its three first-crossing intervals use exact
-rational sign comparisons: finite alternating Taylor bounds for purity,
-integer square-root upper bounds, and positive exponential Taylor bounds
-with a geometric remainder for the logarithmic gain. Decimal diagnostics do
-not decide these inequalities. The canonical report stores the exact rational
-witnesses. These certificates enclose the exact infinite-dimensional crossing
-using the proven state bound; they are not finite-cutoff trajectory claims.
-The additional reference is outside the immutable archive and must not be
-rewritten to hide a failed assertion or a changed scientific conclusion.
+## Figures
 
-## Current reading pages
+[Figure data and captions](manuscript/FIGURES.md) identify the limiting curves
+and finite error bounds. Render the SVGs with
 
-`scripts/build_reading.py` selects the supplied theorem, assessment, and source
-sections and applies only recorded literal presentation changes. Its ledger
-in `provenance/READING.json` hashes sources, outputs, and all selected display
-equations. Edit the generation rule and regenerate rather than independently
-editing those current pages. The complete originals remain unchanged in
-`archive/consolidation-2026-10-09/`.
+```bash
+python manuscript/render_figures.py --output-dir /absolute/new/figure-directory
+```
 
-`provenance/IMPORT.json` records the exact supplied ZIP hash, initial repository
-revision, archive root hash and unchanged license. Only this authorized research
-package was imported; unrelated project files and external PDFs were excluded.
+Rendering additionally requires Matplotlib. The CSV files store plotted
+values, and `manuscript/figures/generation.json` records rendering versions.
 
-The continuation is [Chat-based](CURRENT.md), not dependent on a workspace.
+## Source integrity
 
+`research/THEOREM.md` is generated from the reference theorem through
+`scripts/build_reading.py`. The transformation ledger in
+`provenance/READING.json` hashes the source, output, and every display
+equation. Edit the generation rules and regenerate to update this page.
+Other research pages are maintained directly.
 
-## Manuscript-basis checks and figures
+The verifier checks the 60-file reference package under
+`archive/consolidation-2026-10-09/`, its three manifests, and the owner's
+license. `provenance/IMPORT.json` records the package and archive hashes.
+Reference reports and scientific tolerances are preserved; execution
+receipts for a PR head and merged main are recorded separately in the PR.
 
-The five manuscript-basis groups check pointwise error domination, the exact
-nominal-count identity, the earlier Hamiltonian/overlap convention, finite
-phase-mixture identities, bounded quadrature tests at changing frequencies,
-and an explicit growing-window sequence. No new high-brightness trajectory
-simulation is used. Large-number examples evaluate proven inequalities at
-high precision; unlike the rational first-crossing certificates, those decimal
-evaluations are not interval arithmetic. All original twenty groups still run.
-
-[Analytical figure data and captions](manuscript/FIGURES.md) distinguish
-limiting curves from finite-error bounds. Matplotlib is an optional rendering
-dependency, not a requirement for scientific verification. SVGs contain text
-and vectors, not redistributed fonts. Generation versions are recorded with
-the CSV files. The bibliography's reading scopes are given by the
-[manuscript source audit](research/MANUSCRIPT_SOURCE_AUDIT.md).
+[Sources and attribution](research/SOURCES.md) · [Proof map](research/PROOF_MAP.md)

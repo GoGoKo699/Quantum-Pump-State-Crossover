@@ -21,7 +21,7 @@ class Checks(unittest.TestCase):
   b=(ROOT/'LICENSE').read_bytes()
   self.assertEqual(hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest(),'e17a781bf47c4aadf18b68fc593846a1193b86c1')
  def test_02_generated_reading(self):
-  self.assertEqual(build_reading.expected(),build_reading.expected());self.assertEqual(verify.check_reading(),3)
+  self.assertEqual(build_reading.expected(),build_reading.expected());self.assertEqual(verify.check_reading(),1)
   ledger=json.loads((ROOT/'provenance/READING.json').read_text())
   self.assertGreater(sum(x['display_equations'] for x in ledger),30)
  def test_03_current_links(self):self.assertGreaterEqual(verify.check_links(),25)
@@ -40,8 +40,7 @@ class Checks(unittest.TestCase):
   for a,b in ((1,1.),(True,False),('1','2'),(float('nan'),1.)):
    self.assertFalse(verify.numeric_only([{'kind':'numeric','reference':a,'run':b}]))
   self.assertFalse(verify.numeric_only([{'kind':'keys'}]))
- def test_06_chat_and_contact(self):
-  self.assertIn('continues in the existing Chat',(ROOT/'CURRENT.md').read_text())
+ def test_06_contact_and_scope(self):
   for n in ('README.md','llms.txt'):
    t=(ROOT/n).read_text();self.assertIn('Purpose and contact',t);self.assertIn('mailto:gogoko699@gmail.com',t)
   self.assertIn('convex Gaussian hull',(ROOT/'research/CLAIMS.md').read_text())

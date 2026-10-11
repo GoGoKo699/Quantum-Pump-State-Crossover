@@ -9,7 +9,7 @@ H=i\hbar g(ca^\dagger b^\dagger-c^\dagger ab),\quad g>0,\qquad
 |\Psi(0)\rangle=|\alpha\rangle_c|0,0\rangle_{ab},\quad \alpha>0.
 $$
 
-Set N=alpha^2, tau=gt, and r=alpha*tau. This Hamiltonian and preparation are the established nondegenerate model in Chinni–Quesada [CQ], not a new physical model. The conserved quantities are n_c+n_a and n_c+n_b; the exact state remains globally pure and satisfies n_a=n_b. The nominal deterministic-pump approximation replaces c by alpha and generates
+Set N=alpha^2, tau=gt, and r=alpha*tau. This Hamiltonian and preparation are the established nondegenerate model in Chinni–Quesada [CQ]. The conserved quantities are n_c+n_a and n_c+n_b; the exact state remains globally pure and satisfies n_a=n_b. The nominal deterministic-pump approximation replaces c by alpha and generates
 
 $$
 |{\rm TMSV}_r\rangle=S(r)|00\rangle
@@ -25,7 +25,7 @@ r=r_\alpha(\lambda)=\frac12\ln(1+8\alpha\lambda),\qquad
 \tau_\alpha(\lambda)=r_\alpha(\lambda)/\alpha. \tag{1}
 $$
 
-All uniformity statements below concern lambda in an arbitrary fixed compact interval [0,Lambda]. The target TMSV and some measurement resolutions depend on alpha. There is no claim that the physical output state converges to a single finite-energy state as its mean energy increases. Fixed gain, fixed physical time, and fixed depletion are different limits.
+All uniformity statements below concern lambda in an arbitrary fixed compact interval [0,Lambda]. The target TMSV and some measurement resolutions depend on alpha. The comparison follows a brightness-dependent target whose mean energy increases. Fixed gain, fixed physical time, and fixed depletion are different limits.
 
 ## 2. Two controlled state descriptions
 
@@ -86,7 +86,7 @@ $$
 =O_\Lambda(\ln\alpha/\alpha). \tag{7}
 $$
 
-Both bounds hold for the exact infinite-dimensional evolution. They can exceed a trivial norm bound at small alpha, without affecting their validity or asymptotic use. Equation (6) is a state approximation, not an exact number-conserving ansatz or a new Hamiltonian. In particular its individual coherent branches are not exact conserved-number sectors.
+Both bounds hold for the exact infinite-dimensional evolution. They can exceed a trivial norm bound at small alpha, without affecting their validity or asymptotic use. Equation (6) approximates the state in norm. Its individual coherent branches are not exact conserved-number sectors.
 
 ### 2.1 Proof of the residual-state estimate
 
@@ -151,7 +151,7 @@ Apply Duhamel along exp(s lambda pR), 0<=s<=1. The required norms are the first 
 
 The original Hamiltonian is the self-adjoint direct sum of finite matrices in the simultaneous eigenspaces of n_c+n_a and n_c+n_b. The positive conserved number 2n_c+n_a+n_b is comparable to total occupation. Exact evolution consequently preserves every polynomial occupation-domain norm of the initial coherent/vacuum state. Displacements and finite squeezers preserve the oscillator Schwartz space. In suitable quadrature coordinates the leading evolution multiplies a Gaussian by a cubic phase and also preserves that space at finite lambda. Thus the polynomial actions used in the differentiated interaction frames have finite norms, and the Duhamel identities follow on this common domain by approximation. No uniformly bounded cubic operator or convergent infinite Dyson series is assumed.
 
-Norm and trace-distance estimates control bounded measurements. They do not automatically control photon-number or quadrature moments. The energy conclusion below has a separate argument; the new quadrature result is deliberately formulated as a probability-law and bounded-characteristic-function statement.
+Norm and trace-distance estimates control bounded measurements. They do not automatically control photon-number or quadrature moments. The energy conclusion below has a separate argument; the quadrature result is formulated as a probability-law and bounded-characteristic-function statement.
 
 ## 3. Reduced state: exact counts and a vanishing phase width
 
@@ -235,7 +235,7 @@ $$
 
 At lambda=1/2, purity tends to 0.757872156141312..., target fidelity tends to 0.842738458576109..., and trace distance from the pure TMSV has liminf at least 0.157261541423891.... These are squared-overlap fidelities. Pump mixedness certifies entanglement across pump versus both outputs under the globally pure preparation; it does not measure signal–idler entanglement separately.
 
-The pump marginal is a positive coherent-state mixture. The signal approximation (11) is a convex mixture of Gaussian states. Non-Gaussian shape is therefore not a claim of Wigner negativity, nor of a state outside the convex Gaussian hull. Section 7 instead separates the output from every *individual* Gaussian density operator.
+The limiting displaced pump marginal is a positive coherent-state mixture. The signal approximation (11) is a convex mixture of Gaussian states. Non-Gaussian shape is therefore not a claim of Wigner negativity, nor of a state outside the convex Gaussian hull. Section 7 instead separates the output from every *individual* Gaussian density operator.
 
 ## 6. Fixed-purity-loss time
 
@@ -316,7 +316,7 @@ C_{\rm TMSV}=0.778800783071405\ldots,\qquad
 \varphi_{1/2}(1)=0.635888176601638\ldots.
 $$
 
-The cosine-expectation difference tends to 0.142912606469767.... Thus the homodyne distributions have liminf total variation at least half that value, 0.071456303234884.... This is a lower bound supplied by one bounded statistic, not an optimal discrimination probability or an entanglement witness.
+The cosine-expectation difference tends to 0.142912606469767.... Thus the homodyne distributions have liminf total variation at least half that value, 0.071456303234884.... This lower bound is supplied by one bounded statistic.
 
 ### 7.2 Separation from every Gaussian state, not only the nominal pure one
 
@@ -344,9 +344,9 @@ $$
 } \tag{20}
 $$
 
-The finite-alpha lower bound is [W_lambda(xi)/10-epsilon_alpha]_+. At lambda=1/2, xi=1, W=0.048893320535687... and the conservative lower bound is 0.004889332053569.... No claim that this bound is sharp is made. It rules out repairing the asymptotic state error with a single adjusted Gaussian covariance or gain.
+The finite-alpha lower bound is [W_lambda(xi)/10-epsilon_alpha]_+. At lambda=1/2, xi=1, W=0.048893320535687... and the conservative lower bound is 0.004889332053569.... It rules out repairing the asymptotic state error with a single adjusted Gaussian covariance or gain.
 
-At the same time, (11) proves distance to the convex Gaussian hull tends to zero. Equations (19)–(20) must not be advertised as a witness of being outside that hull, a Wigner-negativity result, or a metrological advantage. Characteristic functions distinguishing Gaussian from non-Gaussian laws are elementary; the new content is their exact limiting form and error control for this dynamical crossover.
+At the same time, (11) proves distance to the convex Gaussian hull tends to zero. Equations (19)–(20) distinguish individual Gaussian states from their mixtures, with an explicit limiting characteristic function and error bound.
 
 ### 7.3 The resolution and reference assumptions are substantive
 
@@ -360,18 +360,18 @@ Thus a finite separation in the standardized record is not a fixed absolute quad
 
 This last statement can be made for the whole noisy distribution without an unbounded moment estimate. Equation (18) and convergence make Y_alpha tight, hence X_-=exp(-r_alpha)Y_alpha tends to zero in probability. Convolution with a fixed nonzero Gaussian density then converges in total variation to that density, by bounded translation continuity. Both exact and nominal noisy quadrature laws converge to the same readout-noise law. This is a measurement control, not a loss channel added to the generation theorem.
 
-Likewise, the external reference must have the phase stability and resolution required for the specified quadrature measurement. Keeping and reusing the correlated pump is a different operation and can reverse the original unitary [F18]. The result claims no free phase reference, fixed detector tolerance, or validated experimental operating window.
+The external reference must have the phase stability and resolution required for the specified quadrature measurement. Keeping and reusing the correlated pump is a different operation and can reverse the original unitary [F18].
 
-## 8. Interpretation and contribution boundary
+## 8. Interpretation
 
-The consolidated conclusion is a controlled separation of validity criteria. At the same growing gain, fractional depletion vanishes, the full number distribution and every total-number-conserving measurement become correct, yet the joint state stays mixed and a phase-referenced rescaled quadrature law stays non-Gaussian. A single Gaussian state cannot approximate it, whereas an explicit Gaussian mixture does.
+The result is a controlled separation of validity criteria. At the same growing gain, fractional depletion vanishes, the full number distribution and every total-number-conserving measurement become correct, yet the joint state stays mixed and a phase-referenced rescaled quadrature law stays non-Gaussian. A single Gaussian state cannot approximate it, whereas an explicit Gaussian mixture does.
 
-The model, pump-induced quantum corrections, logarithmic squeezing scales, phase uncertainty affecting squeezed quadratures, Gaussian interaction frames, and energy-sector coherent-amplitude shifts have direct antecedents [CQ,HS,GIF,KFD,HZ]. The candidate contribution is the uniform nondegenerate crossover-state theorem, its measurement-dependent consequences, and fixed-purity first-crossing law. It is not the discovery that pumps are quantum, the first squeezing limit, or the first appearance of non-Gaussianity.
+The model, pump-induced quantum corrections, logarithmic squeezing scales, phase uncertainty affecting squeezed quadratures, Gaussian interaction frames, and energy-sector coherent-amplitude shifts have direct antecedents [CQ,HS,GIF,KFD,HZ]. The theorem gives a uniform nondegenerate crossover-state approximation, its measurement-dependent consequences, and a fixed-purity first-crossing law.
 
-The Hamiltonian is closed, resonant, and three-mode. Increasing N at fixed g need not preserve the approximations behind a particular optical implementation. Keeping g sqrt(N) fixed lengthens the physical crossover time logarithmically, allowing losses to matter. Those implementation questions are not answered by the theorem, and no experimental resource advantage is inferred from it.
+The Hamiltonian is closed, resonant, and three-mode. The physical crossover time depends on the coupling convention: keeping g sqrt(N) fixed makes it grow logarithmically with N.
 
-See [sources](SOURCES.md), [contribution assessment](REVIEW.md), and the [proof map](PROOF_MAP.md) for the preserved supporting derivations.
+See [sources](SOURCES.md) for attribution and the [proof map](PROOF_MAP.md) for the supporting derivations.
 
 ---
 
-[Preserved source](../archive/consolidation-2026-10-09/THEOREM.md) · [Tutorial bridge](TUTORIAL_BRIDGE.md) · [Validity window](VALIDITY_WINDOW.md) · [Manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md) · [Reproducibility](../REPRODUCIBILITY.md)
+[Tutorial bridge](TUTORIAL_BRIDGE.md) · [Validity window](VALIDITY_WINDOW.md) · [Sources](SOURCES.md) · [Reproducibility](../REPRODUCIBILITY.md)

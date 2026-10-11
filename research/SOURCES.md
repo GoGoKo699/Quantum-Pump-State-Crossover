@@ -1,57 +1,159 @@
-# Source comparison and reading record
+# Sources and attribution
 
-## [CQ] Chinni–Quesada: closest same-model purity analysis
+The references below identify the model, methods, and physical mechanisms
+underlying the result. The [phase-mixture and onset comparison](SOURCE_REVIEW.md)
+gives the detailed formula dictionary; [references.bib](../manuscript/references.bib)
+contains the bibliographic records.
 
-K. Chinni and N. Quesada, *Beyond the parametric approximation: pump depletion, entanglement and squeezing in macroscopic down-conversion*, Physical Review A 110, 013712 (2024), arXiv:2312.09239v2.
-https://arxiv.org/html/2312.09239v2
+## Tutorial: Yanagimoto et al. (2024) [YNG2024]
 
-The source uses the same nondegenerate Hamiltonian and coherent pump/vacuum outputs. It already distinguishes depletion from pump entanglement and derives the general Gaussian-frame generator. The earlier follow-up's reconstruction of Appendix C and Eq. (48) is preserved. Appendix D Eqs. (119)–(120) and its text give a fixed-degree purity-threshold estimate and a finite-range fitted exponent. The controlled logarithmic first-crossing theorem agrees with the short-time coefficients but differs from their large-amplitude polynomial-root extrapolation. The same-model comparison is not replaced by a degenerate-model analogue.
+R. Yanagimoto et al., *Mesoscopic ultrafast nonlinear optics—the emergence
+of multimode quantum non-Gaussian physics*, Optica **11**(7), 896–918 (2024).
+[Author version, arXiv:2311.13775v1](https://arxiv.org/abs/2311.13775v1) ·
+[Published review](https://doi.org/10.1364/OPTICA.514075)
 
-This pass reread the primary HTML introduction, pump-purity discussion, and Appendix D prose. No plot was digitized or source data refitted. The complete equation-level reconstruction and numerical root comparisons remain in prior/FOLLOWUP.md, rather than being claimed as new work this round.
+Section II and Boxes 1–3 provide the single-source learning route. The
+Gaussian-frame decomposition, exponentially amplified cubic interaction,
+and logarithmic onset scale appear in the review's degenerate-amplifier
+example. Its conditional-displacement onset criterion differs from the
+pump-purity crossing studied here. The [tutorial bridge](TUTORIAL_BRIDGE.md)
+translates the model and connects these established ideas to the
+nondegenerate state approximation, finite error bounds, and count/state
+validity hierarchy.
 
-## [HS] Horoshko–Shchesnovich: formal number-shift and validity precedents
+## Depletion and state validity: D'Ariano–Paris–Sacchi [DAPS1999]
 
-D. B. Horoshko and V. S. Shchesnovich, *Isoenergetic model for optical downconversion and error-specific limits of the parametric approximation*, Physical Review A 112, 033706 (2025), arXiv:2503.18828v2.
-https://arxiv.org/html/2503.18828v2
-https://journals.aps.org/pra/abstract/10.1103/wtcf-5pkh
+G. M. D'Ariano, M. G. A. Paris and M. F. Sacchi, *On the parametric
+approximation in quantum optics*, Nuovo Cimento B **114**, 339 (1999).
+[Primary text, arXiv:quant-ph/9902013v1](https://arxiv.org/pdf/quant-ph/9902013v1)
 
-The model is degenerate. The energy-correlated approximation and shifted coherent-pump amplitudes provide a formal predecessor for the Gaussian pair-number coherence kernel. Its stated small-pair-index accuracy domain is not silently promoted to a uniform estimate at k=Theta(sqrt(N)) or transferred to the nondegenerate model. The source also explicitly recounts historical path-integral high-gain validity conditions. Error-specific validity and the distinction between energy and state accuracy are therefore established motivations, not new general principles. The primary HTML historical/model passages were reread; detailed earlier equation comparison is preserved under prior/.
+Section 4, Eqs. (26)–(34), treats coherent-pump nondegenerate conversion with
+vacuum outputs, comparing output-state overlap and photon-number
+statistics. Pump coherence, rather than fractional depletion alone, is
+already a state-validity criterion in this work. Its pump-Fano threshold
+is an empirical numerical criterion.
 
-## [GIF] Gaussian interaction frames and non-Gaussian quadrature noise
+Their Hamiltonian $\kappa(abc^\dagger+a^\dagger b^\dagger c)$ is related to
+ours by a phase rotation of one output; equivalently their coherent pump
+phase can be chosen as $\beta=i\alpha$. Their overlap is
+$\mathcal O=\sqrt{\operatorname{Tr}(\rho_{\rm exact}\rho_{\rm target})}$,
+so $\mathcal O^2$ is our squared-overlap fidelity. A 99% overlap threshold
+therefore differs from a 1% pump-purity loss. The present
+[validity window](VALIDITY_WINDOW.md) quantifies the simultaneous count/state
+separation through a controlled growing-gain approximation.
 
-R. Yanagimoto et al., *Onset of non-Gaussian quantum physics in pulsed squeezing with mesoscopic fields*, Optica 9, 379 (2022), arXiv:2111.13799.
-https://arxiv.org/pdf/2111.13799
+## Strong-pump squeezing: Bandilla–Drobný–Jex [BDJ1998]
 
-Primary PDF Sections II and V explain Gaussian interaction-frame reduction and connect residual quantum fluctuations to lab-frame squeezed quadratures. Equations (35)–(36) give the frame-to-quadrature relationship. The paper already discusses non-Gaussian noise, purity loss, and departures that Gaussian operations do not remove. The present bounded characteristic-function consequence must not be framed as the first measurable non-Gaussian effect of a quantum pump. Its claimed content is the explicit controlled large-brightness crossover law. No figure-specific numerical claim from this paper is used; the multimode waveguide dynamics and device operating windows are not reconstructed here.
+A. Bandilla, G. Drobný and I. Jex, *The classical parametric approximation
+for three-wave interactions*, Optics Communications **156**, 112–122 (1998).
+[Published article](https://doi.org/10.1016/S0030-4018(98)00404-0)
 
-## [KFD] Quantum-pump squeezing and finite-expansion caution
+The publisher's abstract, introduction, and selected-section excerpt describe
+classical trajectories, pump-coordinate scaling, and initial quantum
+fluctuations. They establish that pump depletion at optimal two-mode
+squeezing becomes negligible for a strong coherent pump. The present
+state-distance and complete count-distance estimates follow from the
+quantum dynamics and its explicit remainder bounds.
 
-P. Kinsler, M. Fernée and P. D. Drummond, *Limits to squeezing and phase information in the parametric amplifier*, Physical Review A 48, 3310–3320 (1993).
-https://doi.org/10.1103/PhysRevA.48.3310
-https://www.researchgate.net/publication/13379119_Limits_to_squeezing_and_phase_information_in_the_parametric_amplifier
+## Same-model purity and frame: Chinni–Quesada [CQ / CQ2024]
 
-The publisher abstract was a pilot input. This pass additionally read the relevant introduction and Section II prose in the author-uploaded draft, hosted as content uploaded by Peter Drummond. That document is dated 12 September 2002 and identifies itself as a draft of the 1993 paper with updated references and email addresses; it is not being represented as a verified byte-identical publisher version.
+K. Chinni and N. Quesada, *Beyond the parametric approximation: pump depletion,
+entanglement and squeezing in macroscopic down-conversion*, Physical Review A
+**110**, 013712 (2024).
+[Primary text, arXiv:2312.09239v2](https://arxiv.org/html/2312.09239v2) ·
+[Published article](https://doi.org/10.1103/PhysRevA.110.013712)
 
-It explicitly discusses both degenerate and nondegenerate models, pump phase uncertainty admixing antisqueezed fluctuations, an N^(-1/2) minimum squeezed-variance scale, and why finite asymptotic expansions require care at growing logarithmic gain. These mechanisms and scales are inherited. Several equations in the extracted draft text have encoding damage; no exact coefficient is transcribed from an unreadable expression, and the plots were not used. The publisher PDF and the linked downloadable author PDF were not retrieved. The readable prose suffices for the stated historical boundary, not an absence claim about the complete crossover theorem.
+This work uses the same Hamiltonian and coherent-pump/vacuum-output
+preparation. Appendix C, Eqs. (96)–(100), gives the Gaussian-frame generator;
+Eq. (48) gives short-time purity coefficients. Appendix D, Eqs. (119)–(120),
+gives a fixed-degree purity-threshold estimate and a finite-range fitted
+exponent. Our fixed-gain expansion reproduces the leading large-$\alpha$
+parts of its sixth- and eighth-order coefficients. The logarithmic
+first-crossing law concerns the nonuniform large-amplitude extrapolation
+of that polynomial root; the
+[explicit comparison](SOURCE_REVIEW.md) keeps this distinct from its
+finite-range numerical behavior.
 
-## [HZ] Historical path-integral source: remaining full-text boundary
+## Phase-averaged state family: Vintskevich–Grigoriev–Filippov [VGF2019]
 
-M. Hillery and M. S. Zubairy, *Path-integral approach to the quantum theory of the degenerate parametric amplifier*, Physical Review A 29, 1275 (1984).
-https://journals.aps.org/pra/abstract/10.1103/PhysRevA.29.1275
+S. V. Vintskevich, D. A. Grigoriev and S. N. Filippov, *Effect of an incoherent
+pump on two-mode entanglement in optical parametric generation*, Physical
+Review A **100**, 053811 (2019).
+[arXiv:1905.05756v2](https://arxiv.org/abs/1905.05756v2) ·
+[Published article](https://doi.org/10.1103/PhysRevA.100.053811)
 
-The publisher abstract states the fully quantized path-integral treatment, validity conditions, and reduced squeezing from pump quantization. The publisher PDF again failed to retrieve. Historical detailed conditions are credited through [HS] and the readable [KFD] discussion; the original full text remains unread. This boundary is not evidence of novelty or an obstruction to the mathematical proof.
+Its Gaussian phase-averaged squeezed-state family is exactly our reduced
+comparison state after the width substitution $w=1/(2\alpha)$. The source
+introduces that width through initial pump incoherence; here the width
+comes from tracing an initially pure quantum pump. The
+[formula dictionary and validity comparison](SOURCE_REVIEW.md) explain the
+preparation difference, the source's sufficient high-gain condition, and
+the purity limit.
 
-## [F18] Reusing the correlated pump is not an independent reference
+## Gaussian interaction frames: Yanagimoto et al. (2022) [GIF / GIF2022]
 
-J. Flórez et al., New Journal of Physics 20, 123022 (2018), arXiv:1808.06136.
-https://doi.org/10.1088/1367-2630/aaf3d2
+R. Yanagimoto et al., *Onset of non-Gaussian quantum physics in pulsed
+squeezing with mesoscopic fields*, Optica **9**, 379 (2022).
+[Primary text, arXiv:2111.13799](https://arxiv.org/pdf/2111.13799)
 
-The preceding source read of this fully quantum nonlinear-interferometer work is preserved in prior/SOURCES.md. This pass does not claim a new full-text review. The recorded exact-reversal example guards against treating the pump-traced reduced model as a description of subsequent dynamics retaining that pump. No sensitivity or hardware advantage is borrowed from the source.
+Sections II and V develop Gaussian interaction-frame reduction and connect
+residual fluctuations to laboratory-frame squeezed quadratures, explicitly
+in Eqs. (35)–(36). Pump/output entanglement, non-Gaussian noise, and deviations
+that Gaussian operations cannot remove are established mechanisms. The
+present bounded characteristic-function result quantifies them for the
+specified nondegenerate growing-gain limit. This paper is distinct from the
+2024 tutorial review.
 
-## Mathematical status of the new quadrature consequence
+## Pump phase uncertainty: Kinsler–Fernée–Drummond [KFD / KFD1993]
 
-The Gaussian shear, characteristic-function integration, trace-distance contraction, and modulus identity for Gaussian characteristic functions are elementary consequences explicitly proved in THEOREM.md. The witness is not claimed as a new general non-Gaussianity test. The limiting signal state is itself a convex Gaussian mixture: the result separates it from each single Gaussian state, not from the convex Gaussian hull. No Wigner-negativity claim is made.
+P. Kinsler, M. Fernée and P. D. Drummond, *Limits to squeezing and phase
+information in the parametric amplifier*, Physical Review A **48**,
+3310–3320 (1993).
+[Published article](https://doi.org/10.1103/PhysRevA.48.3310) ·
+[Author-posted draft](https://www.researchgate.net/publication/13379119_Limits_to_squeezing_and_phase_information_in_the_parametric_amplifier)
 
----
+The introduction and Section II of the author draft dated 12 September 2002
+support the mechanism comparison: pump phase uncertainty mixes antisqueezed
+fluctuations into the squeezed quadrature in both degenerate and nondegenerate
+models. The draft discusses the $N^{-1/2}$ minimum squeezed-variance scale
+and the care needed with finite asymptotic expansions at logarithmically
+growing gain. These mechanisms and scales precede the present theorem.
 
-[Preserved source](../archive/consolidation-2026-10-09/SOURCES.md) · [Tutorial bridge](TUTORIAL_BRIDGE.md) · [Validity window](VALIDITY_WINDOW.md) · [Manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md) · [Analytical review](PROOF_REVIEW.md) · [Additional source comparison](SOURCE_REVIEW.md) · [Reproducibility](../REPRODUCIBILITY.md)
+## Number shifts and error criteria: Horoshko–Shchesnovich [HS / HS2025]
+
+D. B. Horoshko and V. S. Shchesnovich, *Isoenergetic model for optical
+down-conversion and error-specific limits of the parametric approximation*,
+Physical Review A **112**, 033706 (2025).
+[Primary text, arXiv:2503.18828v2](https://arxiv.org/html/2503.18828v2) ·
+[Published article](https://doi.org/10.1103/wtcf-5pkh)
+
+The degenerate model supplies energy-correlated coherent-amplitude shifts
+and a predecessor for the Gaussian pair-number coherence kernel, together
+with error-specific validity criteria. Its approximation uses a stated
+small-pair-index domain. The nondegenerate $k=\Theta(\sqrt N)$ regime and
+varying-parameter window here instead have explicit state-error bounds.
+The paper also reviews historical path-integral high-gain conditions.
+
+## Historical path-integral treatment: Hillery–Zubairy [HZ / HZ1984]
+
+M. Hillery and M. S. Zubairy, *Path-integral approach to the quantum theory
+of the degenerate parametric amplifier*, Physical Review A **29**, 1275 (1984).
+[Publisher abstract](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.29.1275)
+
+The publisher abstract credits a fully quantized treatment, validity
+conditions, and reduced squeezing due to pump quantization. The detailed
+historical conditions discussed here are attributed through
+Horoshko–Shchesnovich and the Kinsler–Fernée–Drummond author draft.
+
+## Retaining the correlated pump: Flórez et al. [F18 / F2018]
+
+J. Flórez et al., *The phase sensitivity of a fully quantum three-mode
+nonlinear interferometer*, New Journal of Physics **20**, 123022 (2018).
+[Published article](https://doi.org/10.1088/1367-2630/aaf3d2) ·
+[arXiv:1808.06136](https://arxiv.org/abs/1808.06136)
+
+A second interaction retaining the pump can reverse the first exactly.
+Accordingly, our pump-traced approximation describes the reduced output,
+while subsequent joint operations retaining the correlated pump require
+the joint state. An independent phase reference defines a different
+measurement resource.

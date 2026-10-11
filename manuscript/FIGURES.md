@@ -1,7 +1,7 @@
 # Analytical figures
 
-The two figures visualize proved formulas, not new trajectory simulations.
-No exponent or coefficient is fitted. Render them with
+The figures visualize the limiting crossover curves and finite error bounds.
+Render them with
 
 ```bash
 python manuscript/render_figures.py --output-dir /absolute/new/figure-directory
@@ -21,8 +21,8 @@ fidelity $\mathcal P(\lambda/\sqrt2)$ with the nominal two-mode squeezed
 vacuum in the fixed-$\lambda$ large-pump limit. At every displayed finite
 crossover coordinate, complete pair-count error and fractional depletion
 tend to zero. The curves are limiting formulas, not finite-brightness
-numerical propagation. The purity loss diagnoses pump versus joint-output
-entanglement, not signal/idler entanglement alone.
+numerical propagation. The purity loss diagnoses entanglement across the pump
+versus both outputs jointly.
 
 ## Figure 2: a controlled growing-window sequence
 
@@ -34,7 +34,6 @@ every pure output state tends to one, while the upper bound on the total-
 variation error of the nominal geometric pair-count law tends to zero.
 The curves use the explicit state error, not a bare extrapolation of the
 limiting state. Bounds exceeding a trivial probability range are clipped to
-that range. The enormous values of $N$ are theoretical parameters for this
-closed three-mode Hamiltonian, not proposed device operating points.
-The CSV also includes the energy bound and the single-Gaussian separation
-bound, which are not additional plotted panels.
+that range. The brightness values illustrate the asymptotic bounds of the
+closed three-mode Hamiltonian. The CSV also includes the energy bound and
+the single-Gaussian separation bound.

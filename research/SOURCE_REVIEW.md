@@ -1,24 +1,24 @@
-# Source review: an established state family and a dynamical crossover
+# Phase-mixture and onset comparisons
 
-## The additional direct predecessor
+The [source map](SOURCES.md) gives the complete attribution and bibliography.
+This page compares the phase-averaged state family and same-model purity
+expansion with the controlled dynamical result.
+
+## The phase-averaged state family
 
 S. V. Vintskevich, D. A. Grigoriev and S. N. Filippov, *Effect of an incoherent
 pump on two-mode entanglement in optical parametric generation*, Physical
 Review A **100**, 053811 (2019), arXiv:1905.05756v2, gives an explicit
 phase-averaged squeezed-state family.
 
-The primary arXiv metadata and the author-posted full text were inspected.
-The latter identifies itself as arXiv v2 and was uploaded by Sergey Filippov
-on 22 February 2020. It is not asserted to be a byte-identical publisher PDF.
-The relevant readable material is Sec. II A--B, Eqs. (9)--(17), and Sec. VI A,
-Eqs. (50), (56)--(57). Figures, later citing-paper snippets on the hosting
-page, and unreadable expressions were not used for any numerical claim.
+The comparison uses the author-posted arXiv v2 text, Sec. II A--B,
+Eqs. (9)--(17), and Sec. VI A, Eqs. (50), (56)--(57).
 
 - [arXiv record](https://arxiv.org/abs/1905.05756)
 - [Author-posted text](https://www.researchgate.net/publication/337063825_Effect_of_an_incoherent_pump_on_two-mode_entanglement_in_optical_parametric_generation)
 - [Publisher identifier](https://doi.org/10.1103/PhysRevA.100.053811)
 
-### Exact dictionary, not just a thematic similarity
+### Exact state dictionary
 
 The source first studies a three-mode parametric Hamiltonian with a removable
 phase-convention difference from ours. Its generalized parametric approximation
@@ -31,11 +31,9 @@ $$
 $$
 
 Choosing $w=1/(2\alpha)$ gives **exactly the density-matrix family** used in
-our physical-frame approximation. The reduced Gaussian phase mixture and its
-coherence kernel must therefore not be presented as newly invented states.
-This is stronger attribution than merely crediting pump phase noise in general.
-The source's symbol for a squeezing amplitude is not our crossover coordinate
-$\lambda$.
+our physical-frame approximation. This phase-mixture family and its coherence
+kernel are established. The source's symbol for a squeezing amplitude is not
+our crossover coordinate $\lambda$.
 
 The source also gives its purity through Eq. (57). Independently summing the
 difference of two geometric random variables puts that expression in the form
@@ -46,12 +44,11 @@ $$
 $$
 
 With $w=1/(2\alpha)$ and our growing gain, a Riemann-sum limit gives
-$\int_0^\infty e^{-z-\lambda^2z^2}dz$. This last limit is our reconstruction
-from their family, not a formula quoted from their article. Once the family
-and its width are granted, the limiting purity and unchanged photon counts
-are calculable consequences, not independent physical novelty claims.
+$\int_0^\infty e^{-z-\lambda^2z^2}dz$. This limit follows from their family
+with the specified width and gain; the dynamical state theorem establishes
+that the exact coherent-pump evolution has this approximation.
 
-### What the source does not establish for the present preparation
+### Preparation and approximation domain
 
 The source introduces the width as initial incoherence of a mixed pump.
 Our preparation is one pure coherent state, with no added phase noise. The
@@ -78,46 +75,25 @@ pump. It is a reduced-state family, not a replacement joint dynamics.
 
 ## Same-model onset comparison
 
-The primary Chinni--Quesada HTML was reread at the exact general frame
-(Appendix C, Eqs. (96)--(100)), the pump-purity series (48), and the threshold
-analysis (119)--(120). Their eighth-order polynomial and its
+Chinni--Quesada gives the general frame in Appendix C, Eqs. (96)--(100),
+the pump-purity series in Eq. (48), and the threshold analysis in
+Eqs. (119)--(120). Their eighth-order polynomial and its
 $\alpha^{-3/4}$ root agree with the expressions recorded in our theorem.
-The leading fixed-gain correction reproduces their sixth- and eighth-order
-coefficients. At $gt=[\log\alpha+O(1)]/(2\alpha)$, that finite polynomial
-tends to zero, whereas our exact purity loss tends to a prescribed positive
-constant. The disagreement concerns its nonuniform large-amplitude root
+The leading fixed-gain correction reproduces the leading large-$\alpha$
+parts of their sixth- and eighth-order coefficients.
+At the fixed-loss crossing
+$gt_\delta=[\log\alpha+\log(8\lambda_\delta)+o(1)]/(2\alpha)$,
+where $\mathcal P(\lambda_\delta)=1-\delta$, that finite polynomial tends
+to zero while the exact purity loss equals $\delta$. The disagreement concerns its nonuniform large-amplitude root
 extrapolation, not its coefficients or the usefulness of finite-range fits.
-No source plot was digitized.
 
 - [Chinni--Quesada primary HTML](https://arxiv.org/html/2312.09239v2)
 
-Horoshko--Shchesnovich's primary HTML and the Gaussian-frame paper were also
-checked in the relevant comparison passages. The former supplies
-error-specific validity and number-shift precedents in the degenerate model;
-the latter supplies the interaction-frame strategy and non-Gaussian
-quadrature-noise interpretation. Their mathematical scope is not silently
-expanded to prove this theorem. These roles are retained in
-[the original source map](SOURCES.md).
+## Controlled dynamical result
 
-## Remaining historical reading boundary
-
-The Hillery--Zubairy publisher full text was not obtained through the publisher
-PDF, APS full-text endpoint, or institutional-record routes in this review.
-The institutional item confirms bibliographic identity but does not supply the
-article body. Its detailed historical conditions remain credited indirectly
-through the readable newer sources, not presented as a fresh direct reading.
-No access failure supports an absence or priority claim.
-
-## Contribution after this comparison
-
-The candidate contribution is the **controlled derivation of the crossover
+The theorem gives a **controlled derivation of the crossover
 from a pure coherent pump**, uniform state error, independent energy control,
 and resulting separation between number-statistical and joint-state validity,
-including a quantitatively controlled purity-onset time. The phase-averaged
-family, phase-noise mechanism, Gaussian-frame method, and familiar limiting
-calculations are not separately promoted.
-
-The additional predecessor narrows attribution without refuting the dynamics
-or supplying a same-input uniform estimate. Correctness, exact formula
-novelty, and physical significance therefore remain separate assessments.
-No exhaustive literature search or external priority certification is claimed.
+including a quantitatively controlled purity-onset time. The
+[source map](SOURCES.md) credits the established state family, pump-noise
+mechanism, Gaussian-frame method, and number-shift precedents.

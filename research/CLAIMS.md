@@ -1,106 +1,147 @@
 # Model and claims
 
-## Fixed physical task
+## Model and scales
 
-One lossless resonant pump, signal, and idler obey
-$H=i\hbar g(ca^\dagger b^\dagger-c^\dagger ab)$. The initial pump is
-$|\alpha\rangle$ with real $\alpha>0$ and both outputs start in vacuum.
-$N=\alpha^2$, $\tau=gt$, and $r=\alpha\tau$.
+The pump $`c`$, signal $`a`$, and idler $`b`$ are bosonic modes governed by the
+closed, lossless, resonant Hamiltonian
 
-The theorem takes $\alpha\to\infty$ with
-$r=\tfrac12\ln(1+8\alpha\lambda)$ at fixed finite $\lambda$. Uniform bounds
-hold on every fixed compact interval of $\lambda$. Fixed gain, physical time,
-or depletion would specify different limits. The Hamiltonian is an effective
-closed three-mode model, not a certified multimode or lossy implementation.
+```math
+H=i\hbar g(ca^\dagger b^\dagger-c^\dagger ab),\qquad
+|\Psi(0)\rangle=|\alpha\rangle_c|0,0\rangle_{ab},\qquad g>0,\quad\alpha>0.
+```
 
-## Main state theorem
+Write $`n_j=j^\dagger j`$, $`N=\alpha^2`$, $`\tau=gt`$, and
+$`r=\alpha\tau`$. The nominal classical-pump prediction is the pure
+two-mode squeezed vacuum (TMSV)
 
-After removing the pump displacement and nominal output squeezing, the exact
-state is norm-close to
+```math
+|\mathrm{TMSV}_r\rangle=\sum_{k\ge0}s_k|k,k\rangle,
+\qquad s_k=\operatorname{sech}r\,\tanh^k r.
+```
 
-$$|\chi_\lambda\rangle=
-\exp[\lambda(d-d^\dagger)R]|0,0,0\rangle,\qquad
-R=1+n_a+n_b+a^\dagger b^\dagger+ab.$$
+The crossover coordinate is $`\lambda=(e^{2r}-1)/(8\alpha)\ge0`$. The
+fixed-crossover theorem takes $`\alpha\to\infty`$ at
+$`r=r_\alpha(\lambda)=\tfrac12\log(1+8\alpha\lambda)`$, uniformly on each
+fixed compact interval $`\lambda\in[0,\Lambda]`$. Fixed gain, fixed physical
+time, and fixed depletion specify different limits.
 
-The explicit error is $O_\Lambda(\ln\alpha/\alpha)$, uniform for
-$\lambda\in[0,\Lambda]$. A second, physical-frame approximation marks pair
-number $k$ with pump amplitude $\alpha-k/(2\alpha)$. Its reduced output is
+## Controlled state approximation
 
-$$\sigma_{ab}=\sum_{k,l\ge0}s_ks_l e^{-(k-l)^2/(8N)}
-|k,k\rangle\langle l,l|,\qquad
-s_k=\operatorname{sech}r\,\tanh^k r.$$
+Remove the pump displacement and nominal output squeezing, and let $`d`$
+annihilate the displaced pump. The exact residual state is within
+$`O_\Lambda(\log\alpha/\alpha)`$ in vector norm of
 
-These are approximations to the specified state, not channel estimates for
-arbitrary inputs or replacement dynamics for reuse of the correlated pump.
+```math
+|\chi_\lambda\rangle=e^{\lambda(d-d^\dagger)R}|0,0,0\rangle,
+\qquad R=1+n_a+n_b+a^\dagger b^\dagger+ab.
+```
 
-## Consequences and the necessary distinctions
+In the physical frame, the controlled approximation marks generated pair
+number $`k`$ with pump amplitude $`\alpha-k/(2\alpha)`$. Tracing the pump gives
 
-The full pair-count distribution converges to the nominal geometric law in
-total variation. Each individual mode approaches its thermal marginal in
-trace distance. A separate energy bound, not norm convergence alone, proves
-$\langle n_a\rangle\sim2\lambda\sqrt N$ and vanishing converted fraction.
+```math
+\sigma_{ab}=\sum_{k,l\ge0}s_ks_l e^{-(k-l)^2/(8N)}
+|k,k\rangle\langle l,l|.
+```
 
-The pump and joint-output purities approach $\mathcal P(\lambda)<1$; the
-fidelity with the nominal pure TMSV approaches
-$\mathcal P(\lambda/\sqrt2)<1$. Globally pure evolution makes pump impurity
-an entanglement diagnostic across pump versus both outputs.
+The exact output $`\rho_{ab}`$ is within
+$`O_\Lambda(\log\alpha/\alpha)`$ of this approximation in trace distance,
+$`D(\rho,\sigma)=\tfrac12\|\rho-\sigma\|_1`$. The
+[state proof](THEOREM.md) gives explicit finite bounds for both comparisons.
+The comparison state $`\sigma_{ab}`$ is a Gaussian phase average of the TMSV with phase variance
+$`1/(4N)`$, derived from the initially pure pump. It describes the output
+after tracing the pump; subsequent joint operations retaining that correlated
+pump require the full state.
 
-The standardized squeezed quadrature has a non-Gaussian limiting probability
-law and supplies a positive trace-distance lower bound from every individual
-Gaussian state. The output nonetheless approaches the convex Gaussian hull.
-Neither nonclassical pump marginal, Wigner negativity, Gaussian-hull
-separation, nor signal–idler entanglement strength follows from this claim.
+## Accuracy regimes
 
-A fixed purity loss has first-crossing time
-$gt_\epsilon=[\ln\alpha+\ln(8\lambda_\epsilon)+o(1)]/(2\alpha)$.
-The comparison to a published finite-degree polynomial concerns its
-nonuniform asymptotic extrapolation, not its coefficients or finite-range
-numerical usefulness.
+The finite estimates also control varying $`\lambda=\lambda_\alpha`$ in the
+sufficient window
+
+```math
+\frac{(1+\lambda_\alpha^2)(1+r_\alpha)}{\alpha}\longrightarrow0.
+```
+
+Throughout this window, the complete pair-count distribution converges to the
+nominal geometric law in total variation. Each individual output approaches
+its nominal thermal marginal in trace distance. The joint output obeys a
+stronger accuracy criterion:
+
+| Crossover sequence | Joint-state conclusion |
+|---|---|
+| $`\lambda_\alpha\to0`$ | The nominal pure TMSV becomes accurate in trace distance. |
+| $`\lambda_\alpha\to\lambda_0>0`$ | Purity and nominal-state fidelity approach finite crossover values. |
+| $`\lambda_\alpha\to\infty`$ | The infimum of trace distance over every pure state tends to one. |
+
+Within this window, nominal pure-state accuracy holds **if and only if**
+$`\lambda_\alpha\to0`$, equivalently the nominal mean pair number
+$`\bar n_{\mathrm{cl}}=\sinh^2r`$ is $`o(\sqrt N)`$. The
+[validity-window proof](VALIDITY_WINDOW.md) derives these statements from the
+finite inequalities, including nonconvergent crossover sequences.
+
+## Energy, purity, and entanglement
+
+A separate conserved-sector energy estimate proves vanishing fractional
+pump depletion throughout the window. When also $`\alpha\lambda\to\infty`$,
+
+```math
+\langle n_a\rangle\sim2\alpha\lambda,\qquad
+\frac{N-\langle n_c\rangle}{N}\sim\frac{2\lambda}{\alpha}.
+```
+
+In particular, for fixed $`\lambda>0`$ the mean pair number is asymptotic to
+$`2\lambda\sqrt N`$. The energy proof uses conserved-number sectors and
+bounded truncations of the count law; trace distance alone does not control
+an unbounded mean.
+
+Define
+
+```math
+\mathcal P(\lambda)=\int_0^\infty e^{-z-\lambda^2z^2}\,dz.
+```
+
+At each fixed finite $`\lambda\ge0`$, pump and joint-output purity tend to
+$`\mathcal P(\lambda)`$, while squared target fidelity
+$`\langle\mathrm{TMSV}_r|\rho_{ab}|\mathrm{TMSV}_r\rangle`$ tends to
+$`\mathcal P(\lambda/\sqrt2)`$. Both are strictly below one for
+$`\lambda>0`$ and equal one at $`\lambda=0`$. Global purity makes pump
+mixedness an entanglement diagnostic across **pump versus both outputs**.
+The [growing-window example](VALIDITY_WINDOW.md) also gives the second-Renyi
+entropy for that partition along $`\lambda_\alpha=N^{1/8}`$.
 
 ## Measurement scope
 
 Every POVM commuting with total output photon number has asymptotically the
-nominal statistics. Passive optics with vacuum ancillas and photon counting
-is covered; an external phase reference or retained correlated pump changes
-the task. The distinguishing homodyne record needs phase-referenced readout
-on a physical scale $N^{-1/4}$. Fixed positive additive resolution erases
-this particular distinction. No experimental operating window is inferred.
+nominal statistics throughout the controlled window. This includes passive
+optics with vacuum ancillas followed by photon counting.
 
-The proofs and explicit constants are in [the theorem](THEOREM.md), with
-[attribution](SOURCES.md) and [contribution assessment](REVIEW.md) separate.
+For fixed $`\lambda>0`$, a phase-referenced squeezed-quadrature distribution
+separates the exact output from every individual Gaussian state, including
+mixed states with adjusted parameters. The output nevertheless approaches
+the convex Gaussian hull through $`\sigma_{ab}`$. These are different
+comparison classes. The readout requires physical resolution on a scale
+$`N^{-1/4}`$; fixed positive additive Gaussian resolution erases this
+particular distinction. The [quadrature proof](THEOREM.md), Section 7, and
+[varying-parameter extension](VALIDITY_WINDOW.md), Section 4, give the
+bounded statistics and their measurement scales.
 
-## Review and finite-parameter guarantees
+## First fixed-purity crossing
 
-The [analytical review](PROOF_REVIEW.md) supplies a continuous-coordinate
-check of the remainder norms, a domain justification, and exact-arithmetic
-intervals for the first one-percent purity crossing. For each fixed loss
-$0<\delta<1$, it sharpens the onset-time remainder to
-$O_\delta(\log\alpha/\alpha^2)$ without assuming global monotonicity of the
-exact purity. This is a corollary of the existing state estimate.
+For a prescribed loss $`0<\delta<1`$, let $`\lambda_\delta>0`$ be the unique
+solution of $`\mathcal P(\lambda_\delta)=1-\delta`$. The first time at which
+the exact pump purity reaches $`1-\delta`$ satisfies
 
-The [additional source comparison](SOURCE_REVIEW.md) identifies the exact
-phase-averaged squeezed-state family in Vintskevich, Grigoriev and Filippov
-(2019). Its initial mixed-pump phase distribution is not the pure coherent
-preparation here, and its stated approximation domain does not certify this
-crossover. The candidate contribution is the controlled dynamical limit, not
-invention of that reduced-state family. See the [compact account](AUTHOR_ACCOUNT.md).
+```math
+gt_\delta=\frac{\log\alpha+\log(8\lambda_\delta)}{2\alpha}
++O_\delta(\log\alpha/\alpha^2).
+```
 
+The proof uses a uniform purity envelope without assuming monotonic exact
+dynamics. [Finite first-crossing certificates](PROOF_REVIEW.md) provide
+exact-arithmetic enclosures. The [source comparison](SOURCE_REVIEW.md)
+explains how the leading large-$`\alpha`$ parts of the short-time coefficients
+agree with Chinni–Quesada while
+their fixed-degree polynomial has a different asymptotic root.
 
-## Controlled validity-window corollary
-
-The explicit finite inequalities also imply an error-controlled window with
-varying $\lambda_\alpha$ whenever
-$(1+\lambda_\alpha^2)(1+r_\alpha)/\alpha\to0$. In that window, nominal pure
-TMSV accuracy is equivalent to $\lambda_\alpha\to0$. Counts and thermal
-one-mode marginals remain accurate even along admissible
-$\lambda_\alpha\to\infty$, where the distance from every pure joint state
-tends to one. Fractional depletion still vanishes by the independent energy
-bound. A single Gaussian remains separated while the convex Gaussian hull
-does not. The [proof](VALIDITY_WINDOW.md) retains the order of limits and
-measurement qualifications; it is not a uniform claim for every undepleted
-gain or a new preparation.
-
-The [manuscript source audit](MANUSCRIPT_SOURCE_AUDIT.md) explicitly credits
-the earlier same-model depletion/coherence criterion and the strong-pump
-squeezing literature. The manuscript is organized around the controlled
-accuracy hierarchy rather than the first discovery of quantum pump noise.
+[Proof map](PROOF_MAP.md) · [Tutorial bridge](TUTORIAL_BRIDGE.md) ·
+[Sources and attribution](SOURCES.md)

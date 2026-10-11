@@ -56,7 +56,7 @@ def check_archive()->dict:
 def check_reading()->int:
  for name,data in build_reading.expected().items():
   if (ROOT/name).read_bytes()!=data:raise ValueError('Generated page differs: '+name)
- return 3
+ return len(build_reading.RULES)
 
 def check_links()->int:
  count=0
